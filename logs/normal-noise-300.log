@@ -1,0 +1,35 @@
+# started 2026-11-10T21:09:21-08:00 : scripts/check_normal_mode_noise.sh 300
+Using Python 3.12.15 environment at: .venv-control
+2026-11-10T21:09:21-08:00 normal-mode noise check, 300 steps, output experiments/trainer_parity/normal_steps300
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-10T21:09:24-08:00 aloha-train aloha_a
+2026-11-10 21:09:26,691 INFO root: Cuda backend detected, using cuda.
+2026-11-10 21:09:26,691 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-10 21:09:26,692 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-10 21:09:26,816 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-10 21:10:03,455 INFO aloha_curriculum.train: step 200/300 loss 7.3575 l1 0.5396 kl 0.6818 gn 157.45 data 0.001s step 0.180s elapsed 36s
+2026-11-10 21:10:18,932 INFO aloha_curriculum.train: step 300/300 loss 3.2472 l1 0.4058 kl 0.2841 gn 91.71 data 0.000s step 0.155s elapsed 52s
+2026-11-10T21:10:19-08:00 aloha-train aloha_b
+2026-11-10 21:10:22,427 INFO root: Cuda backend detected, using cuda.
+2026-11-10 21:10:22,427 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-10 21:10:22,427 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-10 21:10:22,563 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-10 21:10:59,976 INFO aloha_curriculum.train: step 200/300 loss 7.3579 l1 0.5400 kl 0.6818 gn 157.44 data 0.001s step 0.184s elapsed 37s
+2026-11-10 21:11:15,513 INFO aloha_curriculum.train: step 300/300 loss 3.2477 l1 0.4061 kl 0.2842 gn 91.72 data 0.000s step 0.155s elapsed 52s
+2026-11-10T21:11:16-08:00 lerobot-train lerobot_a
+2026-11-10T21:12:18-08:00 lerobot-train lerobot_b
+aloha_a vs aloha_b: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 7.998e-04, rms diff 3.071e-05, relative Frobenius 6.249e-04
+lerobot_a vs lerobot_b: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 9.484e-04, rms diff 3.359e-05, relative Frobenius 6.836e-04
+aloha_a vs lerobot_a: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 9.969e-04, rms diff 3.485e-05, relative Frobenius 7.093e-04
+aloha_a vs lerobot_b: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 8.337e-04, rms diff 2.720e-05, relative Frobenius 5.537e-04
+aloha_b vs lerobot_a: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 1.163e-03, rms diff 3.443e-05, relative Frobenius 7.007e-04
+aloha_b vs lerobot_b: 234 tensors, 81 bit-identical, 153 differ, worst abs diff 8.569e-04, rms diff 3.032e-05, relative Frobenius 6.170e-04
+pair                     differing  worst_abs        rms    rel_fro
+aloha_a_vs_aloha_b             153  7.998e-04  3.071e-05  6.249e-04
+aloha_a_vs_lerobot_a           153  9.969e-04  3.485e-05  7.093e-04
+aloha_a_vs_lerobot_b           153  8.337e-04  2.720e-05  5.537e-04
+aloha_b_vs_lerobot_a           153  1.163e-03  3.443e-05  7.007e-04
+aloha_b_vs_lerobot_b           153  8.569e-04  3.032e-05  6.170e-04
+lerobot_a_vs_lerobot_b         153  9.484e-04  3.359e-05  6.836e-04
+2026-11-10T21:13:31-08:00 normal-mode noise check done
+# finished 2026-11-10T21:13:31-08:00 exit=0

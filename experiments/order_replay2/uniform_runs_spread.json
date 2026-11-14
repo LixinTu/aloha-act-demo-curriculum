@@ -1,0 +1,86 @@
+{
+  "aloha_train": {
+    "v1 seed 1000": 68,
+    "v1 seed 1000, RSI-Harness re-run": 69,
+    "v1 seed 1001": 76,
+    "v1 seed 1002": 65,
+    "v2 seed 1000": 60,
+    "v3 seed 1000": 82,
+    "v3 seed 1001": 59,
+    "order replay seed 1000": 66,
+    "order replay seed 1000, repeat 2": 70,
+    "v3 deterministic mode seed 1001": 64
+  },
+  "lerobot": {
+    "lerobot-train v0.6.1 seed 1000": 100,
+    "released checkpoint (LeRobot 3c0a209)": 101,
+    "lerobot-train v0.6.1 seed 1000, re-run": 102,
+    "lerobot-train v0.6.1 deterministic mode seed 1001": 70
+  },
+  "all aloha-train runs": {
+    "chi2": 7.4796546236672015,
+    "dof": 9,
+    "p": 0.5873098466063453,
+    "phi": 0.8310727359630223,
+    "phi95": [
+      0.39319486537607345,
+      2.769842877748416
+    ],
+    "runs": 10,
+    "pooled_rate": 0.1358,
+    "sd_runs": 0.013966626889362612,
+    "binomial_sd": 0.015320467355795644
+  },
+  "v3 runs only": {
+    "chi2": 4.960919107260571,
+    "dof": 2,
+    "p": 0.08370474993035543,
+    "phi": 2.4804595536302854,
+    "phi95": [
+      0.6724154542008717,
+      97.97291910774629
+    ],
+    "runs": 3,
+    "pooled_rate": 0.13666666666666666,
+    "sd_runs": 0.024193663082165414,
+    "binomial_sd": 0.015361568206982572
+  },
+  "lerobot_vs_aloha_train": {
+    "diff_pp": 5.069999999999999,
+    "binomial": {
+      "z": 5.3624546142437755,
+      "p": 8.209860035345212e-08
+    },
+    "observed_spread_t": {
+      "t": 4.355087811906174,
+      "df": 12,
+      "p": 0.0009364193922668636
+    },
+    "phi_upper": {
+      "phi": 2.769842877748416,
+      "z": 3.3610452263418202,
+      "p": 0.0007764811003994313
+    }
+  },
+  "control_checkpoints": {
+    "step 60000": 84,
+    "step 80000": 94,
+    "step 100000": 100
+  },
+  "control_checkpoint_pairs": {
+    "step 80000 vs step 60000": {
+      "both": 47,
+      "first_only": 47,
+      "second_only": 37,
+      "independence_both": 15.792,
+      "mcnemar_exact_p": 0.3261341711919829
+    },
+    "step 100000 vs step 80000": {
+      "both": 61,
+      "first_only": 39,
+      "second_only": 33,
+      "independence_both": 18.8,
+      "mcnemar_exact_p": 0.555997717760971
+    }
+  }
+}

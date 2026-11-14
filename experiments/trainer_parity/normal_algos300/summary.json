@@ -1,0 +1,599 @@
+{
+  "runs": {
+    "aloha_a": {
+      "trainer": "aloha",
+      "recorded_steps": 2,
+      "kernel_launches": 2710,
+      "distinct_kernels": 141,
+      "conv_launches": 390,
+      "gemm_launches": 520,
+      "other_launches": 1800,
+      "cublas_launches": 376,
+      "cublaslt_launches": 498,
+      "conv_distinct": 32,
+      "gemm_distinct": 29,
+      "other_distinct": 80,
+      "cublas_distinct": 44,
+      "cublaslt_distinct": 58,
+      "tf32_kernels": 86,
+      "switches": {
+        "torch": "2.11.0+cu128",
+        "cuda": "12.8",
+        "cudnn": 91900,
+        "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "cudnn_enabled": true,
+        "cudnn_benchmark": true,
+        "cudnn_benchmark_limit": 10,
+        "cudnn_deterministic": false,
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": true,
+        "float32_matmul_precision": "high",
+        "matmul_allow_fp16_reduced_precision_reduction": true,
+        "matmul_allow_bf16_reduced_precision_reduction": true,
+        "deterministic_algorithms": false,
+        "autocast_enabled_at_backward": false,
+        "num_threads": 24
+      }
+    },
+    "aloha_b": {
+      "trainer": "aloha",
+      "recorded_steps": 2,
+      "kernel_launches": 2718,
+      "distinct_kernels": 139,
+      "conv_launches": 398,
+      "gemm_launches": 520,
+      "other_launches": 1800,
+      "cublas_launches": 376,
+      "cublaslt_launches": 498,
+      "conv_distinct": 30,
+      "gemm_distinct": 29,
+      "other_distinct": 80,
+      "cublas_distinct": 44,
+      "cublaslt_distinct": 58,
+      "tf32_kernels": 78,
+      "switches": {
+        "torch": "2.11.0+cu128",
+        "cuda": "12.8",
+        "cudnn": 91900,
+        "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "cudnn_enabled": true,
+        "cudnn_benchmark": true,
+        "cudnn_benchmark_limit": 10,
+        "cudnn_deterministic": false,
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": true,
+        "float32_matmul_precision": "high",
+        "matmul_allow_fp16_reduced_precision_reduction": true,
+        "matmul_allow_bf16_reduced_precision_reduction": true,
+        "deterministic_algorithms": false,
+        "autocast_enabled_at_backward": false,
+        "num_threads": 24
+      }
+    },
+    "lerobot_a": {
+      "trainer": "lerobot",
+      "recorded_steps": 2,
+      "kernel_launches": 2710,
+      "distinct_kernels": 141,
+      "conv_launches": 396,
+      "gemm_launches": 520,
+      "other_launches": 1794,
+      "cublas_launches": 376,
+      "cublaslt_launches": 498,
+      "conv_distinct": 32,
+      "gemm_distinct": 29,
+      "other_distinct": 80,
+      "cublas_distinct": 44,
+      "cublaslt_distinct": 58,
+      "tf32_kernels": 80,
+      "switches": {
+        "torch": "2.11.0+cu128",
+        "cuda": "12.8",
+        "cudnn": 91900,
+        "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "cudnn_enabled": true,
+        "cudnn_benchmark": true,
+        "cudnn_benchmark_limit": 10,
+        "cudnn_deterministic": false,
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": true,
+        "float32_matmul_precision": "high",
+        "matmul_allow_fp16_reduced_precision_reduction": true,
+        "matmul_allow_bf16_reduced_precision_reduction": true,
+        "deterministic_algorithms": false,
+        "autocast_enabled_at_backward": false,
+        "num_threads": 24
+      }
+    },
+    "lerobot_b": {
+      "trainer": "lerobot",
+      "recorded_steps": 2,
+      "kernel_launches": 2712,
+      "distinct_kernels": 138,
+      "conv_launches": 386,
+      "gemm_launches": 520,
+      "other_launches": 1806,
+      "cublas_launches": 376,
+      "cublaslt_launches": 498,
+      "conv_distinct": 29,
+      "gemm_distinct": 29,
+      "other_distinct": 80,
+      "cublas_distinct": 44,
+      "cublaslt_distinct": 58,
+      "tf32_kernels": 80,
+      "switches": {
+        "torch": "2.11.0+cu128",
+        "cuda": "12.8",
+        "cudnn": 91900,
+        "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+        "cudnn_enabled": true,
+        "cudnn_benchmark": true,
+        "cudnn_benchmark_limit": 10,
+        "cudnn_deterministic": false,
+        "cudnn_allow_tf32": true,
+        "matmul_allow_tf32": true,
+        "float32_matmul_precision": "high",
+        "matmul_allow_fp16_reduced_precision_reduction": true,
+        "matmul_allow_bf16_reduced_precision_reduction": true,
+        "deterministic_algorithms": false,
+        "autocast_enabled_at_backward": false,
+        "num_threads": 24
+      }
+    }
+  },
+  "pairs": {
+    "aloha_a vs aloha_b": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi64EEESC_NSE_INSF_ILi64ELi16EEELi128ESH_Li4EEESK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESY_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi32ELi16EEESC_SQ_SC_S11_fNSO_8RowMajorENS15_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S18_SC_NSO_11ColumnMajorEfS18_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1I_Li1EEELi6EbEENS_8epilogue11threadblock8EpilogueIS8_S1H_Li1ENS1M_22PredicatedTileIteratorINS1M_26OutputTileOptimalThreadMapINS1M_15OutputTileShapeILi64ELi8ELi2ELi1ELi1EEENS1Q_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1L_4warp24FragmentIteratorTensorOpIS17_S1B_fNS_5ArrayIfLi4ELb1EEES18_EENS1W_20TileIteratorTensorOpIS17_S1B_fS18_EENS1M_18SharedLoadIteratorINS1T_18CompactedThreadMapEfLi16EEENS1L_6thread17LinearCombinationIfLi4EffLNS26_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS13_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          0,
+          8
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          2,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          8
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)": [
+          0,
+          8
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)": [
+          4,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params)": [
+          6,
+          12
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4::Params)": [
+          2,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4::Params)": [
+          14,
+          8
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4::Params)": [
+          8,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)": [
+          2,
+          8
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": true,
+      "other_diff": {},
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": true
+    },
+    "aloha_a vs lerobot_a": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi128EEESC_SI_SK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESI_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi64ELi16EEESC_SQ_SC_SZ_fNSO_8RowMajorENS13_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S16_SC_NSO_11ColumnMajorEfS16_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1G_Li1EEELi5EbEENS_8epilogue11threadblock8EpilogueIS8_S1F_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1J_4warp24FragmentIteratorTensorOpIS15_S19_fNS_5ArrayIfLi4ELb1EEES16_EENS1U_20TileIteratorTensorOpIS15_S19_fS16_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEfLi16EEENS1J_6thread17LinearCombinationIfLi4EffLNS24_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS11_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          0,
+          6
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          2,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          2
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)": [
+          0,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)": [
+          2,
+          4
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4::Params)": [
+          2,
+          0
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": false,
+      "other_diff": {
+        "Memcpy HtoD (Pinned -> Device)": [
+          18,
+          20
+        ],
+        "Memset (Device)": [
+          140,
+          128
+        ],
+        "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)": [
+          6,
+          10
+        ]
+      },
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": false
+    },
+    "aloha_a vs lerobot_b": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1": [
+          0,
+          2
+        ],
+        "_5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1": [
+          2,
+          8
+        ],
+        "cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)": [
+          2,
+          8
+        ],
+        "cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)": [
+          2,
+          8
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          0
+        ],
+        "void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)": [
+          6,
+          8
+        ],
+        "void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)": [
+          172,
+          160
+        ],
+        "void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)": [
+          64,
+          58
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4::Params)": [
+          0,
+          2
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)": [
+          4,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)": [
+          2,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4::Params)": [
+          2,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)": [
+          2,
+          8
+        ],
+        "void implicit_convolve_sgemm<float, float, 128, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)": [
+          2,
+          0
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": false,
+      "other_diff": {
+        "Memcpy HtoD (Pinned -> Device)": [
+          18,
+          20
+        ],
+        "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)": [
+          6,
+          10
+        ]
+      },
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": false
+    },
+    "aloha_b vs lerobot_a": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi128EEESC_SI_SK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESI_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi64ELi16EEESC_SQ_SC_SZ_fNSO_8RowMajorENS13_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S16_SC_NSO_11ColumnMajorEfS16_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1G_Li1EEELi5EbEENS_8epilogue11threadblock8EpilogueIS8_S1F_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1J_4warp24FragmentIteratorTensorOpIS15_S19_fNS_5ArrayIfLi4ELb1EEES16_EENS1U_20TileIteratorTensorOpIS15_S19_fS16_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEfLi16EEENS1J_6thread17LinearCombinationIfLi4EffLNS24_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS11_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          0,
+          6
+        ],
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi64EEESC_NSE_INSF_ILi64ELi16EEELi128ESH_Li4EEESK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESY_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi32ELi16EEESC_SQ_SC_S11_fNSO_8RowMajorENS15_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S18_SC_NSO_11ColumnMajorEfS18_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1I_Li1EEELi6EbEENS_8epilogue11threadblock8EpilogueIS8_S1H_Li1ENS1M_22PredicatedTileIteratorINS1M_26OutputTileOptimalThreadMapINS1M_15OutputTileShapeILi64ELi8ELi2ELi1ELi1EEENS1Q_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1L_4warp24FragmentIteratorTensorOpIS17_S1B_fNS_5ArrayIfLi4ELb1EEES18_EENS1W_20TileIteratorTensorOpIS17_S1B_fS18_EENS1M_18SharedLoadIteratorINS1T_18CompactedThreadMapEfLi16EEENS1L_6thread17LinearCombinationIfLi4EffLNS26_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS13_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          8,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          0,
+          6
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          8,
+          2
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)": [
+          8,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)": [
+          6,
+          4
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)": [
+          2,
+          4
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params)": [
+          12,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4::Params)": [
+          8,
+          14
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4::Params)": [
+          0,
+          8
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)": [
+          8,
+          2
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": false,
+      "other_diff": {
+        "Memcpy HtoD (Pinned -> Device)": [
+          18,
+          20
+        ],
+        "Memset (Device)": [
+          140,
+          128
+        ],
+        "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)": [
+          6,
+          10
+        ]
+      },
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": false
+    },
+    "aloha_b vs lerobot_b": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1": [
+          0,
+          2
+        ],
+        "_5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1": [
+          2,
+          8
+        ],
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi64EEESC_NSE_INSF_ILi64ELi16EEELi128ESH_Li4EEESK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESY_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi32ELi16EEESC_SQ_SC_S11_fNSO_8RowMajorENS15_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S18_SC_NSO_11ColumnMajorEfS18_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1I_Li1EEELi6EbEENS_8epilogue11threadblock8EpilogueIS8_S1H_Li1ENS1M_22PredicatedTileIteratorINS1M_26OutputTileOptimalThreadMapINS1M_15OutputTileShapeILi64ELi8ELi2ELi1ELi1EEENS1Q_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1L_4warp24FragmentIteratorTensorOpIS17_S1B_fNS_5ArrayIfLi4ELb1EEES18_EENS1W_20TileIteratorTensorOpIS17_S1B_fS18_EENS1M_18SharedLoadIteratorINS1T_18CompactedThreadMapEfLi16EEENS1L_6thread17LinearCombinationIfLi4EffLNS26_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS13_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          8,
+          0
+        ],
+        "cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)": [
+          2,
+          8
+        ],
+        "cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)": [
+          2,
+          8
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          0,
+          2
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          8,
+          0
+        ],
+        "void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)": [
+          6,
+          8
+        ],
+        "void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)": [
+          172,
+          160
+        ],
+        "void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)": [
+          64,
+          58
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)": [
+          8,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4::Params)": [
+          0,
+          2
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)": [
+          2,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params)": [
+          12,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4::Params)": [
+          8,
+          14
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4::Params)": [
+          0,
+          8
+        ],
+        "void implicit_convolve_sgemm<float, float, 128, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)": [
+          2,
+          0
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": false,
+      "other_diff": {
+        "Memcpy HtoD (Pinned -> Device)": [
+          18,
+          20
+        ],
+        "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul>)": [
+          6,
+          10
+        ]
+      },
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": false
+    },
+    "lerobot_a vs lerobot_b": {
+      "switches_identical": true,
+      "switches_diff": {},
+      "conv_identical": false,
+      "conv_diff": {
+        "_5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1": [
+          0,
+          2
+        ],
+        "_5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1": [
+          2,
+          8
+        ],
+        "_ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorOptimizedINS_11MatrixShapeILi128ELi16EEENS_10tfloat32_tENS_9transform29PitchLinearWarpRakedThreadMapINS_16PitchLinearShapeILi128ELi16EEELi128ENSF_ILi8ELi4EEELi4EEENS_12AlignedArrayISC_Li4ELi16EEEEENSD_11threadblock25RegularTileAccessIteratorISB_SC_NS_6layout40ColumnMajorTensorOpMultiplicandCongruousILi32ELi32EEELi1ESI_Li16EEELNS_4arch14CacheOperation4KindE0ENS4_48Conv2dWgradActivationTileAccessIteratorOptimizedINSA_ILi16ELi128EEESC_SI_SK_EENSN_ISW_SC_NSO_37RowMajorTensorOpMultiplicandCongruousILi32ELi32EEELi0ESI_Li16EEELSU_0ENS6_11threadblock9MmaPolicyINS6_4warp11MmaTensorOpINS7_ILi64ELi64ELi16EEESC_SQ_SC_SZ_fNSO_8RowMajorENS13_17MmaTensorOpPolicyINSS_3MmaINS7_ILi16ELi8ELi8EEELi32ESC_S16_SC_NSO_11ColumnMajorEfS16_NSS_13OpMultiplyAddEEENSA_ILi1ELi1EEEEELi1ELb0EbEENSA_ILi0ELi0EEES1G_Li1EEELi5EbEENS_8epilogue11threadblock8EpilogueIS8_S1F_Li1ENS1K_22PredicatedTileIteratorINS1K_26OutputTileOptimalThreadMapINS1K_15OutputTileShapeILi128ELi8ELi2ELi1ELi1EEENS1O_ILi1ELi8ELi1ELi1ELi8EEELi128ELi4ELi32EEEfLb0ENSO_9NoPermuteELb0EEENS1J_4warp24FragmentIteratorTensorOpIS15_S19_fNS_5ArrayIfLi4ELb1EEES16_EENS1U_20TileIteratorTensorOpIS15_S19_fS16_EENS1K_18SharedLoadIteratorINS1R_18CompactedThreadMapEfLi16EEENS1J_6thread17LinearCombinationIfLi4EffLNS24_9ScaleType4KindE0ELNS_15FloatRoundStyleE2EEENSA_ILi0ELi8EEELi2ELi1EEENS11_30GemmIdentityThreadblockSwizzleILi4EEELNS1_8OperatorE2ENS1_17Conv2dProblemSizeELNS1_9GroupModeE0EEEEEvNT_6ParamsE": [
+          6,
+          0
+        ],
+        "cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)": [
+          2,
+          8
+        ],
+        "cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)": [
+          2,
+          8
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          0,
+          2
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          6,
+          0
+        ],
+        "sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn": [
+          2,
+          0
+        ],
+        "void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)": [
+          6,
+          8
+        ],
+        "void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)": [
+          172,
+          160
+        ],
+        "void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)": [
+          64,
+          58
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4> >(cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float, (cutlass__5x_cudnn::epilogue::thread::ScaleType::Kind)0, (cutlass__5x_cudnn::FloatRoundStyle)2>, cutlass__5x_cudnn::reduction::thread::ReduceAdd<float, float, 4>, 4>::Params)": [
+          6,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4::Params)": [
+          0,
+          2
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)": [
+          4,
+          6
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)": [
+          4,
+          0
+        ],
+        "void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)": [
+          2,
+          8
+        ],
+        "void implicit_convolve_sgemm<float, float, 128, 5, 5, 3, 3, 3, 1, false, false, true>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, float const*, float const*, bool, bool, int, int)": [
+          2,
+          0
+        ]
+      },
+      "gemm_identical": true,
+      "gemm_diff": {},
+      "other_identical": false,
+      "other_diff": {
+        "Memset (Device)": [
+          128,
+          140
+        ]
+      },
+      "cublas_identical": true,
+      "cublas_diff": {},
+      "cublaslt_identical": true,
+      "cublaslt_diff": {},
+      "same_trainer": true
+    }
+  }
+}

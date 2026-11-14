@@ -1,0 +1,13 @@
+rsi-oracle: running solve.sh
+rsi-oracle: solve.sh exited 0 after 2s
+rsi-oracle: submission 1/1
+Full verifier output: /run/rsi-harness/feedback/agent-1.log
+--- rsi-harness submission ---
+round: agent-1
+status: completed
+reward: {"eval_s": 1345.6, "n_episodes": 500.0, "reward": 0.162, "successes": 81.0, "train_s": 16133.7}
+score: 0.162
+exit_code: 0
+timed_out: false
+duration_seconds: 17495.405402025
+remaining: 0

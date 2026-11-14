@@ -1,0 +1,40 @@
+{
+  "recorded_on": "2026-11-02",
+  "lerobot": {
+    "repo": "https://github.com/huggingface/lerobot",
+    "tag": "v0.6.1",
+    "commit": "7e241bd630a3719a56157a497ce5d08f244784f1",
+    "released": "2026-08-03",
+    "requires_python": ">=3.12",
+    "install_spec": "lerobot[aloha] @ git+https://github.com/huggingface/lerobot@7e241bd630a3719a56157a497ce5d08f244784f1"
+  },
+  "gym_aloha": {
+    "repo": "https://github.com/huggingface/gym-aloha",
+    "version": "0.1.5",
+    "commit": "6203fac50be47065056b69094e44308972202258",
+    "pypi_wheel_sha256": "1794dd9a1146268a9b56f4a4931bcba69ca27714c2ac9ac146e471801bf0c7b3",
+    "pypi_sdist_sha256": "96648c0c49992476e90dec64cf19a78b7a468c0c25902d4e8c58b5b11d3a110d",
+    "constraints": {"mujoco": ">=3.0.0,<3.9.0", "dm-control": ">=1.0.15,<1.1.0", "gymnasium": ">=0.29.1,<2.0.0"}
+  },
+  "dataset": {
+    "repo_id": "lerobot/aloha_sim_insertion_human",
+    "revision": "cc571a3c661df81b566dbfde3d5c1e85fcdf7884",
+    "revision_alias": ["main", "v3.0"],
+    "codebase_version": "v3.0",
+    "total_bytes_listed": 91348537,
+    "license": "MIT"
+  },
+  "dataset_optional_second_pool": {
+    "repo_id": "lerobot/aloha_sim_insertion_scripted",
+    "revision": "8ab660912970111cbb26738b11458e6fc4a4aed1",
+    "downloaded": false
+  },
+  "reference_checkpoint": {
+    "repo_id": "lerobot/act_aloha_sim_insertion_human",
+    "revision": "33259aa86eb45fdf85350280044a33d9d50e40c3",
+    "model_safetensors_bytes": 206766560,
+    "note": "Trained at lerobot commit 3c0a209 (2025-01-31). Its eval_info.json is the transfer-cube evaluation file (pc_success 83.0), so the reported 20.6% has no per-episode evidence in the repo. Treated as reported, not reproduced."
+  },
+  "python_env": {"manager": "uv 0.13.1", "python": "3.12 (uv-managed)", "freeze": "pins/requirements.freeze.txt (written after install)"},
+  "hardware_dev_machine": {"gpu": "NVIDIA GeForce RTX 4070 Laptop GPU, 8188 MiB", "driver": "595.99.02", "cuda_driver": "13.2", "cpu": "i9-13900HX, 32 threads", "ram_gb": 62, "os": "Ubuntu 24.04.5, kernel 6.8.0-147-generic"}
+}

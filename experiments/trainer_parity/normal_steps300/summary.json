@@ -1,0 +1,93 @@
+{
+  "steps": 300,
+  "pairs": {
+    "aloha_a_vs_aloha_b": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.0007998479995876551,
+      "rms_diff": 3.070676572919058e-05,
+      "rel_fro": 0.000624942620654194
+    },
+    "aloha_a_vs_lerobot_a": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.000996879767626524,
+      "rms_diff": 3.485312960330633e-05,
+      "rel_fro": 0.0007093292189865765
+    },
+    "aloha_a_vs_lerobot_b": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.0008336957544088364,
+      "rms_diff": 2.7203793098639395e-05,
+      "rel_fro": 0.0005536502899957585
+    },
+    "aloha_b_vs_lerobot_a": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.0011630281805992126,
+      "rms_diff": 3.44302060400707e-05,
+      "rel_fro": 0.0007007219018076926
+    },
+    "aloha_b_vs_lerobot_b": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.0008568949997425079,
+      "rms_diff": 3.0317563396018004e-05,
+      "rel_fro": 0.0006170215959877944
+    },
+    "lerobot_a_vs_lerobot_b": {
+      "steps": 300,
+      "lerobot_save_freq": 300,
+      "tensors": 234,
+      "bit_identical": 81,
+      "differing": 153,
+      "worst_abs_diff": 0.0009483993053436279,
+      "rms_diff": 3.3587104066557816e-05,
+      "rel_fro": 0.0006835633102975564
+    }
+  },
+  "within_trainer": [
+    "aloha_a_vs_aloha_b",
+    "lerobot_a_vs_lerobot_b"
+  ],
+  "cross_trainer": [
+    "aloha_a_vs_lerobot_a",
+    "aloha_a_vs_lerobot_b",
+    "aloha_b_vs_lerobot_a",
+    "aloha_b_vs_lerobot_b"
+  ],
+  "max_within": {
+    "worst_abs_diff": 0.0009483993053436279,
+    "rms_diff": 3.3587104066557816e-05,
+    "rel_fro": 0.0006835633102975564,
+    "differing": 153
+  },
+  "min_cross": {
+    "worst_abs_diff": 0.0008336957544088364,
+    "rms_diff": 2.7203793098639395e-05,
+    "rel_fro": 0.0005536502899957585,
+    "differing": 153
+  },
+  "max_cross": {
+    "worst_abs_diff": 0.0011630281805992126,
+    "rms_diff": 3.485312960330633e-05,
+    "rel_fro": 0.0007093292189865765,
+    "differing": 153
+  }
+}

@@ -1,0 +1,39 @@
+schema_version = "1.4"
+
+[task]
+name = "rsi/aloha-act-demo-curriculum"
+version = "0.1.0"
+description = "Design demonstration-sampling curricula (episode selection, chunk-anchor weighting, training-stage schedules) for fixed-budget ACT imitation learning on ALOHA insertion."
+
+[metadata]
+author_name = "Lixin Tu"
+author_email = "ltu35@gatech.edu"
+difficulty_explanation = "Each scoreable candidate requires a full 100,000-step ACT training run from scratch and a 500-episode closed-loop MuJoCo evaluation; useful progress needs hypotheses about the temporal structure of teleoperated demonstrations and how action chunking interacts with data selection."
+verification_explanation = "A single-GPU Judge verifies the fixed assets, validates a declarative curriculum policy (JSON plus an optional per-frame score table), recompiles the 800,000-exposure training schedule itself, retrains ACT with the fixed recipe and seed, and measures success on 500 hidden-seed gym-aloha insertion episodes. Agent code and checkpoints are never scoring inputs."
+category = "ML"
+subcategory = "Training"
+tags = ["autoresearch", "robotics", "imitation-learning", "curriculum", "data-selection", "lerobot", "act", "aloha"]
+expert_time_estimate_hours = 8.0
+relevant_experience = "Robot imitation learning, teleoperation data collection (ALOHA/SO-101), Isaac Sim and MuJoCo evaluation."
+
+[metadata.rsi_harness.verifier]
+gpus = 1
+
+[environment]
+os = "linux"
+cpus = 16
+memory_mb = 65536
+storage_mb = 61440
+build_timeout_sec = 7200
+workdir = "/workspace"
+gpus = 1
+network_mode = "no-network"
+
+[agent]
+timeout_sec = 86400
+network_mode = "no-network"
+
+[verifier]
+timeout_sec = 28800
+network_mode = "no-network"
+environment_mode = "shared"

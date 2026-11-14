@@ -1,0 +1,32 @@
+{
+  "official_budget": false,
+  "steps": 300,
+  "batch_size": 8,
+  "exposures": 2400,
+  "seed": 1000,
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "cudnn_deterministic": false,
+  "protocol_version": 3,
+  "image_normalization": "imagenet",
+  "train_s": 53.83383278202382,
+  "steps_per_s": 5.572703716168913,
+  "peak_gpu_mem_gb": 3.45042944,
+  "final_loss_mean_last_1000": 5.987432965437571,
+  "final_l1_mean_last_1000": 0.4950278361638387,
+  "final_kl_mean_last_1000": 0.5492405125995478,
+  "versions": {
+    "python": "3.12.15",
+    "torch": "2.11.0+cu128",
+    "lerobot": "0.6.1",
+    "gym-aloha": "0.1.5",
+    "mujoco": "3.8.1",
+    "dm-control": "1.0.41",
+    "torchvision": "0.26.0+cu128",
+    "torchcodec": "0.11.1",
+    "av": "15.1.0",
+    "numpy": "2.2.6",
+    "gymnasium": "1.4.0"
+  },
+  "checkpoint": "experiments/trainer_parity/normal_algos300/aloha_a/pretrained_model"
+}

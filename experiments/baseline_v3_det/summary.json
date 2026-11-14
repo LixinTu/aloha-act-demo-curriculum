@@ -1,0 +1,110 @@
+{
+  "candidate": "uniform (default_policy.json)",
+  "baseline_dir": "experiments/baseline_v3_det",
+  "protocol": {
+    "protocol_version": 3,
+    "cudnn_deterministic": true
+  },
+  "seeds": [
+    {
+      "seed": 1000,
+      "protocol_seed": true,
+      "steps": 100000,
+      "exposures": 800000,
+      "hidden_successes": 80,
+      "hidden_episodes": 500,
+      "hidden_rate": 0.16,
+      "hidden_wilson95": [
+        0.13047637235016407,
+        0.19470817916369149
+      ],
+      "hidden_max_reward_histogram": {
+        "0": 96,
+        "1": 109,
+        "2": 19,
+        "3": 196,
+        "4": 80
+      },
+      "proxy_successes": 14,
+      "proxy_episodes": 100,
+      "train_s": 16189.616178679018,
+      "steps_per_s": 6.176798689748767,
+      "hidden_eval_s": 1742.8695801349822,
+      "final_l1_last_1000": 0.04280017132498324
+    },
+    {
+      "seed": 1001,
+      "protocol_seed": false,
+      "steps": 100000,
+      "exposures": 800000,
+      "hidden_successes": 64,
+      "hidden_episodes": 500,
+      "hidden_rate": 0.128,
+      "hidden_wilson95": [
+        0.10152682399523652,
+        0.16014568530815834
+      ],
+      "hidden_max_reward_histogram": {
+        "0": 126,
+        "1": 118,
+        "2": 33,
+        "3": 159,
+        "4": 64
+      },
+      "proxy_successes": 16,
+      "proxy_episodes": 100,
+      "train_s": 16032.15599469401,
+      "steps_per_s": 6.237464258275426,
+      "hidden_eval_s": 1439.5091795509798,
+      "final_l1_last_1000": 0.04345079736784101
+    },
+    {
+      "seed": 1002,
+      "protocol_seed": false,
+      "steps": 100000,
+      "exposures": 800000,
+      "hidden_successes": 57,
+      "hidden_episodes": 500,
+      "hidden_rate": 0.114,
+      "hidden_wilson95": [
+        0.08903690099400285,
+        0.1448490898423155
+      ],
+      "hidden_max_reward_histogram": {
+        "0": 97,
+        "1": 113,
+        "2": 29,
+        "3": 204,
+        "4": 57
+      },
+      "proxy_successes": 16,
+      "proxy_episodes": 100,
+      "train_s": 17555.896315858,
+      "steps_per_s": 5.696091968239261,
+      "hidden_eval_s": 2087.26109119202,
+      "final_l1_last_1000": 0.04376299314573407
+    }
+  ],
+  "mean_rate": 0.134,
+  "sd_rate_across_seeds": 0.02357965224510319,
+  "pooled_successes": 201,
+  "pooled_episodes": 1500,
+  "pooled_rate": 0.134,
+  "pooled_wilson95": [
+    0.11769251934656333,
+    0.1521773239406095
+  ],
+  "binomial_se_single_500": 0.015234434679370286,
+  "homogeneity_chi2": 4.791286063906794,
+  "homogeneity_df": 2,
+  "homogeneity_p": 0.09111407082223393,
+  "training_seed_variance_estimate": 0.000323912,
+  "single_run_sd_estimate": 0.02357965224510319,
+  "two_sided_95_threshold_vs_pooled_baseline": 0.04932582085039254,
+  "min_successes_out_of_500_to_beat_baseline": 92,
+  "reported_not_reproduced": {
+    "source": "lerobot/act_aloha_sim_insertion_human model card",
+    "success_rate": 0.206,
+    "note": "different lerobot version and protocol; the repo's eval_info.json is the transfer-cube file"
+  }
+}

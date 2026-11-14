@@ -1,0 +1,7 @@
+# started 2026-11-07T17:19:48-08:00 : scripts/probes_after_oracle.sh
+# probe drop_idle starting at 2026-11-07T22:19:48-08:00
+# probe drop_idle exit=0 at 2026-11-08T03:15:09-08:00
+# probe insertion_focus starting at 2026-11-08T03:15:09-08:00
+# probe insertion_focus exit=0 at 2026-11-08T08:10:35-08:00
+all probes done
+# finished 2026-11-08T08:10:35-08:00 exit=0

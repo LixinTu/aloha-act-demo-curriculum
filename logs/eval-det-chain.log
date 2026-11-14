@@ -1,0 +1,9 @@
+# started 2026-11-12T15:43:50-08:00 : scripts/eval_determinism_chain.sh
+# det-proxy-run1 queued at 2026-11-12T15:43:50-08:00 (try 1): env PROTOCOL=experiments/eval_determinism/protocol_eval_det.json scripts/eval_blocks.sh experiments/baseline_v3_det/seed1002 experiments/eval_determinism/proxy_run1 proxy
+# det-proxy-run1 exit=0 at 2026-11-12T16:06:38-08:00
+# det-proxy-run2 queued at 2026-11-12T16:06:38-08:00 (try 1): env PROTOCOL=experiments/eval_determinism/protocol_eval_det.json scripts/eval_blocks.sh experiments/baseline_v3_det/seed1002 experiments/eval_determinism/proxy_run2 proxy
+# det-proxy-run2 exit=0 at 2026-11-12T16:13:23-08:00
+100 episodes: successes 16 vs 16; different success 0 (only A 0, only B 0, McNemar p = 1); different max_reward 1; different sum_reward 24; DIFFERENT
+two deterministic evaluations of one checkpoint differ on the proxy block: protocol unchanged; chain stopped
+scripts/eval_determinism_chain.sh failed with exit status 8.
+# finished 2026-11-12T16:13:24-08:00 exit=8

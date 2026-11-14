@@ -1,0 +1,628 @@
+{
+  "checkpoint": "experiments/baseline_v3/seed1001/train/pretrained_model",
+  "gym_id": "gym_aloha/AlohaInsertion-v0",
+  "episode_length": 400,
+  "n_episodes": 100,
+  "n_envs": 10,
+  "start_seed": 100000,
+  "successes": 11,
+  "success_rate": 0.11,
+  "success_rate_se": 0.03128897569432403,
+  "avg_max_reward": 1.98,
+  "avg_sum_reward": 185.0,
+  "max_reward_histogram": {
+    "0": 20,
+    "1": 21,
+    "2": 11,
+    "3": 37,
+    "4": 11
+  },
+  "eval_s": 236.38187460100016,
+  "eval_ep_s": 2.3638187460100015,
+  "device": "cuda",
+  "mujoco_gl": "egl",
+  "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2",
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "per_episode": [
+    {
+      "seed": 100000,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 10.0
+    },
+    {
+      "seed": 100001,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100002,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 49.0
+    },
+    {
+      "seed": 100003,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 288.0
+    },
+    {
+      "seed": 100004,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 399.0
+    },
+    {
+      "seed": 100005,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 269.0
+    },
+    {
+      "seed": 100006,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100007,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 382.0
+    },
+    {
+      "seed": 100008,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100009,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 64.0
+    },
+    {
+      "seed": 100010,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 338.0
+    },
+    {
+      "seed": 100011,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100012,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 153.0
+    },
+    {
+      "seed": 100013,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 371.0
+    },
+    {
+      "seed": 100014,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 185.0
+    },
+    {
+      "seed": 100015,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100016,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 239.0
+    },
+    {
+      "seed": 100017,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 103.0
+    },
+    {
+      "seed": 100018,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 525.0
+    },
+    {
+      "seed": 100019,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 302.0
+    },
+    {
+      "seed": 100020,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 336.0
+    },
+    {
+      "seed": 100021,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100022,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 325.0
+    },
+    {
+      "seed": 100023,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100024,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 139.0
+    },
+    {
+      "seed": 100025,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 51.0
+    },
+    {
+      "seed": 100026,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 302.0
+    },
+    {
+      "seed": 100027,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 26.0
+    },
+    {
+      "seed": 100028,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 38.0
+    },
+    {
+      "seed": 100029,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 263.0
+    },
+    {
+      "seed": 100030,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 110.0
+    },
+    {
+      "seed": 100031,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 92.0
+    },
+    {
+      "seed": 100032,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 548.0
+    },
+    {
+      "seed": 100033,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 506.0
+    },
+    {
+      "seed": 100034,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 198.0
+    },
+    {
+      "seed": 100035,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 288.0
+    },
+    {
+      "seed": 100036,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100037,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 363.0
+    },
+    {
+      "seed": 100038,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 63.0
+    },
+    {
+      "seed": 100039,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 335.0
+    },
+    {
+      "seed": 100040,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100041,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100042,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 542.0
+    },
+    {
+      "seed": 100043,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 397.0
+    },
+    {
+      "seed": 100044,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 468.0
+    },
+    {
+      "seed": 100045,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 75.0
+    },
+    {
+      "seed": 100046,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 371.0
+    },
+    {
+      "seed": 100047,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 237.0
+    },
+    {
+      "seed": 100048,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 526.0
+    },
+    {
+      "seed": 100049,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100050,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100051,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 333.0
+    },
+    {
+      "seed": 100052,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 367.0
+    },
+    {
+      "seed": 100053,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 279.0
+    },
+    {
+      "seed": 100054,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 275.0
+    },
+    {
+      "seed": 100055,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 63.0
+    },
+    {
+      "seed": 100056,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 88.0
+    },
+    {
+      "seed": 100057,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 387.0
+    },
+    {
+      "seed": 100058,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 70.0
+    },
+    {
+      "seed": 100059,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 358.0
+    },
+    {
+      "seed": 100060,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 55.0
+    },
+    {
+      "seed": 100061,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 79.0
+    },
+    {
+      "seed": 100062,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 391.0
+    },
+    {
+      "seed": 100063,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 3.0
+    },
+    {
+      "seed": 100064,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 354.0
+    },
+    {
+      "seed": 100065,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 72.0
+    },
+    {
+      "seed": 100066,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100067,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 449.0
+    },
+    {
+      "seed": 100068,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 397.0
+    },
+    {
+      "seed": 100069,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 48.0
+    },
+    {
+      "seed": 100070,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 330.0
+    },
+    {
+      "seed": 100071,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100072,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 304.0
+    },
+    {
+      "seed": 100073,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 230.0
+    },
+    {
+      "seed": 100074,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 20.0
+    },
+    {
+      "seed": 100075,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 60.0
+    },
+    {
+      "seed": 100076,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 62.0
+    },
+    {
+      "seed": 100077,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100078,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 22.0
+    },
+    {
+      "seed": 100079,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 303.0
+    },
+    {
+      "seed": 100080,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 450.0
+    },
+    {
+      "seed": 100081,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100082,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 18.0
+    },
+    {
+      "seed": 100083,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 302.0
+    },
+    {
+      "seed": 100084,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 351.0
+    },
+    {
+      "seed": 100085,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100086,
+      "success": false,
+      "max_reward": 2.0,
+      "sum_reward": 288.0
+    },
+    {
+      "seed": 100087,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 373.0
+    },
+    {
+      "seed": 100088,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 300.0
+    },
+    {
+      "seed": 100089,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 20.0
+    },
+    {
+      "seed": 100090,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 96.0
+    },
+    {
+      "seed": 100091,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100092,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 9.0
+    },
+    {
+      "seed": 100093,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 57.0
+    },
+    {
+      "seed": 100094,
+      "success": false,
+      "max_reward": 3.0,
+      "sum_reward": 234.0
+    },
+    {
+      "seed": 100095,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 4.0
+    },
+    {
+      "seed": 100096,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100097,
+      "success": false,
+      "max_reward": 0.0,
+      "sum_reward": 0.0
+    },
+    {
+      "seed": 100098,
+      "success": false,
+      "max_reward": 1.0,
+      "sum_reward": 54.0
+    },
+    {
+      "seed": 100099,
+      "success": true,
+      "max_reward": 4.0,
+      "sum_reward": 269.0
+    }
+  ]
+}

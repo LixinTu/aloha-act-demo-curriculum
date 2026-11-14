@@ -1,0 +1,46 @@
+# started 2026-11-08T22:11:12-08:00 : bash -c scripts/check_trainer_parity.sh 3125 && scripts/run_baseline.sh 1000 experiments/baseline_v3
+Using Python 3.12.15 environment at: .venv-control
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-08 22:11:16,809 INFO root: Cuda backend detected, using cuda.
+2026-11-08 22:11:16,809 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-08 22:11:16,809 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-08 22:11:16,914 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-08 22:11:48,410 INFO aloha_curriculum.train: step 200/3125 loss 7.3576 l1 0.5396 kl 0.6818 gn 157.44 data 0.001s step 0.155s elapsed 31s
+2026-11-08 22:12:19,400 INFO aloha_curriculum.train: step 400/3125 loss 3.0602 l1 0.3958 kl 0.2664 gn 86.57 data 0.000s step 0.155s elapsed 62s
+2026-11-08 22:12:50,664 INFO aloha_curriculum.train: step 600/3125 loss 2.5503 l1 0.3417 kl 0.2209 gn 76.70 data 0.000s step 0.156s elapsed 93s
+2026-11-08 22:13:22,084 INFO aloha_curriculum.train: step 800/3125 loss 2.2561 l1 0.3038 kl 0.1952 gn 71.15 data 0.000s step 0.157s elapsed 125s
+2026-11-08 22:13:53,552 INFO aloha_curriculum.train: step 1000/3125 loss 2.0241 l1 0.2847 kl 0.1739 gn 65.83 data 0.000s step 0.157s elapsed 156s
+2026-11-08 22:14:25,114 INFO aloha_curriculum.train: step 1200/3125 loss 1.8268 l1 0.2694 kl 0.1557 gn 62.41 data 0.000s step 0.158s elapsed 188s
+2026-11-08 22:14:56,731 INFO aloha_curriculum.train: step 1400/3125 loss 1.6540 l1 0.2562 kl 0.1398 gn 58.92 data 0.000s step 0.158s elapsed 219s
+2026-11-08 22:15:28,367 INFO aloha_curriculum.train: step 1600/3125 loss 1.5341 l1 0.2449 kl 0.1289 gn 56.71 data 0.000s step 0.158s elapsed 251s
+2026-11-08 22:16:00,000 INFO aloha_curriculum.train: step 1800/3125 loss 1.4027 l1 0.2345 kl 0.1168 gn 53.75 data 0.000s step 0.158s elapsed 283s
+2026-11-08 22:16:31,666 INFO aloha_curriculum.train: step 2000/3125 loss 1.2713 l1 0.2261 kl 0.1045 gn 50.94 data 0.000s step 0.158s elapsed 314s
+2026-11-08 22:17:03,340 INFO aloha_curriculum.train: step 2200/3125 loss 1.1692 l1 0.2183 kl 0.0951 gn 48.61 data 0.000s step 0.158s elapsed 346s
+2026-11-08 22:17:34,961 INFO aloha_curriculum.train: step 2400/3125 loss 1.0568 l1 0.2152 kl 0.0842 gn 46.07 data 0.000s step 0.158s elapsed 378s
+2026-11-08 22:18:06,615 INFO aloha_curriculum.train: step 2600/3125 loss 0.9672 l1 0.2068 kl 0.0760 gn 43.95 data 0.000s step 0.158s elapsed 409s
+2026-11-08 22:18:38,294 INFO aloha_curriculum.train: step 2800/3125 loss 0.8633 l1 0.1970 kl 0.0666 gn 40.68 data 0.000s step 0.158s elapsed 441s
+2026-11-08 22:19:09,994 INFO aloha_curriculum.train: step 3000/3125 loss 0.8013 l1 0.1968 kl 0.0604 gn 39.50 data 0.000s step 0.158s elapsed 473s
+2026-11-08 22:19:29,835 INFO aloha_curriculum.train: step 3125/3125 loss 0.7340 l1 0.1913 kl 0.0543 gn 37.60 data 0.000s step 0.159s elapsed 492s
+234 tensors, 234 bit-identical, 0 differ, worst abs diff 0.000e+00
+2026-11-08 22:28:00,798 INFO root: Cuda backend detected, using cuda.
+2026-11-08 22:28:00,798 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-08 22:28:00,798 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-08 22:28:00,923 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-08 22:28:38,465 INFO aloha_curriculum.train: step 200/100000 loss 7.3244 l1 0.5254 kl 0.6799 gn 157.39 data 0.001s step 0.185s elapsed 37s
+2026-11-08 22:29:10,119 INFO aloha_curriculum.train: step 400/100000 loss 3.0899 l1 0.4044 kl 0.2686 gn 87.99 data 0.000s step 0.158s elapsed 69s
+2026-11-08 22:29:41,784 INFO aloha_curriculum.train: step 600/100000 loss 2.5731 l1 0.3469 kl 0.2226 gn 76.98 data 0.000s step 0.158s elapsed 100s
+2026-11-08 22:30:13,503 INFO aloha_curriculum.train: step 800/100000 loss 2.2352 l1 0.3081 kl 0.1927 gn 70.05 data 0.000s step 0.158s elapsed 132s
+2026-11-08 22:30:45,214 INFO aloha_curriculum.train: step 1000/100000 loss 2.0234 l1 0.2868 kl 0.1737 gn 66.23 data 0.000s step 0.158s elapsed 164s
+2026-11-08 22:31:16,938 INFO aloha_curriculum.train: step 1200/100000 loss 1.8269 l1 0.2674 kl 0.1559 gn 61.87 data 0.000s step 0.158s elapsed 196s
+2026-11-08 22:31:48,661 INFO aloha_curriculum.train: step 1400/100000 loss 1.6580 l1 0.2568 kl 0.1401 gn 58.71 data 0.000s step 0.158s elapsed 227s
+2026-11-08 22:32:20,390 INFO aloha_curriculum.train: step 1600/100000 loss 1.5410 l1 0.2443 kl 0.1297 gn 57.09 data 0.000s step 0.158s elapsed 259s
+2026-11-08 22:32:52,135 INFO aloha_curriculum.train: step 1800/100000 loss 1.4005 l1 0.2311 kl 0.1169 gn 53.65 data 0.000s step 0.159s elapsed 291s
+2026-11-08 22:33:23,924 INFO aloha_curriculum.train: step 2000/100000 loss 1.2850 l1 0.2244 kl 0.1061 gn 51.07 data 0.000s step 0.159s elapsed 323s
+2026-11-08 22:33:55,740 INFO aloha_curriculum.train: step 2200/100000 loss 1.1843 l1 0.2247 kl 0.0960 gn 48.94 data 0.000s step 0.159s elapsed 354s
+2026-11-08 22:34:27,526 INFO aloha_curriculum.train: step 2400/100000 loss 1.0703 l1 0.2176 kl 0.0853 gn 46.28 data 0.000s step 0.159s elapsed 386s
+2026-11-08 22:34:59,338 INFO aloha_curriculum.train: step 2600/100000 loss 0.9825 l1 0.2139 kl 0.0769 gn 43.88 data 0.000s step 0.159s elapsed 418s
+2026-11-08 22:35:31,120 INFO aloha_curriculum.train: step 2800/100000 loss 0.8813 l1 0.2001 kl 0.0681 gn 41.18 data 0.000s step 0.159s elapsed 450s
+2026-11-08 22:36:02,886 INFO aloha_curriculum.train: step 3000/100000 loss 0.8150 l1 0.2013 kl 0.0614 gn 39.22 data 0.000s step 0.159s elapsed 481s
+已终止
+bash failed with exit status 143.
+# finished 2026-11-08T22:36:07-08:00 exit=143

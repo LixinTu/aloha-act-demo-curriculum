@@ -1,0 +1,86 @@
+{
+  "protocol_version": 3,
+  "dataset": {
+    "repo_id": "lerobot/aloha_sim_insertion_human",
+    "revision": "cc571a3c661df81b566dbfde3d5c1e85fcdf7884",
+    "codebase_version": "v3.0",
+    "fps": 50,
+    "total_episodes": 50,
+    "total_frames": 25000,
+    "episode_length": 500,
+    "use_imagenet_stats": true
+  },
+  "training": {
+    "steps": 100000,
+    "batch_size": 8,
+    "seed": 1000,
+    "block_steps": 50,
+    "schedule_seed": 20261102,
+    "schedule_draw": "balanced",
+    "num_workers": 4,
+    "grad_clip_norm": 10.0,
+    "cudnn_deterministic": true,
+    "use_amp": false,
+    "log_every": 200
+  },
+  "policy": {
+    "type": "act",
+    "n_obs_steps": 1,
+    "chunk_size": 100,
+    "n_action_steps": 100,
+    "normalization_mapping": {
+      "VISUAL": "MEAN_STD",
+      "STATE": "MEAN_STD",
+      "ACTION": "MEAN_STD"
+    },
+    "vision_backbone": "resnet18",
+    "pretrained_backbone_weights": "ResNet18_Weights.IMAGENET1K_V1",
+    "replace_final_stride_with_dilation": false,
+    "pre_norm": false,
+    "dim_model": 512,
+    "n_heads": 8,
+    "dim_feedforward": 3200,
+    "feedforward_activation": "relu",
+    "n_encoder_layers": 4,
+    "n_decoder_layers": 1,
+    "use_vae": true,
+    "latent_dim": 32,
+    "n_vae_encoder_layers": 4,
+    "temporal_ensemble_coeff": null,
+    "dropout": 0.1,
+    "kl_weight": 10.0,
+    "optimizer_lr": 1e-05,
+    "optimizer_weight_decay": 0.0001,
+    "optimizer_lr_backbone": 1e-05
+  },
+  "optimizer": {
+    "type": "adamw",
+    "lr": 1e-05,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001
+  },
+  "evaluation": {
+    "gym_id": "gym_aloha/AlohaInsertion-v0",
+    "obs_type": "pixels_agent_pos",
+    "episode_length": 400,
+    "n_envs": 10,
+    "proxy": {
+      "start_seed": 100000,
+      "n_episodes": 100
+    }
+  },
+  "limits": {
+    "policy_bytes": 65536,
+    "scores_bytes": 8388608,
+    "max_score_columns": 16
+  },
+  "backbone_weights": {
+    "file": "resnet18-f37072fd.pth",
+    "url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+    "sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec"
+  }
+}

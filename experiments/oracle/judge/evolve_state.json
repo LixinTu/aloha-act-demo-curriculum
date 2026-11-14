@@ -1,0 +1,20 @@
+{
+  "best_round": "agent-1",
+  "best_score": 0.138,
+  "submissions": [
+    {
+      "at": 1794118764.381165,
+      "kind": "agent",
+      "rewards": {
+        "eval_s": 1376.9,
+        "n_episodes": 500.0,
+        "reward": 0.138,
+        "successes": 69.0,
+        "train_s": 16042.6
+      },
+      "round": "agent-1",
+      "score": 0.138,
+      "status": "completed"
+    }
+  ]
+}

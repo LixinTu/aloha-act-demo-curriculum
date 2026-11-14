@@ -1,0 +1,329 @@
+{
+  "aloha_train_dir": "experiments/order_replay/seed1000/train",
+  "lerobot_log": "logs/control-lerobot-train-seed1000.log",
+  "steps": 100000,
+  "log_freq": 200,
+  "windows": 500,
+  "lerobot_lr_values": [
+    1e-05
+  ],
+  "log_rounding": 0.0005,
+  "max_abs_diff": {
+    "loss": 0.001816697329282746,
+    "l1": 0.0016546276472508836,
+    "kld": 0.0005467133522033697,
+    "grdn": 0.2698172874450684
+  },
+  "blocks": [
+    {
+      "steps": [
+        1,
+        10000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.8103958873018624,
+        "lerobot_train_mean": 0.8100399999999999,
+        "mean_diff": 0.000355887301862271,
+        "relative_diff": 0.00043934534326980283,
+        "share_aloha_train_higher": 0.76,
+        "max_abs_diff": 0.001816697329282746
+      },
+      "l1": {
+        "aloha_train_mean": 0.18241717387214304,
+        "lerobot_train_mean": 0.18230000000000002,
+        "mean_diff": 0.00011717387214302655,
+        "relative_diff": 0.0006427530013331132,
+        "share_aloha_train_higher": 0.58,
+        "max_abs_diff": 0.0011341587156057376
+      },
+      "grdn": {
+        "aloha_train_mean": 34.26118924531937,
+        "lerobot_train_mean": 34.2519,
+        "mean_diff": 0.009289245319366798,
+        "relative_diff": 0.0002712037965592215,
+        "share_aloha_train_higher": 0.48,
+        "max_abs_diff": 0.1975121917724607
+      }
+    },
+    {
+      "steps": [
+        10001,
+        20000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.11916819707527758,
+        "lerobot_train_mean": 0.11882,
+        "mean_diff": 0.00034819707527756707,
+        "relative_diff": 0.0029304584689241464,
+        "share_aloha_train_higher": 0.72,
+        "max_abs_diff": 0.0014893735721707435
+      },
+      "l1": {
+        "aloha_train_mean": 0.09616159214153885,
+        "lerobot_train_mean": 0.09595999999999999,
+        "mean_diff": 0.0002015921415388583,
+        "relative_diff": 0.0021007934716429587,
+        "share_aloha_train_higher": 0.64,
+        "max_abs_diff": 0.0014259317070245692
+      },
+      "grdn": {
+        "aloha_train_mean": 10.751179950904845,
+        "lerobot_train_mean": 10.699119999999999,
+        "mean_diff": 0.052059950904845956,
+        "relative_diff": 0.004865816151687799,
+        "share_aloha_train_higher": 0.74,
+        "max_abs_diff": 0.25084821939468327
+      }
+    },
+    {
+      "steps": [
+        20001,
+        30000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.08375605371072888,
+        "lerobot_train_mean": 0.08353999999999999,
+        "mean_diff": 0.00021605371072888402,
+        "relative_diff": 0.0025862306766684705,
+        "share_aloha_train_higher": 0.7,
+        "max_abs_diff": 0.0015193104818463365
+      },
+      "l1": {
+        "aloha_train_mean": 0.07676627271547913,
+        "lerobot_train_mean": 0.07654000000000001,
+        "mean_diff": 0.00022627271547913692,
+        "relative_diff": 0.0029562675134457393,
+        "share_aloha_train_higher": 0.64,
+        "max_abs_diff": 0.0012967006862163594
+      },
+      "grdn": {
+        "aloha_train_mean": 7.334439951610565,
+        "lerobot_train_mean": 7.30924,
+        "mean_diff": 0.025199951610565156,
+        "relative_diff": 0.0034476842476871953,
+        "share_aloha_train_higher": 0.6,
+        "max_abs_diff": 0.25112593460082877
+      }
+    },
+    {
+      "steps": [
+        30001,
+        40000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.07013401961550116,
+        "lerobot_train_mean": 0.06994,
+        "mean_diff": 0.00019401961550116365,
+        "relative_diff": 0.0027740865813720853,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.0013635107278823777
+      },
+      "l1": {
+        "aloha_train_mean": 0.06667508220635353,
+        "lerobot_train_mean": 0.06654000000000002,
+        "mean_diff": 0.00013508220635354256,
+        "relative_diff": 0.002030090266810077,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.0016546276472508836
+      },
+      "grdn": {
+        "aloha_train_mean": 5.894085704421998,
+        "lerobot_train_mean": 5.86716,
+        "mean_diff": 0.026925704421997078,
+        "relative_diff": 0.004589222796377988,
+        "share_aloha_train_higher": 0.6,
+        "max_abs_diff": 0.24411212539672889
+      }
+    },
+    {
+      "steps": [
+        40001,
+        50000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.0622815724376589,
+        "lerobot_train_mean": 0.06218,
+        "mean_diff": 0.00010157243765890639,
+        "relative_diff": 0.0016335226384513732,
+        "share_aloha_train_higher": 0.58,
+        "max_abs_diff": 0.0010919547602534357
+      },
+      "l1": {
+        "aloha_train_mean": 0.06003793254029006,
+        "lerobot_train_mean": 0.059980000000000006,
+        "mean_diff": 5.7932540290058095e-05,
+        "relative_diff": 0.0009658642929319455,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.001449975006282328
+      },
+      "grdn": {
+        "aloha_train_mean": 5.061386453175545,
+        "lerobot_train_mean": 5.05012,
+        "mean_diff": 0.011266453175544644,
+        "relative_diff": 0.002230927814694432,
+        "share_aloha_train_higher": 0.58,
+        "max_abs_diff": 0.2100592112541202
+      }
+    },
+    {
+      "steps": [
+        50001,
+        60000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.05690633267201483,
+        "lerobot_train_mean": 0.05682,
+        "mean_diff": 8.633267201483135e-05,
+        "relative_diff": 0.0015194064064560251,
+        "share_aloha_train_higher": 0.64,
+        "max_abs_diff": 0.0011024624183773937
+      },
+      "l1": {
+        "aloha_train_mean": 0.0552576893851161,
+        "lerobot_train_mean": 0.055119999999999995,
+        "mean_diff": 0.00013768938511610012,
+        "relative_diff": 0.0024979931987681447,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.0014093653075396978
+      },
+      "grdn": {
+        "aloha_train_mean": 4.551463011169434,
+        "lerobot_train_mean": 4.548900000000001,
+        "mean_diff": 0.0025630111694334976,
+        "relative_diff": 0.0005634353732624365,
+        "share_aloha_train_higher": 0.48,
+        "max_abs_diff": 0.24200574922561646
+      }
+    },
+    {
+      "steps": [
+        60001,
+        70000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.05287911059390754,
+        "lerobot_train_mean": 0.05276000000000001,
+        "mean_diff": 0.00011911059390753653,
+        "relative_diff": 0.0022575927579138837,
+        "share_aloha_train_higher": 0.54,
+        "max_abs_diff": 0.001107709627598527
+      },
+      "l1": {
+        "aloha_train_mean": 0.051587289119511846,
+        "lerobot_train_mean": 0.05149999999999998,
+        "mean_diff": 8.728911951184429e-05,
+        "relative_diff": 0.0016949343594532878,
+        "share_aloha_train_higher": 0.54,
+        "max_abs_diff": 0.0012358121126890206
+      },
+      "grdn": {
+        "aloha_train_mean": 4.1588100930452345,
+        "lerobot_train_mean": 4.15682,
+        "mean_diff": 0.0019900930452346976,
+        "relative_diff": 0.00047875372165133385,
+        "share_aloha_train_higher": 0.5,
+        "max_abs_diff": 0.2698172874450684
+      }
+    },
+    {
+      "steps": [
+        70001,
+        80000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.049522792913019656,
+        "lerobot_train_mean": 0.04946,
+        "mean_diff": 6.279291301965584e-05,
+        "relative_diff": 0.00126956961220493,
+        "share_aloha_train_higher": 0.54,
+        "max_abs_diff": 0.001242408499121668
+      },
+      "l1": {
+        "aloha_train_mean": 0.04849037799313665,
+        "lerobot_train_mean": 0.048420000000000005,
+        "mean_diff": 7.037799313664314e-05,
+        "relative_diff": 0.0014534901515209238,
+        "share_aloha_train_higher": 0.54,
+        "max_abs_diff": 0.0012446351274848014
+      },
+      "grdn": {
+        "aloha_train_mean": 3.847757541632652,
+        "lerobot_train_mean": 3.83188,
+        "mean_diff": 0.015877541632652283,
+        "relative_diff": 0.004143538323917315,
+        "share_aloha_train_higher": 0.52,
+        "max_abs_diff": 0.2571724674701694
+      }
+    },
+    {
+      "steps": [
+        80001,
+        90000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.046874036961048846,
+        "lerobot_train_mean": 0.046799999999999994,
+        "mean_diff": 7.403696104884213e-05,
+        "relative_diff": 0.0015819863471974816,
+        "share_aloha_train_higher": 0.54,
+        "max_abs_diff": 0.0011482543833553766
+      },
+      "l1": {
+        "aloha_train_mean": 0.04600559362862259,
+        "lerobot_train_mean": 0.045939999999999995,
+        "mean_diff": 6.559362862259207e-05,
+        "relative_diff": 0.0014278108102436238,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.0009672461450099951
+      },
+      "grdn": {
+        "aloha_train_mean": 3.603217579460144,
+        "lerobot_train_mean": 3.5773200000000003,
+        "mean_diff": 0.025897579460144017,
+        "relative_diff": 0.007239380167316319,
+        "share_aloha_train_higher": 0.6,
+        "max_abs_diff": 0.195518731355667
+      }
+    },
+    {
+      "steps": [
+        90001,
+        100000
+      ],
+      "windows": 50,
+      "loss": {
+        "aloha_train_mean": 0.04456488563138992,
+        "lerobot_train_mean": 0.04454,
+        "mean_diff": 2.4885631389918172e-05,
+        "relative_diff": 0.0005587254465630483,
+        "share_aloha_train_higher": 0.56,
+        "max_abs_diff": 0.0011379934325814259
+      },
+      "l1": {
+        "aloha_train_mean": 0.0438239907629788,
+        "lerobot_train_mean": 0.04375999999999999,
+        "mean_diff": 6.399076297879503e-05,
+        "relative_diff": 0.001462311768254,
+        "share_aloha_train_higher": 0.58,
+        "max_abs_diff": 0.0010943810045719107
+      },
+      "grdn": {
+        "aloha_train_mean": 3.389987666726112,
+        "lerobot_train_mean": 3.3789599999999997,
+        "mean_diff": 0.011027666726112342,
+        "relative_diff": 0.0032636274848214667,
+        "share_aloha_train_higher": 0.52,
+        "max_abs_diff": 0.19080629467964183
+      }
+    }
+  ]
+}

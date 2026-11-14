@@ -1,0 +1,226 @@
+{
+  "run_dir": "experiments/control_lerobot_train_det/seed1001",
+  "hidden": {
+    "successes": 70,
+    "n_episodes": 500,
+    "rate": 0.14,
+    "wilson95": [
+      0.11232266018786358,
+      0.17316686494445405
+    ],
+    "max_reward_histogram": [
+      85,
+      122,
+      36,
+      187,
+      70
+    ],
+    "avg_max_reward": 2.07,
+    "eval_s": 1436.337900351995,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 14,
+    "n_episodes": 100
+  },
+  "vs_pooled_v1_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 0.06666666666666765,
+    "z": 0.03728029752333249,
+    "p_two_sided": 0.9702615148699602,
+    "required_successes": 88,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 2.0444852242103617,
+    "levels_p": 0.7275769498791319,
+    "levels_dof": 4
+  },
+  "paired": {
+    "experiments/baseline_v3_det/seed1001": {
+      "other_successes": 64,
+      "both": 31,
+      "this_only": 39,
+      "other_only": 33,
+      "neither": 397,
+      "mcnemar_exact_p": 0.555997717760971,
+      "other_max_reward_histogram": {
+        "0": 126,
+        "1": 118,
+        "2": 33,
+        "3": 159,
+        "4": 64
+      }
+    },
+    "experiments/control_lerobot_train/seed1000": {
+      "other_successes": 100,
+      "both": 33,
+      "this_only": 37,
+      "other_only": 67,
+      "neither": 363,
+      "mcnemar_exact_p": 0.004232546845609295,
+      "other_max_reward_histogram": {
+        "0": 77,
+        "1": 125,
+        "2": 28,
+        "3": 170,
+        "4": 100
+      }
+    },
+    "experiments/control_lerobot_train_rerun/seed1000": {
+      "other_successes": 102,
+      "both": 25,
+      "this_only": 45,
+      "other_only": 77,
+      "neither": 353,
+      "mcnemar_exact_p": 0.004800874060088965,
+      "other_max_reward_histogram": {
+        "0": 68,
+        "1": 115,
+        "2": 24,
+        "3": 191,
+        "4": 102
+      }
+    },
+    "experiments/trainer_parity/steps100000/scores/lerobot_train": {
+      "other_successes": 100,
+      "both": 34,
+      "this_only": 36,
+      "other_only": 66,
+      "neither": 364,
+      "mcnemar_exact_p": 0.003865583588338323,
+      "other_max_reward_histogram": {
+        "0": 80,
+        "1": 131,
+        "2": 33,
+        "3": 156,
+        "4": 100
+      }
+    },
+    "experiments/reference": {
+      "other_successes": 101,
+      "both": 43,
+      "this_only": 27,
+      "other_only": 58,
+      "neither": 372,
+      "mcnemar_exact_p": 0.001016220951347889,
+      "other_max_reward_histogram": {
+        "0": 72,
+        "1": 121,
+        "2": 16,
+        "3": 190,
+        "4": 101
+      }
+    },
+    "experiments/order_replay/seed1000": {
+      "other_successes": 66,
+      "both": 23,
+      "this_only": 47,
+      "other_only": 43,
+      "neither": 387,
+      "mcnemar_exact_p": 0.7520332015985951,
+      "other_max_reward_histogram": {
+        "0": 74,
+        "1": 148,
+        "2": 40,
+        "3": 172,
+        "4": 66
+      }
+    },
+    "experiments/baseline_v3/seed1000": {
+      "other_successes": 82,
+      "both": 30,
+      "this_only": 40,
+      "other_only": 52,
+      "neither": 378,
+      "mcnemar_exact_p": 0.25132210347485434,
+      "other_max_reward_histogram": {
+        "0": 92,
+        "1": 114,
+        "2": 16,
+        "3": 196,
+        "4": 82
+      }
+    },
+    "experiments/baseline_v3/seed1001": {
+      "other_successes": 59,
+      "both": 26,
+      "this_only": 44,
+      "other_only": 33,
+      "neither": 397,
+      "mcnemar_exact_p": 0.2543046661477,
+      "other_max_reward_histogram": {
+        "0": 121,
+        "1": 102,
+        "2": 21,
+        "3": 197,
+        "4": 59
+      }
+    },
+    "experiments/baseline_v2/seed1000": {
+      "other_successes": 60,
+      "both": 23,
+      "this_only": 47,
+      "other_only": 37,
+      "neither": 393,
+      "mcnemar_exact_p": 0.3261341711919829,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 107,
+        "2": 35,
+        "3": 213,
+        "4": 60
+      }
+    },
+    "experiments/baseline/seed1000": {
+      "other_successes": 68,
+      "both": 31,
+      "this_only": 39,
+      "other_only": 37,
+      "neither": 393,
+      "mcnemar_exact_p": 0.9087769252754927,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 137,
+        "2": 35,
+        "3": 175,
+        "4": 68
+      }
+    },
+    "experiments/baseline/seed1001": {
+      "other_successes": 76,
+      "both": 24,
+      "this_only": 46,
+      "other_only": 52,
+      "neither": 378,
+      "mcnemar_exact_p": 0.6137344676301392,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 96,
+        "2": 28,
+        "3": 219,
+        "4": 76
+      }
+    },
+    "experiments/baseline/seed1002": {
+      "other_successes": 65,
+      "both": 23,
+      "this_only": 47,
+      "other_only": 42,
+      "neither": 388,
+      "mcnemar_exact_p": 0.6718086491746104,
+      "other_max_reward_histogram": {
+        "0": 96,
+        "1": 94,
+        "2": 37,
+        "3": 208,
+        "4": 65
+      }
+    }
+  }
+}

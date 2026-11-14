@@ -1,0 +1,85 @@
+{
+  "run_dir": "experiments/probes_final/insertion_focus/run_seed1000",
+  "baseline_dir": "experiments/baseline_v3_det",
+  "candidate_protocol": {
+    "protocol_version": 3,
+    "cudnn_deterministic": true
+  },
+  "baseline_protocol": {
+    "protocol_version": 3,
+    "cudnn_deterministic": true
+  },
+  "protocol_matches": true,
+  "policy_name": "insertion-focus",
+  "schedule_sha256": "71ab4441e06f3a100bc464ad69d77d854b64ade3ac7a27b21165b9f9ce48ace1",
+  "schedule": {
+    "distinct_frames_fraction": 0.7182,
+    "entropy_mean_nats": 9.693610300571521,
+    "entropy_uniform_nats": 10.126631103850338,
+    "chunk_pad_fraction_padded": 0.05072875,
+    "stage_blocks": [
+      600,
+      1400
+    ],
+    "episodes_used": 50
+  },
+  "train": {
+    "seed": 1000,
+    "steps": 100000,
+    "exposures": 800000,
+    "train_s": 16012.539435171995,
+    "steps_per_s": 6.2451056189343195,
+    "final_l1_mean_last_1000": 0.04017684649303555,
+    "final_kl_mean_last_1000": 6.904950365424156e-05,
+    "peak_gpu_mem_gb": 2.252082176
+  },
+  "hidden": {
+    "successes": 88,
+    "n_episodes": 500,
+    "rate": 0.176,
+    "wilson95": [
+      0.1451264013297259,
+      0.21181417128935995
+    ],
+    "max_reward_histogram": [
+      88,
+      111,
+      30,
+      183,
+      88
+    ],
+    "avg_max_reward": 2.144,
+    "eval_s": 1403.898547951001,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 13,
+    "n_episodes": 100
+  },
+  "vs_pooled_baseline": {
+    "baseline": "201/1500",
+    "diff_pp": 4.199999999999998,
+    "z": 1.6688721227844936,
+    "p_two_sided": 0.09514272541860125,
+    "required_successes": 92,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      319,
+      340,
+      81,
+      559,
+      201
+    ],
+    "levels_chi2": 7.37971483853391,
+    "levels_p": 0.11713182860335812,
+    "levels_dof": 4
+  },
+  "paired_vs_host_seed1000": {
+    "against": "uniform run experiments/baseline_v3_det/seed1000, same hidden seeds",
+    "both": 37,
+    "baseline_only": 43,
+    "candidate_only": 51,
+    "neither": 369,
+    "mcnemar_exact_p": 0.4704921148903706
+  }
+}

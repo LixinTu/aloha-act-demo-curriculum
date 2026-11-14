@@ -1,0 +1,20 @@
+2026-11-12T01:00:57-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T01:01:25-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T01:01:37-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T01:01:43-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T01:34:03-08:00 host kernel: BUG: Bad rss-counter state mm:00000000a80ab8c5 type:MM_FILEPAGES val:1
+2026-11-12T01:34:03-08:00 host kernel: BUG: Bad rss-counter state mm:00000000a80ab8c5 type:MM_ANONPAGES val:-1
+2026-11-12T01:35:30-08:00 host kernel: perf: interrupt took too long (8121 > 8058), lowering kernel.perf_event_max_sample_rate to 24000
+2026-11-12T01:40:02-08:00 host kernel: BUG: Bad rss-counter state mm:00000000a6fd72e1 type:MM_FILEPAGES val:-1
+2026-11-12T01:40:02-08:00 host kernel: BUG: Bad rss-counter state mm:00000000a6fd72e1 type:MM_ANONPAGES val:1
+2026-11-12T01:41:48-08:00 host kernel: BUG: Bad page state in process VizCompositorTh  pfn:482970
+2026-11-12T01:41:48-08:00 host kernel: page dumped because: PAGE_FLAGS_CHECK_AT_PREP flag(s) set
+2026-11-12T03:21:20-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T03:21:26-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T03:21:33-08:00 host kernel: wlp0s20f3: associated
+2026-11-12T04:09:02-08:00 host kernel: BUG: unable to handle page fault for address: ffffad4491076348
+2026-11-12T04:09:02-08:00 host kernel: #PF: supervisor write access in kernel mode
+2026-11-12T04:09:02-08:00 host kernel: Oops: 0002 [#1] PREEMPT SMP NOPTI
+2026-11-12T04:09:02-08:00 host kernel: RIP: 0010:inode_io_list_del+0x56/0xa0
+2026-11-12T04:09:26-08:00 host kernel: watchdog: BUG: soft lockup - CPU#12 stuck for 26s! [git:879536]
+2026-11-12T04:10:02-08:00 host kernel: rcu: INFO: rcu_preempt self-detected stall on CPU

@@ -1,0 +1,40 @@
+{
+  "a": "experiments/baseline_v3_det/seed1002/eval_hidden/eval_result.json",
+  "b": "experiments/baseline_v3_det_verify/reeval3_seed1002/eval_hidden/eval_result.json",
+  "n_episodes": 500,
+  "cudnn_deterministic": [
+    false,
+    false
+  ],
+  "successes": [
+    57,
+    62
+  ],
+  "different_success": 23,
+  "only_a_success": 9,
+  "only_b_success": 14,
+  "mcnemar_exact_p": 0.4048728942871094,
+  "different_max_reward": 66,
+  "different_sum_reward": 397,
+  "max_reward_histograms": [
+    {
+      "0": 97,
+      "1": 113,
+      "2": 29,
+      "3": 204,
+      "4": 57
+    },
+    {
+      "0": 96,
+      "1": 109,
+      "2": 32,
+      "3": 201,
+      "4": 62
+    }
+  ],
+  "eval_s": [
+    2087.26109119202,
+    1421.1036619920014
+  ],
+  "identical": false
+}

@@ -1,0 +1,20 @@
+{
+  "start_after_backward": 200,
+  "stop_after_backward": 202,
+  "recorded_steps": 2,
+  "trainer": "aloha",
+  "trainer_args": [
+    "--schedule",
+    "experiments/trainer_parity/normal_algos300/order.npy",
+    "--protocol",
+    "task/aloha-act-demo-curriculum/environment/fixed_train.json",
+    "--dataset-root",
+    "data/aloha_sim_insertion_human",
+    "--output",
+    "experiments/trainer_parity/normal_algos300/aloha_b",
+    "--steps",
+    "300"
+  ],
+  "kernel_launches": 2718,
+  "distinct_kernels": 139
+}

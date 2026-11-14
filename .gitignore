@@ -1,0 +1,17 @@
+.venv/
+data/
+experiments/**/checkpoints/
+experiments/**/*.safetensors
+experiments/**/videos/
+experiments/**/record/*.log
+experiments/**/record/table.txt
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+harness/
+.venv-control/
+
+# Withheld from the public copy; see task/aloha-act-demo-curriculum/tests/HIDDEN_SEEDS.md
+task/aloha-act-demo-curriculum/tests/hidden_seeds.json

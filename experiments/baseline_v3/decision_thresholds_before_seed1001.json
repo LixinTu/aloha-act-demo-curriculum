@@ -1,0 +1,35 @@
+{
+  "control_successes": 100,
+  "v1_pooled": "209/1500",
+  "thresholds_by_seed_count": {
+    "1": {
+      "above_v1_at_least": 88,
+      "below_control_at_most": 76
+    },
+    "2": {
+      "above_v1_at_least": 168,
+      "below_control_at_most": 159
+    },
+    "3": {
+      "above_v1_at_least": 247,
+      "below_control_at_most": 242
+    }
+  },
+  "runs": [
+    {
+      "seed": 1000,
+      "hidden_successes": 82,
+      "proxy_successes": 24,
+      "levels": [
+        92,
+        114,
+        16,
+        196,
+        82
+      ]
+    }
+  ],
+  "pooled_successes": 82,
+  "pooled_episodes": 500,
+  "verdict": "neither"
+}

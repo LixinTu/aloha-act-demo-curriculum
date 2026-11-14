@@ -1,0 +1,60 @@
+{
+  "run_dir": "experiments/reference",
+  "checkpoint": "data/reference_policy",
+  "checkpoint_sha256": "5e0e5e5cd5b340b559db6fd3fa5d7ca051aef330c484b4b59bf4e04e4c95dc5b",
+  "note": "released checkpoint: same recipe and budget, older LeRobot, v2 dataset format, epoch shuffling; an author measurement, not the matched baseline",
+  "train_config": {
+    "steps": 100000,
+    "batch_size": 8,
+    "seed": 1000
+  },
+  "hidden": {
+    "successes": 101,
+    "n_episodes": 500,
+    "rate": 0.202,
+    "wilson95": [
+      0.16914122067557874,
+      0.23940288623950645
+    ],
+    "max_reward_histogram": [
+      72,
+      121,
+      16,
+      190,
+      101
+    ],
+    "avg_max_reward": 2.254,
+    "eval_s": 1440.856633377989,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 17,
+    "n_episodes": 100
+  },
+  "vs_pooled_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 6.2666666666666675,
+    "z": 3.5043479671932034,
+    "p_two_sided": 0.00045772684113657894,
+    "required_successes": 88,
+    "exceeds_threshold": true,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 20.778228803713873,
+    "levels_p": 0.00035039257833677765,
+    "levels_dof": 4
+  },
+  "paired_vs_host_seed1000": {
+    "against": "host uniform run, training seed 1000, same hidden seeds",
+    "both": 30,
+    "baseline_only": 38,
+    "candidate_only": 71,
+    "neither": 361,
+    "mcnemar_exact_p": 0.002033169531309131
+  }
+}

@@ -1,0 +1,28 @@
+Loading weights from local directory
+gym id 'gym_aloha/AlohaInsertion-v0' not found, attempting to import 'gym_aloha'...
+{
+  "checkpoint": "experiments/baseline_v3/seed1000/train/pretrained_model",
+  "gym_id": "gym_aloha/AlohaInsertion-v0",
+  "episode_length": 400,
+  "n_episodes": 100,
+  "n_envs": 10,
+  "start_seed": 100000,
+  "successes": 24,
+  "success_rate": 0.24,
+  "success_rate_se": 0.04270831300812525,
+  "avg_max_reward": 2.27,
+  "avg_sum_reward": 197.98,
+  "max_reward_histogram": {
+    "0": 16,
+    "1": 23,
+    "2": 3,
+    "3": 34,
+    "4": 24
+  },
+  "eval_s": 240.03248662999977,
+  "eval_ep_s": 2.400324866299998,
+  "device": "cuda",
+  "mujoco_gl": "egl",
+  "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2",
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39"
+}

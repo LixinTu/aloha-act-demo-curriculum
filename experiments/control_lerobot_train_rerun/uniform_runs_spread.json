@@ -1,0 +1,84 @@
+{
+  "aloha_train": {
+    "v1 seed 1000": 68,
+    "v1 seed 1000, RSI-Harness re-run": 69,
+    "v1 seed 1001": 76,
+    "v1 seed 1002": 65,
+    "v2 seed 1000": 60,
+    "v3 seed 1000": 82,
+    "v3 seed 1001": 59,
+    "order replay seed 1000": 66,
+    "v3 deterministic mode seed 1001": 64
+  },
+  "lerobot": {
+    "lerobot-train v0.6.1 seed 1000": 100,
+    "released checkpoint (LeRobot 3c0a209)": 101,
+    "lerobot-train v0.6.1 seed 1000, re-run": 102
+  },
+  "all aloha-train runs": {
+    "chi2": 7.417648153563927,
+    "dof": 8,
+    "p": 0.4923130233953227,
+    "phi": 0.9272060191954908,
+    "phi95": [
+      0.4230305189856449,
+      3.403011203522816
+    ],
+    "runs": 9,
+    "pooled_rate": 0.13533333333333333,
+    "sd_runs": 0.014730919862656238,
+    "binomial_sd": 0.015298249718331979
+  },
+  "v3 runs only": {
+    "chi2": 4.960919107260571,
+    "dof": 2,
+    "p": 0.08370474993035543,
+    "phi": 2.4804595536302854,
+    "phi95": [
+      0.6724154542008717,
+      97.97291910774629
+    ],
+    "runs": 3,
+    "pooled_rate": 0.13666666666666666,
+    "sd_runs": 0.024193663082165414,
+    "binomial_sd": 0.015361568206982572
+  },
+  "lerobot_vs_aloha_train": {
+    "diff_pp": 6.666666666666668,
+    "binomial": {
+      "z": 6.228239177905712,
+      "p": 4.71706568227404e-10
+    },
+    "observed_spread_t": {
+      "t": 7.572281660192281,
+      "df": 10,
+      "p": 1.899021180258409e-05
+    },
+    "phi_upper": {
+      "phi": 3.403011203522816,
+      "z": 3.543452086814147,
+      "p": 0.00039492506463203363
+    }
+  },
+  "control_checkpoints": {
+    "step 60000": 84,
+    "step 80000": 94,
+    "step 100000": 100
+  },
+  "control_checkpoint_pairs": {
+    "step 80000 vs step 60000": {
+      "both": 47,
+      "first_only": 47,
+      "second_only": 37,
+      "independence_both": 15.792,
+      "mcnemar_exact_p": 0.3261341711919829
+    },
+    "step 100000 vs step 80000": {
+      "both": 61,
+      "first_only": 39,
+      "second_only": 33,
+      "independence_both": 18.8,
+      "mcnemar_exact_p": 0.555997717760971
+    }
+  }
+}

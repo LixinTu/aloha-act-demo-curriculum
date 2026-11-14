@@ -1,0 +1,7 @@
+{
+  "steps": 3125,
+  "tensors": 234,
+  "bit_identical": 234,
+  "differing": 0,
+  "worst_abs_diff": 0.0
+}

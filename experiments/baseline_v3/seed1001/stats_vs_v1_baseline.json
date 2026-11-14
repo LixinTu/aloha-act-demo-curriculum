@@ -1,0 +1,67 @@
+{
+  "run_dir": "experiments/baseline_v3/seed1001",
+  "policy_name": "uniform",
+  "schedule_sha256": "c6e00c8736a118c6b77ab9a9edba77b06db9c4a3a6463328061ceb4de0bd400c",
+  "schedule": {
+    "distinct_frames_fraction": 1.0,
+    "entropy_mean_nats": 10.126631103850338,
+    "entropy_uniform_nats": 10.126631103850338,
+    "chunk_pad_fraction_padded": 0.198,
+    "stage_blocks": [
+      2000
+    ],
+    "episodes_used": 50
+  },
+  "train": {
+    "seed": 1001,
+    "steps": 100000,
+    "exposures": 800000,
+    "train_s": 15561.696204647,
+    "steps_per_s": 6.426034712728694,
+    "final_l1_mean_last_1000": 0.043672948926687244,
+    "final_kl_mean_last_1000": 6.592050939798354e-05,
+    "peak_gpu_mem_gb": 3.45059328
+  },
+  "hidden": {
+    "successes": 59,
+    "n_episodes": 500,
+    "rate": 0.118,
+    "wilson95": [
+      0.09259300825150649,
+      0.14923198786111944
+    ],
+    "max_reward_histogram": [
+      121,
+      102,
+      21,
+      197,
+      59
+    ],
+    "avg_max_reward": 1.942,
+    "eval_s": 1178.0163102280058,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 11,
+    "n_episodes": 100
+  },
+  "vs_pooled_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": -2.133333333333334,
+    "z": -1.1929695207466227,
+    "p_two_sided": 0.23288131011769525,
+    "required_successes": 88,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 14.31627372940636,
+    "levels_p": 0.006351139412076432,
+    "levels_dof": 4
+  },
+  "paired_vs_host_seed1000": null
+}

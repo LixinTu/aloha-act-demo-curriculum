@@ -1,0 +1,329 @@
+# started 2026-11-02T23:08:03-08:00 : scripts/eval_variants.sh
+2026-11-02 23:08:07,994 INFO absl: MUJOCO_GL=egl, attempting to import specified OpenGL backend.
+2026-11-02 23:08:08,000 INFO OpenGL.acceleratesupport: No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-11-02 23:08:08,073 INFO absl: MuJoCo library version is: 3.8.1
+Process Worker<AsyncVectorEnv>-9:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-6:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-5:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-7:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-13:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-17:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-1:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-18:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-8:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-0:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Process Worker<AsyncVectorEnv>-10:
+Traceback (most recent call last):
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 833, in _async_worker
+    env = env_fn()
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/utils/misc.py", line 47, in __call__
+    return self.fn()
+           ^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 111, in _make_one
+    return gym.make(self.gym_id, disable_env_checker=self.disable_env_checker, **self.gym_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 682, in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 525, in _find_spec
+    _check_version_exists(ns, name, version)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 389, in _check_version_exists
+    _check_name_exists(ns, name)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 352, in _check_name_exists
+    _check_namespace_exists(ns)
+  File ".venv/lib/python3.12/site-packages/gymnasium/envs/registration.py", line 346, in _check_namespace_exists
+    raise error.NamespaceNotFound(f"Namespace {ns} not found. {suggestion_msg}")
+gymnasium.error.NamespaceNotFound: Namespace gym_aloha not found. Have you installed the proper package for gym_aloha?
+Traceback (most recent call last):
+  File ".venv/bin/aloha-eval", line 10, in <module>
+    sys.exit(eval_main())
+             ^^^^^^^^^^^
+  File "task/aloha-act-demo-curriculum/environment/aloha_curriculum/cli.py", line 183, in eval_main
+    result = eval_mod.evaluate(
+             ^^^^^^^^^^^^^^^^^^
+  File "task/aloha-act-demo-curriculum/environment/aloha_curriculum/evaluate.py", line 79, in evaluate
+    envs = make_env(env_cfg, n_envs=n_envs, use_async_envs=use_async_envs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/factory.py", line 122, in make_env
+    return cfg.create_envs(n_envs=n_envs, use_async_envs=use_async_envs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/lerobot/envs/configs.py", line 119, in create_envs
+    vec = env_cls(
+          ^^^^^^^^
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 314, in __init__
+    self._check_spaces()
+  File ".venv/lib/python3.12/site-packages/gymnasium/vector/async_vector_env.py", line 756, in _check_spaces
+    pipe.send(
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/connection.py", line 206, in send
+    self._send_bytes(_ForkingPickler.dumps(obj))
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/connection.py", line 421, in _send_bytes
+    self._send(buf)
+  File "~/.local/share/uv/python/cpython-3.12.15-linux-x86_64-gnu/lib/python3.12/multiprocessing/connection.py", line 384, in _send
+    n = write(self._handle, buf)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+BrokenPipeError: [Errno 32] Broken pipe

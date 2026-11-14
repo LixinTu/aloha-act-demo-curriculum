@@ -1,0 +1,121 @@
+{
+  "run_dir": "experiments/control_lerobot_train/seed1000",
+  "hidden": {
+    "successes": 100,
+    "n_episodes": 500,
+    "rate": 0.2,
+    "wilson95": [
+      0.16728549897175743,
+      0.23728910530517394
+    ],
+    "max_reward_histogram": [
+      77,
+      125,
+      28,
+      170,
+      100
+    ],
+    "avg_max_reward": 2.182,
+    "eval_s": 1460.8129460540003,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 12,
+    "n_episodes": 100
+  },
+  "vs_pooled_v1_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 6.066666666666667,
+    "z": 3.3925070746232073,
+    "p_two_sided": 0.0006925614355672296,
+    "required_successes": 88,
+    "exceeds_threshold": true,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 15.89841223769588,
+    "levels_p": 0.0031585529221386586,
+    "levels_dof": 4
+  },
+  "paired": {
+    "experiments/reference": {
+      "other_successes": 101,
+      "both": 43,
+      "this_only": 57,
+      "other_only": 58,
+      "neither": 342,
+      "mcnemar_exact_p": 1.0,
+      "other_max_reward_histogram": {
+        "0": 72,
+        "1": 121,
+        "2": 16,
+        "3": 190,
+        "4": 101
+      }
+    },
+    "experiments/baseline_v2/seed1000": {
+      "other_successes": 60,
+      "both": 29,
+      "this_only": 71,
+      "other_only": 31,
+      "neither": 369,
+      "mcnemar_exact_p": 9.307650827247333e-05,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 107,
+        "2": 35,
+        "3": 213,
+        "4": 60
+      }
+    },
+    "experiments/baseline/seed1000": {
+      "other_successes": 68,
+      "both": 32,
+      "this_only": 68,
+      "other_only": 36,
+      "neither": 364,
+      "mcnemar_exact_p": 0.0022094328919877613,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 137,
+        "2": 35,
+        "3": 175,
+        "4": 68
+      }
+    },
+    "experiments/baseline/seed1001": {
+      "other_successes": 76,
+      "both": 31,
+      "this_only": 69,
+      "other_only": 45,
+      "neither": 355,
+      "mcnemar_exact_p": 0.030776323854403202,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 96,
+        "2": 28,
+        "3": 219,
+        "4": 76
+      }
+    },
+    "experiments/baseline/seed1002": {
+      "other_successes": 65,
+      "both": 28,
+      "this_only": 72,
+      "other_only": 37,
+      "neither": 363,
+      "mcnemar_exact_p": 0.0010329356216356765,
+      "other_max_reward_histogram": {
+        "0": 96,
+        "1": 94,
+        "2": 37,
+        "3": 208,
+        "4": 65
+      }
+    }
+  }
+}

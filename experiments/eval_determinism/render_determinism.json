@@ -1,0 +1,63 @@
+{
+  "gym_id": "gym_aloha/AlohaInsertion-v0",
+  "seed": 100000,
+  "steps": 120,
+  "processes": 3,
+  "mujoco_gl": "egl",
+  "frame_shape": [
+    480,
+    640,
+    3
+  ],
+  "pixels_per_frame": 307200,
+  "state_sha256": [
+    "b5149a290ba6d336cec4378445aee5f7554759c97dc9c1aa0cab55409b7e5962",
+    "b5149a290ba6d336cec4378445aee5f7554759c97dc9c1aa0cab55409b7e5962",
+    "b5149a290ba6d336cec4378445aee5f7554759c97dc9c1aa0cab55409b7e5962"
+  ],
+  "frames_sha256": [
+    "2c78da8b2bd99526ee91070570e6cddb374317ff614b34f665c86937fec06577",
+    "59ff5093e3566c2cfdcf11fcb176bf045790f5207cc4c43992be41efd6024d94",
+    "33fbbacb920826bd6a7989d7fe6b3fb283135a81e003a679da7217ad57983c67"
+  ],
+  "pairs": [
+    {
+      "runs": [
+        0,
+        1
+      ],
+      "states_identical": true,
+      "frames": 120,
+      "frames_differing": 18,
+      "max_abs_pixel_difference": 1,
+      "pixels_differing_per_differing_frame_median": 1.0,
+      "pixels_differing_per_differing_frame_max": 5
+    },
+    {
+      "runs": [
+        0,
+        2
+      ],
+      "states_identical": true,
+      "frames": 120,
+      "frames_differing": 20,
+      "max_abs_pixel_difference": 1,
+      "pixels_differing_per_differing_frame_median": 2.0,
+      "pixels_differing_per_differing_frame_max": 5
+    },
+    {
+      "runs": [
+        1,
+        2
+      ],
+      "states_identical": true,
+      "frames": 120,
+      "frames_differing": 12,
+      "max_abs_pixel_difference": 1,
+      "pixels_differing_per_differing_frame_median": 2.0,
+      "pixels_differing_per_differing_frame_max": 5
+    }
+  ],
+  "physics_identical": true,
+  "rendering_identical": false
+}

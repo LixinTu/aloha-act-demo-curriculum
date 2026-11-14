@@ -1,0 +1,39 @@
+{
+  "description": "RSI-Harness oracle run (uniform default policy) vs host baseline seed 1000; same schedule, training seed and hidden seed block",
+  "oracle_run_id": "c504ab36acb7416eb92a37b8c1735ed1",
+  "schedule_sha256_host": "5d45f8e8845a3248eba6380ffa56a6f6dd63a99f9c6ce3b3ffe6c92274751461",
+  "schedule_sha256_judge": "5d45f8e8845a3248eba6380ffa56a6f6dd63a99f9c6ce3b3ffe6c92274751461",
+  "host_successes": 68,
+  "judge_successes": 69,
+  "n_episodes": 500,
+  "paired_2x2": {
+    "both": 31,
+    "host_only": 37,
+    "judge_only": 38,
+    "neither": 394
+  },
+  "mcnemar_exact_p": 1.0,
+  "same_max_reward_level_episodes": 328,
+  "max_reward_pearson_r": 0.6219433583246267,
+  "level_histogram_host": [
+    85,
+    137,
+    35,
+    175,
+    68
+  ],
+  "level_histogram_judge": [
+    74,
+    132,
+    28,
+    197,
+    69
+  ],
+  "level_histogram_chi2": 2.9400954089501288,
+  "level_histogram_p": 0.5678998248765479,
+  "level_histogram_dof": 4,
+  "judge_vs_pooled_baseline_z": -0.07456059504666343,
+  "judge_gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2",
+  "host_eval_s": 2124.500276686973,
+  "judge_eval_s": 1376.9383404999971
+}

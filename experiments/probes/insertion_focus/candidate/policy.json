@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "scores": null,
+  "episodes": {
+    "include": "all",
+    "exclude": []
+  },
+  "anchors": {
+    "min_frame": 0,
+    "max_frame": 499,
+    "max_chunk_pad": 99
+  },
+  "name": "insertion-focus",
+  "notes": "Author probe H2 (phase-aware stage curriculum): same eligibility as H1; uniform for the first 30% of steps, then the bimanual phase (both grippers closed after having opened) gets 3x weight for the remaining 70%.",
+  "stages": [
+    {
+      "until": 0.3,
+      "weight": {
+        "const": 1.0
+      },
+      "mask": {
+        "op": "le",
+        "args": [
+          {
+            "feature": "frame_index"
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "op": "ep_last_where",
+                "args": [
+                  {
+                    "op": "gt",
+                    "args": [
+                      {
+                        "op": "window_mean",
+                        "args": [
+                          {
+                            "feature": "speed_l2"
+                          },
+                          {
+                            "const": 12
+                          }
+                        ]
+                      },
+                      {
+                        "const": 0.5
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "const": 25
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "until": 1.0,
+      "weight": {
+        "op": "add",
+        "args": [
+          {
+            "const": 1.0
+          },
+          {
+            "op": "mul",
+            "args": [
+              {
+                "const": 2.0
+              },
+              {
+                "op": "and",
+                "args": [
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "gt",
+                        "args": [
+                          {
+                            "op": "ep_cummax",
+                            "args": [
+                              {
+                                "feature": "gripper_left_cmd"
+                              }
+                            ]
+                          },
+                          {
+                            "const": 0.5
+                          }
+                        ]
+                      },
+                      {
+                        "op": "lt",
+                        "args": [
+                          {
+                            "feature": "gripper_left_cmd"
+                          },
+                          {
+                            "const": 0.4
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "and",
+                    "args": [
+                      {
+                        "op": "gt",
+                        "args": [
+                          {
+                            "op": "ep_cummax",
+                            "args": [
+                              {
+                                "feature": "gripper_right_cmd"
+                              }
+                            ]
+                          },
+                          {
+                            "const": 0.5
+                          }
+                        ]
+                      },
+                      {
+                        "op": "lt",
+                        "args": [
+                          {
+                            "feature": "gripper_right_cmd"
+                          },
+                          {
+                            "const": 0.3
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "mask": {
+        "op": "le",
+        "args": [
+          {
+            "feature": "frame_index"
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "op": "ep_last_where",
+                "args": [
+                  {
+                    "op": "gt",
+                    "args": [
+                      {
+                        "op": "window_mean",
+                        "args": [
+                          {
+                            "feature": "speed_l2"
+                          },
+                          {
+                            "const": 12
+                          }
+                        ]
+                      },
+                      {
+                        "const": 0.5
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "const": 25
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "run_dir": "experiments/baseline_v3/seed1000",
+  "hidden": {
+    "successes": 82,
+    "n_episodes": 500,
+    "rate": 0.164,
+    "wilson95": [
+      0.13412892031587176,
+      0.1989946364742914
+    ],
+    "max_reward_histogram": [
+      92,
+      114,
+      16,
+      196,
+      82
+    ],
+    "avg_max_reward": 2.124,
+    "eval_s": 1185.7943054989955,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 24,
+    "n_episodes": 100
+  },
+  "vs_pooled_v1_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 2.466666666666667,
+    "z": 1.3793710083632822,
+    "p_two_sided": 0.16778039326245164,
+    "required_successes": 88,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 9.774767538214217,
+    "levels_p": 0.044397502907970406,
+    "levels_dof": 4
+  },
+  "paired": {
+    "experiments/control_lerobot_train/seed1000": {
+      "other_successes": 100,
+      "both": 36,
+      "this_only": 46,
+      "other_only": 64,
+      "neither": 354,
+      "mcnemar_exact_p": 0.10461305811126692,
+      "other_max_reward_histogram": {
+        "0": 77,
+        "1": 125,
+        "2": 28,
+        "3": 170,
+        "4": 100
+      }
+    },
+    "experiments/reference": {
+      "other_successes": 101,
+      "both": 40,
+      "this_only": 42,
+      "other_only": 61,
+      "neither": 357,
+      "mcnemar_exact_p": 0.07561910758625795,
+      "other_max_reward_histogram": {
+        "0": 72,
+        "1": 121,
+        "2": 16,
+        "3": 190,
+        "4": 101
+      }
+    },
+    "experiments/baseline_v2/seed1000": {
+      "other_successes": 60,
+      "both": 28,
+      "this_only": 54,
+      "other_only": 32,
+      "neither": 386,
+      "mcnemar_exact_p": 0.02298259190715704,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 107,
+        "2": 35,
+        "3": 213,
+        "4": 60
+      }
+    },
+    "experiments/baseline/seed1000": {
+      "other_successes": 68,
+      "both": 34,
+      "this_only": 48,
+      "other_only": 34,
+      "neither": 384,
+      "mcnemar_exact_p": 0.15067520762630385,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 137,
+        "2": 35,
+        "3": 175,
+        "4": 68
+      }
+    },
+    "experiments/baseline/seed1001": {
+      "other_successes": 76,
+      "both": 29,
+      "this_only": 53,
+      "other_only": 47,
+      "neither": 371,
+      "mcnemar_exact_p": 0.6172994135892524,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 96,
+        "2": 28,
+        "3": 219,
+        "4": 76
+      }
+    },
+    "experiments/baseline/seed1002": {
+      "other_successes": 65,
+      "both": 25,
+      "this_only": 57,
+      "other_only": 40,
+      "neither": 378,
+      "mcnemar_exact_p": 0.10376938287271803,
+      "other_max_reward_histogram": {
+        "0": 96,
+        "1": 94,
+        "2": 37,
+        "3": 208,
+        "4": 65
+      }
+    }
+  }
+}

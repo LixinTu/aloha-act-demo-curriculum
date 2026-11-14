@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "scores": null,
+  "episodes": {
+    "include": "all",
+    "exclude": []
+  },
+  "anchors": {
+    "min_frame": 0,
+    "max_frame": 499,
+    "max_chunk_pad": 99
+  },
+  "name": "drop-idle-tail",
+  "notes": "Author probe H1 (budget reallocation): exclude chunk anchors more than 25 frames after the end of task motion (last frame whose 25-frame mean joint speed exceeds 0.5 rad/s); about a third of uniform exposures fall on post-task holding.",
+  "stages": [
+    {
+      "until": 1.0,
+      "weight": {
+        "const": 1.0
+      },
+      "mask": {
+        "op": "le",
+        "args": [
+          {
+            "feature": "frame_index"
+          },
+          {
+            "op": "add",
+            "args": [
+              {
+                "op": "ep_last_where",
+                "args": [
+                  {
+                    "op": "gt",
+                    "args": [
+                      {
+                        "op": "window_mean",
+                        "args": [
+                          {
+                            "feature": "speed_l2"
+                          },
+                          {
+                            "const": 12
+                          }
+                        ]
+                      },
+                      {
+                        "const": 0.5
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "const": 25
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

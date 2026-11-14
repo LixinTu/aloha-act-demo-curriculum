@@ -1,0 +1,50 @@
+# started 2026-11-02T22:57:21-08:00 : .venv/bin/aloha-train --schedule experiments/smoke200/schedule/schedule.npy --protocol task/aloha-act-demo-curriculum/environment/fixed_train.json --dataset-root data/aloha_sim_insertion_human --output experiments/smoke200/train --steps 200 --log-every 20
+2026-11-02 22:57:26,650 INFO root: Cuda backend detected, using cuda.
+2026-11-02 22:57:26,650 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-02 22:57:26,650 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-02 22:57:26,874 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+task/aloha-act-demo-curriculum/environment/aloha_curriculum/train.py:208: RuntimeWarning: Mean of empty slice
+  "kl_loss": float(np.nanmean(window["kl"])),
+2026-11-02 22:57:37,063 INFO aloha_curriculum.train: step 20/200 loss 28.2380 l1 0.7436 kl nan gn 445.60 data 0.013s step 0.471s elapsed 10s
+2026-11-02 22:57:40,175 INFO aloha_curriculum.train: step 40/200 loss 8.9163 l1 0.6237 kl nan gn 196.58 data 0.000s step 0.155s elapsed 13s
+2026-11-02 22:57:43,288 INFO aloha_curriculum.train: step 60/200 loss 6.4760 l1 0.5920 kl nan gn 150.52 data 0.000s step 0.155s elapsed 16s
+2026-11-02 22:57:46,406 INFO aloha_curriculum.train: step 80/200 loss 5.5279 l1 0.5275 kl nan gn 143.45 data 0.000s step 0.156s elapsed 19s
+2026-11-02 22:57:49,522 INFO aloha_curriculum.train: step 100/200 loss 4.9577 l1 0.5000 kl nan gn 126.92 data 0.000s step 0.156s elapsed 22s
+2026-11-02 22:57:52,644 INFO aloha_curriculum.train: step 120/200 loss 4.7131 l1 0.4915 kl nan gn 124.30 data 0.000s step 0.156s elapsed 25s
+2026-11-02 22:57:55,771 INFO aloha_curriculum.train: step 140/200 loss 4.1179 l1 0.4939 kl nan gn 112.49 data 0.000s step 0.156s elapsed 28s
+2026-11-02 22:57:58,894 INFO aloha_curriculum.train: step 160/200 loss 3.8903 l1 0.4554 kl nan gn 106.68 data 0.000s step 0.156s elapsed 31s
+2026-11-02 22:58:02,024 INFO aloha_curriculum.train: step 180/200 loss 3.7793 l1 0.4365 kl nan gn 106.78 data 0.000s step 0.156s elapsed 35s
+2026-11-02 22:58:05,158 INFO aloha_curriculum.train: step 200/200 loss 3.6281 l1 0.4511 kl nan gn 101.07 data 0.000s step 0.156s elapsed 38s
+task/aloha-act-demo-curriculum/environment/aloha_curriculum/train.py:247: RuntimeWarning: Mean of empty slice
+  "final_kl_mean_last_1000": float(np.nanmean(kls[-tail:])),
+{
+  "official_budget": false,
+  "steps": 200,
+  "batch_size": 8,
+  "exposures": 1600,
+  "seed": 1000,
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "cudnn_deterministic": false,
+  "train_s": 37.7807569700235,
+  "steps_per_s": 5.293700180721276,
+  "peak_gpu_mem_gb": 3.420732928,
+  "final_loss_mean_last_1000": 7.4244682097435,
+  "final_l1_mean_last_1000": 0.5315313445031643,
+  "final_kl_mean_last_1000": NaN,
+  "versions": {
+    "python": "3.12.15",
+    "torch": "2.11.0+cu128",
+    "lerobot": "0.6.1",
+    "gym-aloha": "0.1.5",
+    "mujoco": "3.8.1",
+    "dm-control": "1.0.41",
+    "torchvision": "0.26.0+cu128",
+    "torchcodec": "0.11.1",
+    "av": "15.1.0",
+    "numpy": "2.2.6",
+    "gymnasium": "1.4.0"
+  },
+  "checkpoint": "experiments/smoke200/train/pretrained_model"
+}
+# finished 2026-11-02T22:58:06-08:00 exit=0

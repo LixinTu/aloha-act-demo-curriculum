@@ -1,0 +1,24 @@
+{
+  "start_after_backward": 200,
+  "stop_after_backward": 202,
+  "recorded_steps": 2,
+  "trainer": "lerobot",
+  "trainer_args": [
+    "--policy.type=act",
+    "--policy.device=cuda",
+    "--policy.push_to_hub=false",
+    "--dataset.repo_id=lerobot/aloha_sim_insertion_human",
+    "--dataset.root=data/aloha_sim_insertion_human",
+    "--dataset.revision=cc571a3c661df81b566dbfde3d5c1e85fcdf7884",
+    "--seed=1000",
+    "--batch_size=8",
+    "--steps=300",
+    "--num_workers=4",
+    "--log_freq=100",
+    "--save_freq=300",
+    "--wandb.enable=false",
+    "--output_dir=experiments/trainer_parity/normal_algos300/lerobot_b"
+  ],
+  "kernel_launches": 2712,
+  "distinct_kernels": 138
+}

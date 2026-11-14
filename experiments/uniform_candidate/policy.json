@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "name": "uniform",
+  "notes": "Baseline: every eligible frame is an equally likely chunk anchor for the whole run.",
+  "scores": null,
+  "episodes": {"include": "all", "exclude": []},
+  "anchors": {"min_frame": 0, "max_frame": 499, "max_chunk_pad": 99},
+  "stages": [
+    {"until": 1.0, "weight": {"const": 1.0}, "mask": null}
+  ]
+}

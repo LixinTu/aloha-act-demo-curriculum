@@ -1,0 +1,25 @@
+2026-11-12T02:40:57-08:00 waiting for 300 s without GPU compute processes (poll every 60 s), then: scripts/oracle_run.sh
+2026-11-12T02:40:57-08:00 GPU busy: 848423, <another program>
+2026-11-12T02:59:00-08:00 GPU idle; counting
+2026-11-12T03:04:09-08:00 GPU idle for 309 s; starting: scripts/oracle_run.sh
+Running Agent 'oracle' on task: aloha-act-demo-curriculum
+  Task dir:         task/aloha-act-demo-curriculum
+  Timeout:          30600.0s
+  GPU selectors:    0
+  Max submissions:  1
+  Data root:        harness/data
+  Logs root:        harness/logs
+
+Network policy: enforced in each container's own namespace (non-root controller)
+GPU pool: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Work GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPU mode: release-all
+Preparing task images (the first run may take several minutes)...
+Task images ready; preparing Work container...
+Run ID: 8a5c0b2fba2f49f0ba9781077d38ead7
+Work container started; preparing Agent...
+Running oracle (timeout=30600.0s)...
+Agent output: harness/logs/runs/8a5c0b2fba2f49f0ba9781077d38ead7/aloha-act-demo-curriculum/agent_output.txt
+Judge agent-1: snapshotting Work...
+Judge agent-1: running /tests/test.sh...

@@ -1,0 +1,41 @@
+# started 2026-11-07T17:17:51-08:00 : scripts/oracle_run.sh
+Running Agent 'oracle' on task: aloha-act-demo-curriculum
+  Task dir:         task/aloha-act-demo-curriculum
+  Timeout:          30600.0s
+  GPU selectors:    0
+  Max submissions:  1
+  Data root:        harness/data
+  Logs root:        harness/logs
+
+Network policy: enforced in each container's own namespace (non-root controller)
+GPU pool: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Work GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPU mode: release-all
+Preparing task images (the first run may take several minutes)...
+Task images ready; preparing Work container...
+Run ID: c504ab36acb7416eb92a37b8c1735ed1
+Work container started; preparing Agent...
+Running oracle (timeout=30600.0s)...
+Agent output: harness/logs/runs/c504ab36acb7416eb92a37b8c1735ed1/aloha-act-demo-curriculum/agent_output.txt
+Judge agent-1: snapshotting Work...
+Judge agent-1: running /tests/test.sh...
+Judge agent-1 finished: completed score=0.138 runtime=17435.32s
+Agent finished: exit_code=0 timed_out=False
+
+Run completed in 18107.2s
+  Run ID:           c504ab36acb7416eb92a37b8c1735ed1
+  Status:           completed
+  Rounds:           1
+  Best score:       0.138
+  Best round:       agent-1
+  Workspace:        harness/data/c504ab36acb7416eb92a37b8c1735ed1/workspace
+  Logs:             harness/logs/runs/c504ab36acb7416eb92a37b8c1735ed1
+  Artifacts:        harness/logs/runs/c504ab36acb7416eb92a37b8c1735ed1/aloha-act-demo-curriculum
+  Agent exit code:  0
+
+Judge rounds:
+  agent-1: completed score=0.138 exit_code=0 runtime=17435.3s
+
+Oracle check passed
+# finished 2026-11-07T22:19:39-08:00 exit=0

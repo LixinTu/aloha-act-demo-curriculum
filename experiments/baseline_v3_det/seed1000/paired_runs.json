@@ -1,0 +1,256 @@
+{
+  "run_dir": "experiments/baseline_v3_det/seed1000",
+  "hidden": {
+    "successes": 80,
+    "n_episodes": 500,
+    "rate": 0.16,
+    "wilson95": [
+      0.13047637235016407,
+      0.19470817916369149
+    ],
+    "max_reward_histogram": [
+      96,
+      109,
+      19,
+      196,
+      80
+    ],
+    "avg_max_reward": 2.11,
+    "eval_s": 1742.8695801349822,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 14,
+    "n_episodes": 100
+  },
+  "vs_pooled_v1_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 2.0666666666666664,
+    "z": 1.1556892232232903,
+    "p_two_sided": 0.247808297789899,
+    "required_successes": 88,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 6.998985611044551,
+    "levels_p": 0.13594184092301978,
+    "levels_dof": 4
+  },
+  "paired": {
+    "experiments/control_lerobot_train/seed1000": {
+      "other_successes": 100,
+      "both": 42,
+      "this_only": 38,
+      "other_only": 58,
+      "neither": 362,
+      "mcnemar_exact_p": 0.05191052214883844,
+      "other_max_reward_histogram": {
+        "0": 77,
+        "1": 125,
+        "2": 28,
+        "3": 170,
+        "4": 100
+      }
+    },
+    "experiments/reference": {
+      "other_successes": 101,
+      "both": 38,
+      "this_only": 42,
+      "other_only": 63,
+      "neither": 357,
+      "mcnemar_exact_p": 0.05044215663996978,
+      "other_max_reward_histogram": {
+        "0": 72,
+        "1": 121,
+        "2": 16,
+        "3": 190,
+        "4": 101
+      }
+    },
+    "experiments/order_replay/seed1000": {
+      "other_successes": 66,
+      "both": 33,
+      "this_only": 47,
+      "other_only": 33,
+      "neither": 387,
+      "mcnemar_exact_p": 0.1456354544029827,
+      "other_max_reward_histogram": {
+        "0": 74,
+        "1": 148,
+        "2": 40,
+        "3": 172,
+        "4": 66
+      }
+    },
+    "experiments/baseline_v3/seed1000": {
+      "other_successes": 82,
+      "both": 44,
+      "this_only": 36,
+      "other_only": 38,
+      "neither": 382,
+      "mcnemar_exact_p": 0.9075606176124984,
+      "other_max_reward_histogram": {
+        "0": 92,
+        "1": 114,
+        "2": 16,
+        "3": 196,
+        "4": 82
+      }
+    },
+    "experiments/baseline_v3/seed1001": {
+      "other_successes": 59,
+      "both": 26,
+      "this_only": 54,
+      "other_only": 33,
+      "neither": 387,
+      "mcnemar_exact_p": 0.03141811023384611,
+      "other_max_reward_histogram": {
+        "0": 121,
+        "1": 102,
+        "2": 21,
+        "3": 197,
+        "4": 59
+      }
+    },
+    "experiments/baseline_v2/seed1000": {
+      "other_successes": 60,
+      "both": 32,
+      "this_only": 48,
+      "other_only": 28,
+      "neither": 392,
+      "mcnemar_exact_p": 0.028626655508737896,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 107,
+        "2": 35,
+        "3": 213,
+        "4": 60
+      }
+    },
+    "experiments/baseline/seed1000": {
+      "other_successes": 68,
+      "both": 35,
+      "this_only": 45,
+      "other_only": 33,
+      "neither": 387,
+      "mcnemar_exact_p": 0.21268281985080573,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 137,
+        "2": 35,
+        "3": 175,
+        "4": 68
+      }
+    },
+    "experiments/baseline/seed1001": {
+      "other_successes": 76,
+      "both": 27,
+      "this_only": 53,
+      "other_only": 49,
+      "neither": 371,
+      "mcnemar_exact_p": 0.7666042612518518,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 96,
+        "2": 28,
+        "3": 219,
+        "4": 76
+      }
+    },
+    "experiments/baseline/seed1002": {
+      "other_successes": 65,
+      "both": 26,
+      "this_only": 54,
+      "other_only": 39,
+      "neither": 381,
+      "mcnemar_exact_p": 0.14617702864715262,
+      "other_max_reward_histogram": {
+        "0": 96,
+        "1": 94,
+        "2": 37,
+        "3": 208,
+        "4": 65
+      }
+    },
+    "experiments/trainer_parity/steps100000/scores/lerobot_train": {
+      "other_successes": 100,
+      "both": 45,
+      "this_only": 35,
+      "other_only": 55,
+      "neither": 365,
+      "mcnemar_exact_p": 0.04459752462791592,
+      "other_max_reward_histogram": {
+        "0": 80,
+        "1": 131,
+        "2": 33,
+        "3": 156,
+        "4": 100
+      }
+    },
+    "experiments/baseline_v3_det/seed1001": {
+      "other_successes": 64,
+      "both": 31,
+      "this_only": 49,
+      "other_only": 33,
+      "neither": 387,
+      "mcnemar_exact_p": 0.09703091129729907,
+      "other_max_reward_histogram": {
+        "0": 126,
+        "1": 118,
+        "2": 33,
+        "3": 159,
+        "4": 64
+      }
+    },
+    "experiments/control_lerobot_train_det/seed1001": {
+      "other_successes": 70,
+      "both": 31,
+      "this_only": 49,
+      "other_only": 39,
+      "neither": 381,
+      "mcnemar_exact_p": 0.33739903685311995,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 122,
+        "2": 36,
+        "3": 187,
+        "4": 70
+      }
+    },
+    "experiments/control_lerobot_train_rerun/seed1000": {
+      "other_successes": 102,
+      "both": 41,
+      "this_only": 39,
+      "other_only": 61,
+      "neither": 359,
+      "mcnemar_exact_p": 0.035200200217704855,
+      "other_max_reward_histogram": {
+        "0": 68,
+        "1": 115,
+        "2": 24,
+        "3": 191,
+        "4": 102
+      }
+    },
+    "experiments/order_replay2/seed1000": {
+      "other_successes": 70,
+      "both": 32,
+      "this_only": 48,
+      "other_only": 38,
+      "neither": 382,
+      "mcnemar_exact_p": 0.3318343545999156,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 129,
+        "2": 34,
+        "3": 186,
+        "4": 70
+      }
+    }
+  }
+}

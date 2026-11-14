@@ -1,0 +1,122 @@
+{
+  "gpu_plan": {
+    "authorized_pool": {
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+          "uuid": "GPU-47476bbb-620e-457b-dfca-391528b33fc7"
+        }
+      ]
+    },
+    "judge": {
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+          "uuid": "GPU-47476bbb-620e-457b-dfca-391528b33fc7"
+        }
+      ]
+    },
+    "judge_mode": "release-all",
+    "work": {
+      "devices": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+          "uuid": "GPU-47476bbb-620e-457b-dfca-391528b33fc7"
+        }
+      ]
+    }
+  },
+  "images": {
+    "base_digest": "sha256:5113320e5cf9d7876c7aca3459533b15e92af95d17dcbe2d7e0638c906dd9671",
+    "base_ref": "rsi-harness-base@sha256:5113320e5cf9d7876c7aca3459533b15e92af95d17dcbe2d7e0638c906dd9671",
+    "judge_digest": "sha256:5113320e5cf9d7876c7aca3459533b15e92af95d17dcbe2d7e0638c906dd9671",
+    "judge_ref": "rsi-harness-base@sha256:5113320e5cf9d7876c7aca3459533b15e92af95d17dcbe2d7e0638c906dd9671",
+    "judge_user": "0",
+    "rootfs_snapshot_mode": "split-workdir",
+    "work_digest": "sha256:4d8a8013873d9682243a808180a3bbf706ebc2fee8a524cc6820a37691bef593",
+    "work_ref": "rsi-harness-work@sha256:4d8a8013873d9682243a808180a3bbf706ebc2fee8a524cc6820a37691bef593",
+    "work_user": "0",
+    "workdir": "/workspace"
+  },
+  "paths": {
+    "logs": "harness/logs",
+    "root": "harness/data/c504ab36acb7416eb92a37b8c1735ed1",
+    "workspace": "harness/data/c504ab36acb7416eb92a37b8c1735ed1/workspace"
+  },
+  "rootfs_snapshot_mode": "split-workdir",
+  "sandbox": null,
+  "schema_version": 2,
+  "snapshot_kind": "docker-rootfs",
+  "task": {
+    "agent": {
+      "environment": [],
+      "install_stop_hook": true,
+      "model": null,
+      "name": "oracle",
+      "network": {
+        "allowlist": [],
+        "mode": "no-network"
+      },
+      "reasoning_effort": null,
+      "secret_env_names": [],
+      "timeout_seconds": 30600.0,
+      "user": null
+    },
+    "assets": [],
+    "environment_digest": "74d927464a62e329af9fc1be41cc3b758d633ac1f8756790fad4bf290690c4d3",
+    "gpu_requirement": {
+      "count": 1,
+      "name": null
+    },
+    "instruction": "# Agent-designed demonstration curriculum for ACT on ALOHA insertion\n\n## Goal\n\nRaise the closed-loop success rate of an **ACT** (Action Chunking Transformer) policy on\n`gym_aloha/AlohaInsertion-v0` by designing **how the 50 human teleoperation demonstrations are\nsampled during training**: which episodes are used, which frames may serve as the start of a\n100-step action chunk, how strongly each frame is weighted, and how all of that changes over the\ncourse of training. The model, the raw data, the optimiser and the training budget are fixed.\nYour candidate is data, not code.\n\nPrimary reward: hidden-seed success rate in `[0, 1]` (higher is better). The Judge retrains ACT\nfrom scratch under the fixed recipe for every submission, so the only thing that can move the\nscore is the exposure schedule your policy compiles to.\n\n## What is fixed (verified by the Judge before every run)\n\n| Component | Value |\n| --- | --- |\n| Dataset | `lerobot/aloha_sim_insertion_human`, revision `cc571a3c661df81b566dbfde3d5c1e85fcdf7884` (v3.0): 50 episodes x 500 frames at 50 fps, one top camera (480x640), 14-D joint state and 14-D joint-position action |\n| Model | ACT exactly as in `lerobot/act_aloha_sim_insertion_human/config.json`: ResNet18 (ImageNet init), `chunk_size = n_action_steps = 100`, VAE latent 32, `kl_weight = 10`, dropout 0.1 |\n| Training | 100,000 steps x batch 8 = **800,000 frame exposures**; AdamW lr 1e-5, weight decay 1e-4, grad clip 10; training seed 1000; no image augmentation |\n| Evaluation | `AlohaInsertion-v0`, `episode_length = 400`, success = reward level 4 (peg pin inside the socket); 500 hidden seeds, 10 parallel envs |\n| Software | lerobot v0.6.1 (`7e241bd6`), gym-aloha 0.1.5, mujoco 3.8.1, torch 2.11.0+cu128 (see `/opt/aloha_public/manifest.json`) |\n\nThe full protocol is `/opt/aloha_public/fixed_train.json`. The baseline candidate is uniform\nsampling (`/opt/aloha_public/default_policy.json`), which is what `/workspace/curriculum/policy.json`\ncontains when you start.\n\n## What you control\n\n`/workspace/curriculum/policy.json` (<= 64 KiB) and optionally\n`/workspace/curriculum/scores.csv` (<= 8 MiB). Nothing else under `/workspace/curriculum` is\nallowed. `/workspace/research/` is yours for notes, scripts, diagnostics and checkpoints; the\nJudge ignores it. `/workspace` must contain only those two directories.\n\n### policy.json\n\n```json\n{\n  \"schema_version\": 1,\n  \"name\": \"late-insertion-focus\",\n  \"notes\": \"optional, <= 2000 chars\",\n  \"scores\": null,\n  \"episodes\": {\"include\": \"all\", \"exclude\": [7, 23]},\n  \"anchors\": {\"min_frame\": 0, \"max_frame\": 499, \"max_chunk_pad\": 99},\n  \"stages\": [\n    {\"until\": 0.4, \"weight\": {\"const\": 1.0}, \"mask\": null},\n    {\"until\": 1.0,\n     \"weight\": {\"op\": \"add\", \"args\": [{\"const\": 0.2},\n                                      {\"op\": \"mul\", \"args\": [{\"var\": \"t_stage\"},\n                                                             {\"op\": \"ge\", \"args\": [{\"feature\": \"t_norm\"}, {\"const\": 0.5}]}]}]},\n     \"mask\": null}\n  ]\n}\n```\n\n- `episodes`: `include` is `\"all\"` or a list of episode indices (0..49); `exclude` removes episodes.\n- `anchors`: global frame-level eligibility. `chunk_pad` is the number of padded steps in the\n  100-step action chunk that starts at a frame (frames 401..499 have pads; the loss ignores padded\n  steps through `action_is_pad`). `max_chunk_pad = 0` keeps only fully observed chunks.\n- `stages`: 1..16 consecutive training stages, `until` is the fraction of the 100,000 steps at which\n  the stage ends (strictly increasing, last one 1.0). Each stage has a `weight` expression\n  (non-negative, one value per frame) and an optional boolean `mask` expression (frames with mask\n  <= 0.5 are excluded). Within a stage the sampling distribution is\n  `weight x mask x eligibility`, normalised.\n- Steps are grouped into blocks of 50; each block's distribution is evaluated with `t_train`\n  (global progress, 0..1) and `t_stage` (progress inside the stage) at the block midpoint and\n  `50 x 8 = 400` anchors are drawn with replacement. A fixed RNG seed makes the compiled schedule a\n  deterministic function of your candidate. The same compiler runs in the Judge.\n\n### Expression DSL (closed operator set, no code)\n\nLeaves: `{\"const\": x}`, `{\"feature\": \"<column>\"}`, `{\"score\": \"<your column>\"}`,\n`{\"var\": \"t_train\" | \"t_stage\"}`. Nodes: `{\"op\": \"<name>\", \"args\": [...]}`.\n\n| Group | Operators |\n| --- | --- |\n| arithmetic | `add sub mul div neg abs min max clip(x,lo,hi) exp log1p sqrt square pow(x, const p) sigmoid tanh` |\n| logic (0/1) | `lt le gt ge eq and or not where(cond,a,b)` |\n| dataset-wide | `rank(x)` percentile rank over all frames, `zscore(x)` |\n| per episode (broadcast) | `ep_mean ep_min ep_max ep_sum ep_std ep_rank ep_cumsum ep_cummax ep_first_where(cond) ep_last_where(cond)` |\n| temporal (within episode, edge padded) | `shift(x, const k)`, `window_mean/window_max/window_min(x, const k)` over `[i-k, i+k]`, `future_mean/future_max/future_sum(x, const k)` over `[i, i+k]`, `past_mean(x, const k)` over `[i-k, i]` |\n\nLimits: 512 nodes and depth 24 per expression, `|const| <= 1e6`, window `k <= 250`, shift\n`|k| <= 500`, `|p| <= 8`. Division, `exp`, `log1p`, `sqrt` and `pow` are clamped to stay finite.\nNegative weights, non-finite values, zero total mass in any block, unknown names and any\nstructural violation make the candidate **invalid**: the Judge reports the reason and produces no\nscore for that submission.\n\n### Public per-frame features (`/opt/aloha_public/features.parquet`, also `.csv`)\n\n25,000 rows (one per frame) with these columns, all usable in expressions by name:\n`episode_index frame_index global_index t_norm frames_to_end chunk_pad`,\n`state_<motor>` and `action_<motor>` for the 14 motors\n(`left/right_{waist,shoulder,elbow,forearm_roll,wrist_angle,wrist_rotate,gripper}`),\n`cmd_err_l2 cmd_err_left cmd_err_right` (commanded-minus-measured joint gap),\n`speed_l2 speed_left speed_right accel_l2 jerk_l2` (joint-space kinematics from the measured state),\n`action_speed_l2 action_speed_left action_speed_right`,\n`gripper_left_cmd gripper_right_cmd gripper_left_vel gripper_right_vel`,\n`chunk_path_l2 chunk_speed_mean chunk_gripper_left_delta chunk_gripper_right_delta`\n(properties of the 100-step chunk that starts at the frame),\n`ep_length ep_path_l2 ep_speed_mean ep_speed_max ep_jerk_mean ep_gripper_left_min ep_gripper_right_min ep_cmd_err_mean`\n(episode aggregates broadcast to every frame). `/opt/aloha_public/features_schema.json` lists them.\n\n### scores.csv (optional)\n\nYour own per-frame columns, computed any way you like in Work: columns\n`episode_index,frame_index,<name>...` with 1..16 extra float columns named `[a-z][a-z0-9_]{0,31}`\n(not colliding with public names), exactly one row per frame, all values finite. Set\n`\"scores\": \"scores.csv\"` in the policy and reference columns as `{\"score\": \"<name>\"}`. Typical\nuses: phase labels from the video, per-frame prediction error of the reference policy, learned\ndifficulty, contact proxies.\n\n## Tools in Work (all on PATH; fixed copies under `/opt/aloha_public`)\n\n| Command | Purpose |\n| --- | --- |\n| `aloha-validate --candidate-dir /workspace/curriculum --features /opt/aloha_public/features.parquet --protocol /opt/aloha_public/fixed_train.json` | Validate and dry-compile the candidate; prints the schedule summary (entropy, episode coverage, decile exposure, chunk padding) or the exact rejection reason. Exit 2 = invalid. |\n| `aloha-compile ... --output DIR [--steps N]` | Write `schedule.npy` + `schedule_summary.json`. `--steps` only for diagnostic runs. |\n| `aloha-train --schedule DIR/schedule.npy --protocol ... --dataset-root /opt/aloha_assets/aloha_sim_insertion_human --output DIR [--steps N] [--seed S]` | The Judge's fixed trainer. A full run is 100,000 steps; `--steps` gives short diagnostics (compile the schedule with the same `--steps`). |\n| `aloha-eval --checkpoint DIR/pretrained_model --protocol ... --output DIR [--n-episodes K] [--start-seed S] [--n-envs E]` | Closed-loop evaluation. Defaults to the **public proxy block** (seeds 100000..100099, 100 episodes), which is disjoint from the hidden Judge seeds. |\n| `aloha-features --dataset-root ... --output ...` | Regenerate the public feature table. |\n\nAlso available offline: the dataset at `/opt/aloha_assets/aloha_sim_insertion_human` (LeRobot\nv3.0 format, loadable with `LeRobotDataset(repo_id, root=...)`), the official reference checkpoint\nmigrated to the current format at `/opt/aloha_assets/reference_policy` (the published\n`lerobot/act_aloha_sim_insertion_human`, usable for per-frame prediction-error scores or as a\nsanity check), the torchvision ResNet18 weights in `TORCH_HOME`, and the task-owned sources under\n`/opt/aloha_public/aloha_curriculum` (read-only). There is no network.\n\nCompute: a full training run takes roughly 100,000 / (steps per second of your GPU); the Judge logs\nits own throughput in every round. A 500-episode evaluation is CPU-bound (MuJoCo physics plus\nEGL rendering in 10 sequential environments) and takes about 30-80 minutes on a laptop-class CPU.\nShort diagnostic trainings (e.g. 5,000-20,000 steps) and proxy evaluations are the cheap way to\ntest hypotheses before spending a submission.\n\n## Submitting\n\nStop any of your own processes that use the GPU first: on a single-GPU host the Judge runs on the\nsame device as Work, and the Harness refuses a submission while a Work process still holds it.\nThen run `rsi-submit`. A fresh Judge container then:\n\n1. verifies every fixed asset and package version against the build manifest;\n2. checks `/workspace` layout and copies `policy.json` (+ `scores.csv`) with single stable reads;\n3. validates and compiles the candidate itself (`candidate_invalid` events explain any rejection);\n4. trains ACT from scratch: 100,000 steps, batch 8, seed 1000, on `cuda:0`;\n5. evaluates 500 hidden-seed episodes;\n6. writes the reward.\n\nFeedback (JSON lines on stdout): `candidate_staged` (hashes), `schedule_compiled` (schedule\nsha256, distinct frames, episode exposures, decile histogram, chunk padding, entropy),\n`train_complete` (throughput, final loss, a 100-point loss history), and `complete` with\n`reward`, `successes`, `n_episodes`, `success_rate_se`, `avg_max_reward` and a histogram of the\nbest reward level reached per episode (0..4: nothing / both grippers touching / both objects\nlifted / peg touching socket / pin inside). Hidden seeds are never revealed. Invalid candidates,\ntraining failures and timeouts produce **no score** for that round; the best valid reward is kept.\n\n## Research directions worth testing\n\n- Temporal structure: ACT learns from (frame, next-100-actions) pairs. Anchors near the end of\n  an episode see padded chunks; anchors just before grasp or insertion see the contact-rich\n  transitions. Does over- or under-sampling particular phases help?\n- Phase-aware curricula: stage schedules that emphasise approach/grasp first and insertion later\n  (or the reverse), expressed with `t_train`, `ep_first_where` on gripper events, or your own\n  `scores.csv` phase labels.\n- Demonstration quality: `ep_jerk_mean`, `ep_path_l2`, `ep_cmd_err_mean` and `ep_rank` rank\n  smooth vs hesitant demonstrations; excluding or down-weighting the noisiest episodes is a\n  classic hypothesis (Demo-SCORE / CUPID style), and the 50-episode pool makes each exclusion a\n  real decision.\n- Difficulty: run the reference policy over the dataset, score each frame by its chunk\n  prediction error, and build easy-to-hard or hard-first schedules.\n\nA single hidden evaluation has a binomial standard error of about 2 percentage points at\nsuccess rates near 20-30%; treat differences smaller than that as noise and favour hypotheses\nthat move the score by more.\n",
+    "instruction_digest": "636464e4ee39d816fd868eddac80d61c9a88266d0bffa2e239f3284df6ebee8d",
+    "require_disjoint_phase_nodes": false,
+    "sandbox": null,
+    "score_direction": "maximize",
+    "service": {
+      "build_context": "task/aloha-act-demo-curriculum/environment",
+      "build_timeout_seconds": 7200.0,
+      "cpus": 16,
+      "environment": [],
+      "gpu_requirement": null,
+      "image": null,
+      "memory_mb": 65536,
+      "network_mode": "no-network",
+      "shm_size": "8g",
+      "storage_mb": 61440,
+      "user": null,
+      "workdir": "/workspace"
+    },
+    "source_digest": "da98fe33586d4ff6e9c48f6a1afe06b7cbad6a193fb961eb693e854ff3502c62",
+    "source_dir": "task/aloha-act-demo-curriculum",
+    "task_id": "aloha-act-demo-curriculum",
+    "tests_digest": "123a208648d0c9713181e440b7b1c9dcce160fed57deb53a4b345d0bf74b3690",
+    "verifier": {
+      "clean_image": true,
+      "command": [
+        "/bin/bash",
+        "/tests/test.sh"
+      ],
+      "environment": [],
+      "gpu_count": 1,
+      "judge_model": null,
+      "judge_model_effort": null,
+      "model_access": false,
+      "network": {
+        "allowlist": [],
+        "mode": "no-network"
+      },
+      "output_limit_bytes": 1000000,
+      "primary_reward": null,
+      "secret_env_names": [],
+      "timeout_seconds": 28800.0,
+      "user": null,
+      "visibility": "hidden"
+    },
+    "workdir": "/workspace"
+  },
+  "workdir": "/workspace"
+}

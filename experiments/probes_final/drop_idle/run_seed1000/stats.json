@@ -1,0 +1,84 @@
+{
+  "run_dir": "experiments/probes_final/drop_idle/run_seed1000",
+  "baseline_dir": "experiments/baseline_v3_det",
+  "candidate_protocol": {
+    "protocol_version": 3,
+    "cudnn_deterministic": true
+  },
+  "baseline_protocol": {
+    "protocol_version": 3,
+    "cudnn_deterministic": true
+  },
+  "protocol_matches": true,
+  "policy_name": "drop-idle-tail",
+  "schedule_sha256": "e7c5fe8d8a47d1fa69a62addd8cf1a3510f07fecb87b50bf0760e1906c6be7f4",
+  "schedule": {
+    "distinct_frames_fraction": 0.7182,
+    "entropy_mean_nats": 9.795623906660184,
+    "entropy_uniform_nats": 10.126631103850338,
+    "chunk_pad_fraction_padded": 0.0342025,
+    "stage_blocks": [
+      2000
+    ],
+    "episodes_used": 50
+  },
+  "train": {
+    "seed": 1000,
+    "steps": 100000,
+    "exposures": 800000,
+    "train_s": 16199.297857141006,
+    "steps_per_s": 6.173107061916132,
+    "final_l1_mean_last_1000": 0.04394435314834118,
+    "final_kl_mean_last_1000": 6.83305412530899e-05,
+    "peak_gpu_mem_gb": 2.252082176
+  },
+  "hidden": {
+    "successes": 84,
+    "n_episodes": 500,
+    "rate": 0.168,
+    "wilson95": [
+      0.13778823297684417,
+      0.20327432908962656
+    ],
+    "max_reward_histogram": [
+      95,
+      111,
+      17,
+      193,
+      84
+    ],
+    "avg_max_reward": 2.12,
+    "eval_s": 1402.3026129579957,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 14,
+    "n_episodes": 100
+  },
+  "vs_pooled_baseline": {
+    "baseline": "201/1500",
+    "diff_pp": 3.4000000000000004,
+    "z": 1.3509917184445908,
+    "p_two_sided": 0.17669808557017397,
+    "required_successes": 92,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      319,
+      340,
+      81,
+      559,
+      201
+    ],
+    "levels_chi2": 7.247607377996765,
+    "levels_p": 0.12336769245578506,
+    "levels_dof": 4
+  },
+  "paired_vs_host_seed1000": {
+    "against": "uniform run experiments/baseline_v3_det/seed1000, same hidden seeds",
+    "both": 39,
+    "baseline_only": 41,
+    "candidate_only": 45,
+    "neither": 375,
+    "mcnemar_exact_p": 0.7465343822890571
+  }
+}

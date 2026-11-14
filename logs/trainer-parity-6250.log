@@ -1,0 +1,41 @@
+# started 2026-11-09T09:31:57-08:00 : scripts/check_trainer_parity.sh 6250
+Using Python 3.12.15 environment at: .venv-control
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-09 09:32:01,867 INFO root: Cuda backend detected, using cuda.
+2026-11-09 09:32:01,868 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-09 09:32:01,868 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-09 09:32:01,991 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-09 09:33:11,589 INFO aloha_curriculum.train: step 200/6250 loss 7.3576 l1 0.5396 kl 0.6818 gn 157.44 data 0.001s step 0.342s elapsed 69s
+2026-11-09 09:34:19,701 INFO aloha_curriculum.train: step 400/6250 loss 3.0602 l1 0.3958 kl 0.2664 gn 86.57 data 0.000s step 0.340s elapsed 137s
+2026-11-09 09:35:27,748 INFO aloha_curriculum.train: step 600/6250 loss 2.5503 l1 0.3417 kl 0.2209 gn 76.70 data 0.000s step 0.340s elapsed 205s
+2026-11-09 09:36:35,793 INFO aloha_curriculum.train: step 800/6250 loss 2.2561 l1 0.3038 kl 0.1952 gn 71.15 data 0.000s step 0.340s elapsed 273s
+2026-11-09 09:37:43,773 INFO aloha_curriculum.train: step 1000/6250 loss 2.0241 l1 0.2847 kl 0.1739 gn 65.83 data 0.000s step 0.340s elapsed 341s
+2026-11-09 09:38:51,753 INFO aloha_curriculum.train: step 1200/6250 loss 1.8268 l1 0.2694 kl 0.1557 gn 62.41 data 0.000s step 0.340s elapsed 409s
+2026-11-09 09:39:59,696 INFO aloha_curriculum.train: step 1400/6250 loss 1.6540 l1 0.2562 kl 0.1398 gn 58.92 data 0.000s step 0.340s elapsed 477s
+2026-11-09 09:41:07,650 INFO aloha_curriculum.train: step 1600/6250 loss 1.5341 l1 0.2449 kl 0.1289 gn 56.71 data 0.000s step 0.340s elapsed 545s
+2026-11-09 09:42:15,576 INFO aloha_curriculum.train: step 1800/6250 loss 1.4027 l1 0.2345 kl 0.1168 gn 53.75 data 0.000s step 0.339s elapsed 613s
+2026-11-09 09:43:23,485 INFO aloha_curriculum.train: step 2000/6250 loss 1.2713 l1 0.2261 kl 0.1045 gn 50.94 data 0.000s step 0.339s elapsed 681s
+2026-11-09 09:44:31,405 INFO aloha_curriculum.train: step 2200/6250 loss 1.1692 l1 0.2183 kl 0.0951 gn 48.61 data 0.000s step 0.339s elapsed 748s
+2026-11-09 09:45:39,288 INFO aloha_curriculum.train: step 2400/6250 loss 1.0568 l1 0.2152 kl 0.0842 gn 46.07 data 0.000s step 0.339s elapsed 816s
+2026-11-09 09:46:47,181 INFO aloha_curriculum.train: step 2600/6250 loss 0.9672 l1 0.2068 kl 0.0760 gn 43.95 data 0.000s step 0.339s elapsed 884s
+2026-11-09 09:47:55,028 INFO aloha_curriculum.train: step 2800/6250 loss 0.8633 l1 0.1970 kl 0.0666 gn 40.68 data 0.000s step 0.339s elapsed 952s
+2026-11-09 09:49:02,936 INFO aloha_curriculum.train: step 3000/6250 loss 0.8013 l1 0.1968 kl 0.0604 gn 39.50 data 0.000s step 0.339s elapsed 1020s
+2026-11-09 09:50:10,856 INFO aloha_curriculum.train: step 3200/6250 loss 0.7214 l1 0.1912 kl 0.0530 gn 37.12 data 0.000s step 0.339s elapsed 1088s
+2026-11-09 09:51:18,770 INFO aloha_curriculum.train: step 3400/6250 loss 0.6569 l1 0.1837 kl 0.0473 gn 35.70 data 0.000s step 0.339s elapsed 1156s
+2026-11-09 09:52:26,685 INFO aloha_curriculum.train: step 3600/6250 loss 0.6033 l1 0.1823 kl 0.0421 gn 33.54 data 0.000s step 0.339s elapsed 1224s
+2026-11-09 09:53:34,545 INFO aloha_curriculum.train: step 3800/6250 loss 0.5545 l1 0.1771 kl 0.0377 gn 32.06 data 0.000s step 0.339s elapsed 1292s
+2026-11-09 09:54:42,440 INFO aloha_curriculum.train: step 4000/6250 loss 0.5046 l1 0.1688 kl 0.0336 gn 29.90 data 0.000s step 0.339s elapsed 1359s
+2026-11-09 09:55:50,316 INFO aloha_curriculum.train: step 4200/6250 loss 0.4766 l1 0.1733 kl 0.0303 gn 29.13 data 0.000s step 0.339s elapsed 1427s
+2026-11-09 09:56:58,183 INFO aloha_curriculum.train: step 4400/6250 loss 0.4354 l1 0.1647 kl 0.0271 gn 28.18 data 0.000s step 0.339s elapsed 1495s
+2026-11-09 09:58:06,031 INFO aloha_curriculum.train: step 4600/6250 loss 0.4114 l1 0.1660 kl 0.0245 gn 26.76 data 0.000s step 0.339s elapsed 1563s
+2026-11-09 09:59:13,898 INFO aloha_curriculum.train: step 4800/6250 loss 0.3815 l1 0.1599 kl 0.0222 gn 25.37 data 0.000s step 0.339s elapsed 1631s
+2026-11-09 10:00:21,770 INFO aloha_curriculum.train: step 5000/6250 loss 0.3574 l1 0.1548 kl 0.0203 gn 24.64 data 0.000s step 0.339s elapsed 1699s
+2026-11-09 10:01:29,665 INFO aloha_curriculum.train: step 5200/6250 loss 0.3402 l1 0.1557 kl 0.0185 gn 23.97 data 0.000s step 0.339s elapsed 1767s
+2026-11-09 10:02:37,503 INFO aloha_curriculum.train: step 5400/6250 loss 0.3213 l1 0.1509 kl 0.0170 gn 23.12 data 0.000s step 0.339s elapsed 1835s
+2026-11-09 10:03:45,397 INFO aloha_curriculum.train: step 5600/6250 loss 0.3083 l1 0.1507 kl 0.0158 gn 22.49 data 0.000s step 0.339s elapsed 1902s
+2026-11-09 10:04:53,262 INFO aloha_curriculum.train: step 5800/6250 loss 0.2854 l1 0.1445 kl 0.0141 gn 21.05 data 0.000s step 0.339s elapsed 1970s
+2026-11-09 10:06:01,122 INFO aloha_curriculum.train: step 6000/6250 loss 0.2794 l1 0.1441 kl 0.0135 gn 21.09 data 0.000s step 0.339s elapsed 2038s
+2026-11-09 10:07:08,956 INFO aloha_curriculum.train: step 6200/6250 loss 0.2688 l1 0.1440 kl 0.0125 gn 20.70 data 0.000s step 0.339s elapsed 2106s
+2026-11-09 10:07:25,915 INFO aloha_curriculum.train: step 6250/6250 loss 0.2566 l1 0.1354 kl 0.0121 gn 19.71 data 0.000s step 0.339s elapsed 2123s
+234 tensors, 234 bit-identical, 0 differ, worst abs diff 0.000e+00
+# finished 2026-11-09T10:44:37-08:00 exit=0

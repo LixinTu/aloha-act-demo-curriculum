@@ -1,0 +1,74 @@
+{
+  "run_dir": "experiments/probes/drop_idle/run_seed1000",
+  "policy_name": "drop-idle-tail",
+  "schedule_sha256": "6957178bda4513c0b5c3eb48aeac478c41ccc42b76f9f02e6d2fca9246bc7789",
+  "schedule": {
+    "distinct_frames_fraction": 0.7182,
+    "entropy_mean_nats": 9.795623906660184,
+    "entropy_uniform_nats": 10.126631103850338,
+    "chunk_pad_fraction_padded": 0.033895,
+    "stage_blocks": [
+      2000
+    ],
+    "episodes_used": 50
+  },
+  "train": {
+    "seed": 1000,
+    "steps": 100000,
+    "exposures": 800000,
+    "train_s": 15978.338252004993,
+    "steps_per_s": 6.2584730916841,
+    "final_l1_mean_last_1000": 0.044275159750133755,
+    "final_kl_mean_last_1000": 6.538588926196098e-05,
+    "peak_gpu_mem_gb": 3.420732928
+  },
+  "hidden": {
+    "successes": 74,
+    "n_episodes": 500,
+    "rate": 0.148,
+    "wilson95": [
+      0.1195614053892054,
+      0.18180613029572734
+    ],
+    "max_reward_histogram": [
+      67,
+      133,
+      29,
+      197,
+      74
+    ],
+    "avg_max_reward": 2.156,
+    "eval_s": 1436.7549829710042,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 21,
+    "n_episodes": 100
+  },
+  "vs_pooled_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 0.8666666666666656,
+    "z": 0.48464386780331464,
+    "p_two_sided": 0.6279289902988532,
+    "required_successes": 88,
+    "exceeds_threshold": false,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 8.212761858636053,
+    "levels_p": 0.08408811775969449,
+    "levels_dof": 4
+  },
+  "paired_vs_host_seed1000": {
+    "against": "host uniform run, training seed 1000, same hidden seeds",
+    "both": 28,
+    "baseline_only": 40,
+    "candidate_only": 46,
+    "neither": 386,
+    "mcnemar_exact_p": 0.5900356111485566
+  }
+}

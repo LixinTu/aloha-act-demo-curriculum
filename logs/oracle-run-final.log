@@ -1,0 +1,47 @@
+2026-11-12T15:33:03-08:00 waiting for 300 s without GPU compute processes (poll every 60 s), then: scripts/oracle_run.sh
+2026-11-12T15:33:03-08:00 GPU idle; counting
+2026-11-12T15:36:05-08:00 GPU busy: 71199, <another program>
+2026-11-12T16:14:37-08:00 waiting for 300 s without GPU compute processes (poll every 60 s), then: scripts/oracle_run.sh
+2026-11-12T16:14:37-08:00 GPU idle; counting
+2026-11-12T16:19:43-08:00 GPU idle for 306 s; starting: scripts/oracle_run.sh
+kernel log clean (this boot)
+Running Agent 'oracle' on task: aloha-act-demo-curriculum
+  Task dir:         task/aloha-act-demo-curriculum
+  Timeout:          30600.0s
+  GPU selectors:    0
+  Max submissions:  1
+  Data root:        harness/data
+  Logs root:        harness/logs
+
+Network policy: enforced in each container's own namespace (non-root controller)
+GPU pool: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Work GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPUs: GPU-47476bbb-620e-457b-dfca-391528b33fc7
+Judge GPU mode: release-all
+Preparing task images (the first run may take several minutes)...
+Task images ready; preparing Work container...
+Run ID: 8f721dab03844104a15b295fbfd30535
+Work container started; preparing Agent...
+Running oracle (timeout=30600.0s)...
+Agent output: harness/logs/runs/8f721dab03844104a15b295fbfd30535/aloha-act-demo-curriculum/agent_output.txt
+Judge agent-1: snapshotting Work...
+Judge agent-1: running /tests/test.sh...
+Judge agent-1 finished: completed score=0.162 runtime=17495.41s
+Agent finished: exit_code=0 timed_out=False
+
+Run completed in 18146.7s
+  Run ID:           8f721dab03844104a15b295fbfd30535
+  Status:           completed
+  Rounds:           1
+  Best score:       0.162
+  Best round:       agent-1
+  Workspace:        harness/data/8f721dab03844104a15b295fbfd30535/workspace
+  Logs:             harness/logs/runs/8f721dab03844104a15b295fbfd30535
+  Artifacts:        harness/logs/runs/8f721dab03844104a15b295fbfd30535/aloha-act-demo-curriculum
+  Agent exit code:  0
+
+Judge rounds:
+  agent-1: completed score=0.162 exit_code=0 runtime=17495.4s
+
+Oracle check passed
+kernel log clean (this boot since 2026-11-12 16:19:43)

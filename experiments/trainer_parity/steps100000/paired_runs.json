@@ -1,0 +1,181 @@
+{
+  "run_dir": "experiments/trainer_parity/steps100000/scores/lerobot_train",
+  "hidden": {
+    "successes": 100,
+    "n_episodes": 500,
+    "rate": 0.2,
+    "wilson95": [
+      0.16728549897175743,
+      0.23728910530517394
+    ],
+    "max_reward_histogram": [
+      80,
+      131,
+      33,
+      156,
+      100
+    ],
+    "avg_max_reward": 2.13,
+    "eval_s": 1439.9828689029964,
+    "gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2"
+  },
+  "proxy": {
+    "successes": 13,
+    "n_episodes": 100
+  },
+  "vs_pooled_v1_baseline": {
+    "baseline": "209/1500",
+    "diff_pp": 6.066666666666667,
+    "z": 3.3925070746232073,
+    "p_two_sided": 0.0006925614355672296,
+    "required_successes": 88,
+    "exceeds_threshold": true,
+    "levels_baseline_pooled": [
+      262,
+      327,
+      100,
+      602,
+      209
+    ],
+    "levels_chi2": 20.473882536764602,
+    "levels_p": 0.00040253255189677854,
+    "levels_dof": 4
+  },
+  "paired": {
+    "experiments/control_lerobot_train/seed1000": {
+      "other_successes": 100,
+      "both": 57,
+      "this_only": 43,
+      "other_only": 43,
+      "neither": 357,
+      "mcnemar_exact_p": 1.0,
+      "other_max_reward_histogram": {
+        "0": 77,
+        "1": 125,
+        "2": 28,
+        "3": 170,
+        "4": 100
+      }
+    },
+    "experiments/reference": {
+      "other_successes": 101,
+      "both": 47,
+      "this_only": 53,
+      "other_only": 54,
+      "neither": 346,
+      "mcnemar_exact_p": 1.0,
+      "other_max_reward_histogram": {
+        "0": 72,
+        "1": 121,
+        "2": 16,
+        "3": 190,
+        "4": 101
+      }
+    },
+    "experiments/order_replay/seed1000": {
+      "other_successes": 66,
+      "both": 48,
+      "this_only": 52,
+      "other_only": 18,
+      "neither": 382,
+      "mcnemar_exact_p": 5.849547318695842e-05,
+      "other_max_reward_histogram": {
+        "0": 74,
+        "1": 148,
+        "2": 40,
+        "3": 172,
+        "4": 66
+      }
+    },
+    "experiments/baseline_v3/seed1000": {
+      "other_successes": 82,
+      "both": 45,
+      "this_only": 55,
+      "other_only": 37,
+      "neither": 363,
+      "mcnemar_exact_p": 0.07576023576406513,
+      "other_max_reward_histogram": {
+        "0": 92,
+        "1": 114,
+        "2": 16,
+        "3": 196,
+        "4": 82
+      }
+    },
+    "experiments/baseline_v3/seed1001": {
+      "other_successes": 59,
+      "both": 32,
+      "this_only": 68,
+      "other_only": 27,
+      "neither": 373,
+      "mcnemar_exact_p": 3.114061659106967e-05,
+      "other_max_reward_histogram": {
+        "0": 121,
+        "1": 102,
+        "2": 21,
+        "3": 197,
+        "4": 59
+      }
+    },
+    "experiments/baseline_v2/seed1000": {
+      "other_successes": 60,
+      "both": 36,
+      "this_only": 64,
+      "other_only": 24,
+      "neither": 376,
+      "mcnemar_exact_p": 2.3726590787439646e-05,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 107,
+        "2": 35,
+        "3": 213,
+        "4": 60
+      }
+    },
+    "experiments/baseline/seed1000": {
+      "other_successes": 68,
+      "both": 34,
+      "this_only": 66,
+      "other_only": 34,
+      "neither": 366,
+      "mcnemar_exact_p": 0.0017899303914868528,
+      "other_max_reward_histogram": {
+        "0": 85,
+        "1": 137,
+        "2": 35,
+        "3": 175,
+        "4": 68
+      }
+    },
+    "experiments/baseline/seed1001": {
+      "other_successes": 76,
+      "both": 31,
+      "this_only": 69,
+      "other_only": 45,
+      "neither": 355,
+      "mcnemar_exact_p": 0.030776323854403202,
+      "other_max_reward_histogram": {
+        "0": 81,
+        "1": 96,
+        "2": 28,
+        "3": 219,
+        "4": 76
+      }
+    },
+    "experiments/baseline/seed1002": {
+      "other_successes": 65,
+      "both": 29,
+      "this_only": 71,
+      "other_only": 36,
+      "neither": 364,
+      "mcnemar_exact_p": 0.0009231579958033549,
+      "other_max_reward_histogram": {
+        "0": 96,
+        "1": 94,
+        "2": 37,
+        "3": 208,
+        "4": 65
+      }
+    }
+  }
+}

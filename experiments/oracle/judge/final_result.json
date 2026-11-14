@@ -1,0 +1,21 @@
+{
+  "agent": "oracle",
+  "agent_exit_code": 0,
+  "agent_runtime_seconds": 17437.022464020003,
+  "best_rewards": {
+    "eval_s": 1376.9,
+    "n_episodes": 500.0,
+    "reward": 0.138,
+    "successes": 69.0,
+    "train_s": 16042.6
+  },
+  "best_round": "agent-1",
+  "best_score": 0.138,
+  "first_submission_seconds": 1.111731127020903,
+  "model": null,
+  "runtime_seconds": 18102.505060566997,
+  "status": "completed",
+  "timed_out": false,
+  "timeout_seconds": 30600.0,
+  "total_rounds": 1
+}

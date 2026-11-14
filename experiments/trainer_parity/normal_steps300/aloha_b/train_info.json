@@ -1,0 +1,54 @@
+{
+  "official_budget": false,
+  "steps": 300,
+  "batch_size": 8,
+  "exposures": 2400,
+  "seed": 1000,
+  "device": "cuda",
+  "device_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "cudnn_deterministic": false,
+  "protocol_version": 3,
+  "image_normalization": "imagenet",
+  "train_s": 52.47542483601137,
+  "steps_per_s": 5.71696181474503,
+  "peak_gpu_mem_gb": 3.45042944,
+  "final_loss_mean_last_1000": 5.98784339427948,
+  "final_l1_mean_last_1000": 0.49535970797141393,
+  "final_kl_mean_last_1000": 0.5492483688394229,
+  "history": [
+    {
+      "step": 200,
+      "loss": 7.357932028770446,
+      "l1_loss": 0.5400054931640625,
+      "kl_loss": 0.6817926540970802,
+      "grad_norm": 157.4436876678467,
+      "data_s": 0.0009551786413067021,
+      "step_s": 0.18356861878055497,
+      "elapsed_s": 36.91921087299124
+    },
+    {
+      "step": 300,
+      "loss": 3.2476661252975463,
+      "l1_loss": 0.4060681375861168,
+      "kl_loss": 0.28415979832410815,
+      "grad_norm": 91.72276000976562,
+      "data_s": 0.00012790565990144386,
+      "step_s": 0.15517548513133078,
+      "elapsed_s": 52.4569367649965
+    }
+  ],
+  "versions": {
+    "python": "3.12.15",
+    "torch": "2.11.0+cu128",
+    "lerobot": "0.6.1",
+    "gym-aloha": "0.1.5",
+    "mujoco": "3.8.1",
+    "dm-control": "1.0.41",
+    "torchvision": "0.26.0+cu128",
+    "torchcodec": "0.11.1",
+    "av": "15.1.0",
+    "numpy": "2.2.6",
+    "gymnasium": "1.4.0"
+  },
+  "checkpoint": "experiments/trainer_parity/normal_steps300/aloha_b/pretrained_model"
+}

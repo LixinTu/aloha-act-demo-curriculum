@@ -1,0 +1,10 @@
+{
+  "steps": 60000,
+  "lerobot_save_freq": 20000,
+  "tensors": 234,
+  "bit_identical": 81,
+  "differing": 153,
+  "worst_abs_diff": 0.09381281165406108,
+  "rms_diff": 0.0010453065997319138,
+  "rel_fro": 0.021246802916716555
+}

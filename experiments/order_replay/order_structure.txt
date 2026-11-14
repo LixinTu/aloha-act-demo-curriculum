@@ -1,0 +1,21 @@
+lerobot-train seed 1000: 800000 draws
+  exposures per frame: min 32, max 32, s.d. 0.000
+  distinct frames per 25000 draws: mean 25000.0, min 25000
+  draws between exposures of a frame: mean 25000, s.d. 10203, p1 3550, median 24990, p99 46476, max 49983
+  distinct episodes per batch: 7.462
+  mean frame-in-episode per batch (8 draws): mean 249.5, s.d. 51.03, lag-1 autocorrelation -0.0018
+  mean frame-in-episode per block (400 draws): mean 249.5, s.d. 7.42, lag-1 autocorrelation -0.0160
+v3 uniform: 800000 draws
+  exposures per frame: min 32, max 32, s.d. 0.000
+  distinct frames per 25000 draws: mean 24902.9, min 24896
+  draws between exposures of a frame: mean 25000, s.d. 10203, p1 3551, median 25006, p99 46474, max 50299
+  distinct episodes per batch: 7.460
+  mean frame-in-episode per batch (8 draws): mean 249.5, s.d. 51.12, lag-1 autocorrelation +0.0017
+  mean frame-in-episode per block (400 draws): mean 249.5, s.d. 7.21, lag-1 autocorrelation -0.0024
+v2 independent draws: 800000 draws
+  exposures per frame: min 11, max 55, s.d. 5.663
+  distinct frames per 25000 draws: mean 15796.5, min 15694
+  draws between exposures of a frame: mean 24194, s.d. 24189, p1 245, median 16780, p99 111421, max 344363
+  distinct episodes per batch: 7.459
+  mean frame-in-episode per batch (8 draws): mean 249.5, s.d. 51.09, lag-1 autocorrelation +0.0011
+  mean frame-in-episode per block (400 draws): mean 249.5, s.d. 7.27, lag-1 autocorrelation +0.0140

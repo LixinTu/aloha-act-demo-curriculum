@@ -1,0 +1,86 @@
+{
+  "description": "RSI-Harness oracle run (uniform default policy) vs host baseline seed 1000; same schedule, training seed and hidden seed block",
+  "oracle_run_id": "8f721dab03844104a15b295fbfd30535",
+  "host_dir": "experiments/baseline_v3_det/seed1000",
+  "judge_dir": "experiments/oracle_final/judge",
+  "schedule_sha256_host": "c6e00c8736a118c6b77ab9a9edba77b06db9c4a3a6463328061ceb4de0bd400c",
+  "schedule_sha256_judge": "c6e00c8736a118c6b77ab9a9edba77b06db9c4a3a6463328061ceb4de0bd400c",
+  "host_successes": 80,
+  "judge_successes": 81,
+  "n_episodes": 500,
+  "paired_2x2": {
+    "both": 78,
+    "host_only": 2,
+    "judge_only": 3,
+    "neither": 417
+  },
+  "mcnemar_exact_p": 1.0,
+  "same_max_reward_level_episodes": 490,
+  "different_sum_reward_episodes": 83,
+  "identical_per_episode": false,
+  "max_reward_pearson_r": 0.9920541496896991,
+  "level_histogram_host": [
+    96,
+    109,
+    19,
+    196,
+    80
+  ],
+  "level_histogram_judge": [
+    95,
+    108,
+    19,
+    197,
+    81
+  ],
+  "level_histogram_chi2": 0.01859960641142653,
+  "level_histogram_p": 0.9999570239994755,
+  "level_histogram_dof": 4,
+  "judge_vs_pooled_baseline_z": 1.5917040452312077,
+  "train_cudnn_deterministic": [
+    true,
+    true
+  ],
+  "eval_cudnn_deterministic": [
+    false,
+    false
+  ],
+  "train_loss_history_points": [
+    500,
+    500
+  ],
+  "train_loss_history_identical": true,
+  "train_final_loss_identical": true,
+  "train_versions_host": {
+    "python": "3.12.15",
+    "torch": "2.11.0+cu128",
+    "lerobot": "0.6.1",
+    "gym-aloha": "0.1.5",
+    "mujoco": "3.8.1",
+    "dm-control": "1.0.41",
+    "torchvision": "0.26.0+cu128",
+    "torchcodec": "0.11.1",
+    "av": "15.1.0",
+    "numpy": "2.2.6",
+    "gymnasium": "1.4.0"
+  },
+  "train_versions_judge": {
+    "python": "3.12.3",
+    "torch": "2.11.0+cu128",
+    "lerobot": "0.6.1",
+    "gym-aloha": "0.1.5",
+    "mujoco": "3.8.1",
+    "dm-control": "1.0.41",
+    "torchvision": "0.26.0+cu128",
+    "torchcodec": "0.11.1",
+    "av": "15.1.0",
+    "numpy": "2.2.6",
+    "gymnasium": "1.4.0"
+  },
+  "judge_gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2",
+  "host_gl_renderer": "NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2",
+  "host_train_s": 16189.616178679018,
+  "judge_train_s": 16133.736532987,
+  "host_eval_s": 1742.8695801349822,
+  "judge_eval_s": 1345.6417741629994
+}

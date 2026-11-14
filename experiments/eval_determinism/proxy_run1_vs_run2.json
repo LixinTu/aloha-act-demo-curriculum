@@ -1,0 +1,40 @@
+{
+  "a": "experiments/eval_determinism/proxy_run1/eval_proxy/eval_result.json",
+  "b": "experiments/eval_determinism/proxy_run2/eval_proxy/eval_result.json",
+  "n_episodes": 100,
+  "cudnn_deterministic": [
+    true,
+    true
+  ],
+  "successes": [
+    16,
+    16
+  ],
+  "different_success": 0,
+  "only_a_success": 0,
+  "only_b_success": 0,
+  "mcnemar_exact_p": 1.0,
+  "different_max_reward": 1,
+  "different_sum_reward": 24,
+  "max_reward_histograms": [
+    {
+      "0": 16,
+      "1": 21,
+      "2": 7,
+      "3": 40,
+      "4": 16
+    },
+    {
+      "0": 15,
+      "1": 21,
+      "2": 7,
+      "3": 41,
+      "4": 16
+    }
+  ],
+  "eval_s": [
+    277.8344934859997,
+    277.25356627499787
+  ],
+  "identical": false
+}

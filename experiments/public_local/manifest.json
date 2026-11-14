@@ -1,0 +1,32 @@
+{
+  "files": {
+    "data/reference_policy/README.md": "04f92534d35f812194ad24a1de0632bbb5cabcce9f5d173501ea52cd774ad2ee",
+    "data/reference_policy/config.json": "087144dc6b31f8922048de78d828536e1d4835e1782e3b9fdd2313ce3c2239d8",
+    "data/reference_policy/eval_info.json": "566d1661791f6e939efef28826a5cd7f674795d9c94575496d9ce252a11705ba",
+    "data/reference_policy/model.safetensors": "5e0e5e5cd5b340b559db6fd3fa5d7ca051aef330c484b4b59bf4e04e4c95dc5b",
+    "data/reference_policy/policy_postprocessor.json": "ee37b39ca2c4815e8645730c5668052409f3eaf0a04c110de7fd2a0d34220ae3",
+    "data/reference_policy/policy_postprocessor_step_0_unnormalizer_processor.safetensors": "d78041b1589339813c0a24f2c5860b22c37aae7946d367459af2f5a1e3ed9898",
+    "data/reference_policy/policy_preprocessor.json": "80b14140aeb15df9b731ba93fbb5ede4aa1b64265855a59948e30ac84456d35a",
+    "data/reference_policy/policy_preprocessor_step_3_normalizer_processor.safetensors": "d78041b1589339813c0a24f2c5860b22c37aae7946d367459af2f5a1e3ed9898",
+    "data/reference_policy/train_config.json": "0ab265e4c5ba260111d33acdc94a13e453e721faf13c9cbf237a6811dd8f02bf",
+    "experiments/public_local/features.csv": "dd3cf8673c4f01ecc7c26265f8c0a78966cc72aab64662322f810417316095d5",
+    "experiments/public_local/features.parquet": "ce40d57281595e90f28f65503fd39dadb9b0f573d48d851a834d775b701aa658",
+    "experiments/public_local/features_schema.json": "0c69aa8ed7a0fff0269c1b2d4565f102ebfe68050c48d5bbafd3bae66c2b1c04"
+  },
+  "lerobot_commit": "7e241bd630a3719a56157a497ce5d08f244784f1",
+  "packages": {
+    "aloha-curriculum": "0.1.0",
+    "av": "15.1.0",
+    "dm-control": "1.0.41",
+    "gym-aloha": "0.1.5",
+    "gymnasium": "1.4.0",
+    "lerobot": "0.6.1",
+    "mujoco": "3.8.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pyarrow": "26.0.0",
+    "torch": "2.11.0+cu128",
+    "torchcodec": "0.11.1",
+    "torchvision": "0.26.0+cu128"
+  }
+}

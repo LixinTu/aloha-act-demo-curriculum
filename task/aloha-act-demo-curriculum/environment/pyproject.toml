@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aloha-curriculum"
+version = "0.1.0"
+description = "Task-owned runtime for the aloha-act-demo-curriculum OpenRSI task"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+aloha-features = "aloha_curriculum.cli:features_main"
+aloha-validate = "aloha_curriculum.cli:validate_main"
+aloha-compile = "aloha_curriculum.cli:compile_main"
+aloha-train = "aloha_curriculum.cli:train_main"
+aloha-eval = "aloha_curriculum.cli:eval_main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["aloha_curriculum"]

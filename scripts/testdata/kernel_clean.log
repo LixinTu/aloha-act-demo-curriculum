@@ -1,0 +1,6 @@
+2026-11-12T10:11:33-08:00 host kernel: Linux version 6.8.0-147-generic (buildd@lcy02-amd64-081) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binuti
+2026-11-12T10:11:33-08:00 host kernel: thermal_sys: Registered thermal governor 'fair_share'
+2026-11-12T10:11:33-08:00 host kernel: thermal_sys: Registered thermal governor 'bang_bang'
+2026-11-12T10:11:33-08:00 host kernel: thermal_sys: Registered thermal governor 'step_wise'
+2026-11-12T10:11:33-08:00 host kernel: thermal_sys: Registered thermal governor 'user_space'
+2026-11-12T10:11:33-08:00 host kernel: thermal_sys: Registered thermal governor 'power_allocator'

@@ -1,0 +1,33 @@
+{
+  "torch": "2.11.0+cu128",
+  "cuda": "12.8",
+  "cudnn": 91900,
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "cudnn_enabled": true,
+  "cudnn_benchmark": true,
+  "cudnn_benchmark_limit": 10,
+  "cudnn_deterministic": false,
+  "cudnn_allow_tf32": true,
+  "matmul_allow_tf32": true,
+  "float32_matmul_precision": "high",
+  "matmul_allow_fp16_reduced_precision_reduction": true,
+  "matmul_allow_bf16_reduced_precision_reduction": true,
+  "deterministic_algorithms": false,
+  "autocast_enabled_at_backward": false,
+  "num_threads": 24,
+  "env": {
+    "NVIDIA_TF32_OVERRIDE": null,
+    "CUDNN_LOGLEVEL_DBG": null,
+    "CUDNN_LOGINFO_DBG": null,
+    "TORCH_CUDNN_V8_API_DISABLED": null,
+    "TORCH_CUDNN_V8_API_LRU_CACHE_LIMIT": null,
+    "CUBLAS_WORKSPACE_CONFIG": null,
+    "CUBLASLT_WORKSPACE_SIZE": null,
+    "PYTORCH_CUDA_ALLOC_CONF": null,
+    "CUDA_LAUNCH_BLOCKING": null,
+    "OMP_NUM_THREADS": null,
+    "PYTHONHASHSEED": "0",
+    "MUJOCO_GL": "egl",
+    "HF_HUB_OFFLINE": "1"
+  }
+}

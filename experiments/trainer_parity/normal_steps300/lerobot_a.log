@@ -1,0 +1,150 @@
+INFO 2026-11-10 21:11:19 ot_train.py:272 {'batch_size': 8,
+ 'checkpoint_path': None,
+ 'cudnn_deterministic': False,
+ 'dataloader_multiprocessing_context': 'spawn',
+ 'dataset': {'depth_output_unit': 'mm',
+             'episodes': None,
+             'eval_split': 0.0,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'lerobot/aloha_sim_insertion_human',
+             'repo_type': 'dataset',
+             'return_uint8': False,
+             'revision': 'cc571a3c661df81b566dbfde3d5c1e85fcdf7884',
+             'root': 'data/aloha_sim_insertion_human',
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'torchcodec'},
+ 'env': None,
+ 'env_eval_freq': 20000,
+ 'eval': {'batch_size': 22,
+          'n_episodes': 50,
+          'recording': False,
+          'recording_private': False,
+          'recording_repo_id': None,
+          'use_async_envs': True},
+ 'eval_steps': 0,
+ 'job': {'detach': False,
+         'image': 'huggingface/lerobot-gpu:latest',
+         'tags': [],
+         'target': None,
+         'timeout': '2d'},
+ 'job_name': 'act',
+ 'log_freq': 100,
+ 'max_eval_samples': 0,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.999],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 1e-05,
+               'type': 'adamw',
+               'weight_decay': 0.0001},
+ 'output_dir': 'experiments/trainer_parity/normal_steps300/lerobot_a',
+ 'peft': None,
+ 'persistent_workers': True,
+ 'policy': {'chunk_size': 100,
+            'device': 'cuda',
+            'dim_feedforward': 3200,
+            'dim_model': 512,
+            'dropout': 0.1,
+            'feedforward_activation': 'relu',
+            'input_features': {},
+            'kl_weight': 10.0,
+            'latent_dim': 32,
+            'license': None,
+            'n_action_steps': 100,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 4,
+            'n_heads': 8,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 4,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {},
+            'pre_norm': False,
+            'pretrained_backbone_weights': 'ResNet18_Weights.IMAGENET1K_V1',
+            'pretrained_path': None,
+            'pretrained_revision': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': False,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'type': 'act',
+            'use_amp': False,
+            'use_peft': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'prefetch_factor': 4,
+ 'rename_map': {},
+ 'resume': False,
+ 'reward_model': None,
+ 'sample_weighting': None,
+ 'save_checkpoint': True,
+ 'save_checkpoint_to_hub': False,
+ 'save_freq': 300,
+ 'scheduler': None,
+ 'seed': 1000,
+ 'steps': 300,
+ 'tolerance_s': 0.0001,
+ 'use_policy_training_preset': True,
+ 'wandb': {'add_tags': True,
+           'disable_artifact': False,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'run_id': None}}
+INFO 2026-11-10 21:11:19 ot_train.py:280 Logs will be saved locally.
+INFO 2026-11-10 21:11:19 ot_train.py:298 Creating dataset
+WARNING 2026-11-10 21:11:19 ts/utils.py:191 Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+WARNING 2026-11-10 21:11:19 ts/utils.py:191 Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+INFO 2026-11-10 21:11:19 ot_train.py:324 Creating policy
+INFO 2026-11-10 21:11:20 ot_train.py:402 Creating optimizer and scheduler
+INFO 2026-11-10 21:11:20 ot_train.py:434 Output dir: experiments/trainer_parity/normal_steps300/lerobot_a
+INFO 2026-11-10 21:11:20 ot_train.py:441 cfg.steps=300 (300)
+INFO 2026-11-10 21:11:20 ot_train.py:442 dataset.num_frames=25000 (25K)
+INFO 2026-11-10 21:11:20 ot_train.py:443 dataset.num_episodes=50
+INFO 2026-11-10 21:11:20 ot_train.py:446 Effective batch size: 8 x 1 = 8
+INFO 2026-11-10 21:11:20 ot_train.py:447 num_learnable_params=51613582 (52M)
+INFO 2026-11-10 21:11:20 ot_train.py:448 num_total_params=51613582 (52M)
+Training:   0%|          | 0/300 [00:00<?, ?step/s]INFO 2026-11-10 21:11:20 ot_train.py:597 Start offline training on a fixed dataset, with effective batch size: 8
+Training:   0%|          | 1/300 [00:09<48:15,  9.69s/step]Training:   1%|          | 2/300 [00:09<20:14,  4.07s/step]Training:   1%|          | 3/300 [00:09<11:18,  2.28s/step]Training:   1%|▏         | 4/300 [00:10<07:07,  1.44s/step]Training:   2%|▏         | 5/300 [00:10<04:48,  1.02step/s]Training:   2%|▏         | 6/300 [00:10<03:25,  1.43step/s]Training:   2%|▏         | 7/300 [00:10<02:32,  1.92step/s]Training:   3%|▎         | 8/300 [00:10<01:58,  2.47step/s]Training:   3%|▎         | 9/300 [00:10<01:35,  3.06step/s]Training:   3%|▎         | 10/300 [00:11<01:19,  3.65step/s]Training:   4%|▎         | 11/300 [00:11<01:08,  4.21step/s]Training:   4%|▍         | 12/300 [00:11<01:01,  4.71step/s]Training:   4%|▍         | 13/300 [00:11<00:56,  5.12step/s]Training:   5%|▍         | 14/300 [00:11<00:52,  5.45step/s]Training:   5%|▌         | 15/300 [00:11<00:49,  5.72step/s]Training:   5%|▌         | 16/300 [00:12<00:48,  5.91step/s]Training:   6%|▌         | 17/300 [00:12<00:46,  6.08step/s]Training:   6%|▌         | 18/300 [00:12<00:45,  6.18step/s]Training:   6%|▋         | 19/300 [00:12<00:44,  6.25step/s]Training:   7%|▋         | 20/300 [00:12<00:44,  6.31step/s]Training:   7%|▋         | 21/300 [00:12<00:43,  6.35step/s]Training:   7%|▋         | 22/300 [00:12<00:43,  6.37step/s]Training:   8%|▊         | 23/300 [00:13<00:43,  6.40step/s]Training:   8%|▊         | 24/300 [00:13<00:43,  6.42step/s]Training:   8%|▊         | 25/300 [00:13<00:43,  6.39step/s]Training:   9%|▊         | 26/300 [00:13<00:42,  6.43step/s]Training:   9%|▉         | 27/300 [00:13<00:42,  6.43step/s]Training:   9%|▉         | 28/300 [00:13<00:42,  6.43step/s]Training:  10%|▉         | 29/300 [00:14<00:42,  6.43step/s]Training:  10%|█         | 30/300 [00:14<00:41,  6.44step/s]Training:  10%|█         | 31/300 [00:14<00:41,  6.42step/s]Training:  11%|█         | 32/300 [00:14<00:41,  6.43step/s]Training:  11%|█         | 33/300 [00:14<00:41,  6.43step/s]Training:  11%|█▏        | 34/300 [00:14<00:41,  6.41step/s]Training:  12%|█▏        | 35/300 [00:14<00:41,  6.43step/s]Training:  12%|█▏        | 36/300 [00:15<00:41,  6.42step/s]Training:  12%|█▏        | 37/300 [00:15<00:40,  6.43step/s]Training:  13%|█▎        | 38/300 [00:15<00:40,  6.44step/s]Training:  13%|█▎        | 39/300 [00:15<00:40,  6.45step/s]Training:  13%|█▎        | 40/300 [00:15<00:40,  6.43step/s]Training:  14%|█▎        | 41/300 [00:15<00:40,  6.44step/s]Training:  14%|█▍        | 42/300 [00:16<00:40,  6.43step/s]Training:  14%|█▍        | 43/300 [00:16<00:40,  6.41step/s]Training:  15%|█▍        | 44/300 [00:16<00:39,  6.44step/s]Training:  15%|█▌        | 45/300 [00:16<00:39,  6.43step/s]Training:  15%|█▌        | 46/300 [00:16<00:39,  6.44step/s]Training:  16%|█▌        | 47/300 [00:16<00:39,  6.45step/s]Training:  16%|█▌        | 48/300 [00:16<00:39,  6.46step/s]Training:  16%|█▋        | 49/300 [00:17<00:38,  6.46step/s]Training:  17%|█▋        | 50/300 [00:17<00:38,  6.45step/s]Training:  17%|█▋        | 51/300 [00:17<00:38,  6.43step/s]Training:  17%|█▋        | 52/300 [00:17<00:38,  6.42step/s]Training:  18%|█▊        | 53/300 [00:17<00:38,  6.45step/s]Training:  18%|█▊        | 54/300 [00:17<00:38,  6.43step/s]Training:  18%|█▊        | 55/300 [00:18<00:38,  6.42step/s]Training:  19%|█▊        | 56/300 [00:18<00:37,  6.43step/s]Training:  19%|█▉        | 57/300 [00:18<00:37,  6.43step/s]Training:  19%|█▉        | 58/300 [00:18<00:37,  6.41step/s]Training:  20%|█▉        | 59/300 [00:18<00:37,  6.42step/s]Training:  20%|██        | 60/300 [00:18<00:37,  6.42step/s]Training:  20%|██        | 61/300 [00:19<00:37,  6.40step/s]Training:  21%|██        | 62/300 [00:19<00:37,  6.42step/s]Training:  21%|██        | 63/300 [00:19<00:36,  6.41step/s]Training:  21%|██▏       | 64/300 [00:19<00:36,  6.43step/s]Training:  22%|██▏       | 65/300 [00:19<00:36,  6.43step/s]Training:  22%|██▏       | 66/300 [00:19<00:36,  6.44step/s]Training:  22%|██▏       | 67/300 [00:19<00:36,  6.42step/s]Training:  23%|██▎       | 68/300 [00:20<00:36,  6.43step/s]Training:  23%|██▎       | 69/300 [00:20<00:35,  6.42step/s]Training:  23%|██▎       | 70/300 [00:20<00:35,  6.41step/s]Training:  24%|██▎       | 71/300 [00:20<00:35,  6.44step/s]Training:  24%|██▍       | 72/300 [00:20<00:35,  6.42step/s]Training:  24%|██▍       | 73/300 [00:20<00:35,  6.43step/s]Training:  25%|██▍       | 74/300 [00:21<00:35,  6.43step/s]Training:  25%|██▌       | 75/300 [00:21<00:35,  6.40step/s]Training:  25%|██▌       | 76/300 [00:21<00:34,  6.40step/s]Training:  26%|██▌       | 77/300 [00:21<00:34,  6.42step/s]Training:  26%|██▌       | 78/300 [00:21<00:34,  6.43step/s]Training:  26%|██▋       | 79/300 [00:21<00:34,  6.42step/s]Training:  27%|██▋       | 80/300 [00:21<00:34,  6.45step/s]Training:  27%|██▋       | 81/300 [00:22<00:34,  6.43step/s]Training:  27%|██▋       | 82/300 [00:22<00:34,  6.41step/s]Training:  28%|██▊       | 83/300 [00:22<00:33,  6.42step/s]Training:  28%|██▊       | 84/300 [00:22<00:33,  6.42step/s]Training:  28%|██▊       | 85/300 [00:22<00:33,  6.43step/s]Training:  29%|██▊       | 86/300 [00:22<00:33,  6.42step/s]Training:  29%|██▉       | 87/300 [00:23<00:33,  6.44step/s]Training:  29%|██▉       | 88/300 [00:23<00:33,  6.41step/s]Training:  30%|██▉       | 89/300 [00:23<00:32,  6.42step/s]Training:  30%|███       | 90/300 [00:23<00:32,  6.40step/s]Training:  30%|███       | 91/300 [00:23<00:32,  6.41step/s]Training:  31%|███       | 92/300 [00:23<00:32,  6.43step/s]Training:  31%|███       | 93/300 [00:23<00:32,  6.43step/s]Training:  31%|███▏      | 94/300 [00:24<00:31,  6.44step/s]Training:  32%|███▏      | 95/300 [00:24<00:31,  6.43step/s]Training:  32%|███▏      | 96/300 [00:24<00:31,  6.44step/s]Training:  32%|███▏      | 97/300 [00:24<00:31,  6.42step/s]Training:  33%|███▎      | 98/300 [00:24<00:31,  6.43step/s]Training:  33%|███▎      | 99/300 [00:24<00:31,  6.43step/s]Training:  33%|███▎      | 100/300 [00:25<00:31,  6.43step/s]INFO 2026-11-10 21:11:45 ot_train.py:641 step:100 smpl:800 ep:2 epch:0.03 loss:10.711 grdn:209.233 lr:1.0e-05 updt_s:0.212 data_s:0.038 smp/s:32 mem_gb:2.11 l1_loss:0.609 kld_loss:1.010
+Training:  34%|███▎      | 101/300 [00:25<00:30,  6.44step/s]Training:  34%|███▍      | 102/300 [00:25<00:30,  6.43step/s]Training:  34%|███▍      | 103/300 [00:25<00:30,  6.43step/s]Training:  35%|███▍      | 104/300 [00:25<00:30,  6.41step/s]Training:  35%|███▌      | 105/300 [00:25<00:30,  6.41step/s]Training:  35%|███▌      | 106/300 [00:26<00:30,  6.42step/s]Training:  36%|███▌      | 107/300 [00:26<00:30,  6.43step/s]Training:  36%|███▌      | 108/300 [00:26<00:29,  6.44step/s]Training:  36%|███▋      | 109/300 [00:26<00:29,  6.43step/s]Training:  37%|███▋      | 110/300 [00:26<00:29,  6.42step/s]Training:  37%|███▋      | 111/300 [00:26<00:29,  6.40step/s]Training:  37%|███▋      | 112/300 [00:26<00:29,  6.42step/s]Training:  38%|███▊      | 113/300 [00:27<00:29,  6.43step/s]Training:  38%|███▊      | 114/300 [00:27<00:28,  6.44step/s]Training:  38%|███▊      | 115/300 [00:27<00:28,  6.43step/s]Training:  39%|███▊      | 116/300 [00:27<00:28,  6.43step/s]Training:  39%|███▉      | 117/300 [00:27<00:28,  6.42step/s]Training:  39%|███▉      | 118/300 [00:27<00:28,  6.43step/s]Training:  40%|███▉      | 119/300 [00:28<00:28,  6.44step/s]Training:  40%|████      | 120/300 [00:28<00:27,  6.43step/s]Training:  40%|████      | 121/300 [00:28<00:27,  6.43step/s]Training:  41%|████      | 122/300 [00:28<00:27,  6.43step/s]Training:  41%|████      | 123/300 [00:28<00:27,  6.41step/s]Training:  41%|████▏     | 124/300 [00:28<00:27,  6.41step/s]Training:  42%|████▏     | 125/300 [00:28<00:27,  6.41step/s]Training:  42%|████▏     | 126/300 [00:29<00:27,  6.42step/s]Training:  42%|████▏     | 127/300 [00:29<00:26,  6.43step/s]Training:  43%|████▎     | 128/300 [00:29<00:26,  6.44step/s]Training:  43%|████▎     | 129/300 [00:29<00:26,  6.43step/s]Training:  43%|████▎     | 130/300 [00:29<00:26,  6.43step/s]Training:  44%|████▎     | 131/300 [00:29<00:26,  6.43step/s]Training:  44%|████▍     | 132/300 [00:30<00:26,  6.43step/s]Training:  44%|████▍     | 133/300 [00:30<00:25,  6.43step/s]Training:  45%|████▍     | 134/300 [00:30<00:25,  6.41step/s]Training:  45%|████▌     | 135/300 [00:30<00:25,  6.41step/s]Training:  45%|████▌     | 136/300 [00:30<00:25,  6.42step/s]Training:  46%|████▌     | 137/300 [00:30<00:25,  6.42step/s]Training:  46%|████▌     | 138/300 [00:30<00:25,  6.40step/s]Training:  46%|████▋     | 139/300 [00:31<00:25,  6.40step/s]Training:  47%|████▋     | 140/300 [00:31<00:24,  6.40step/s]Training:  47%|████▋     | 141/300 [00:31<00:24,  6.42step/s]Training:  47%|████▋     | 142/300 [00:31<00:24,  6.42step/s]Training:  48%|████▊     | 143/300 [00:31<00:24,  6.42step/s]Training:  48%|████▊     | 144/300 [00:31<00:24,  6.40step/s]Training:  48%|████▊     | 145/300 [00:32<00:24,  6.42step/s]Training:  49%|████▊     | 146/300 [00:32<00:23,  6.43step/s]Training:  49%|████▉     | 147/300 [00:32<00:23,  6.41step/s]Training:  49%|████▉     | 148/300 [00:32<00:23,  6.41step/s]Training:  50%|████▉     | 149/300 [00:32<00:23,  6.41step/s]Training:  50%|█████     | 150/300 [00:32<00:23,  6.42step/s]Training:  50%|█████     | 151/300 [00:33<00:23,  6.43step/s]Training:  51%|█████     | 152/300 [00:33<00:23,  6.42step/s]Training:  51%|█████     | 153/300 [00:33<00:22,  6.43step/s]Training:  51%|█████▏    | 154/300 [00:33<00:22,  6.42step/s]Training:  52%|█████▏    | 155/300 [00:33<00:22,  6.42step/s]Training:  52%|█████▏    | 156/300 [00:33<00:22,  6.41step/s]Training:  52%|█████▏    | 157/300 [00:33<00:22,  6.42step/s]Training:  53%|█████▎    | 158/300 [00:34<00:22,  6.41step/s]Training:  53%|█████▎    | 159/300 [00:34<00:21,  6.42step/s]Training:  53%|█████▎    | 160/300 [00:34<00:21,  6.43step/s]Training:  54%|█████▎    | 161/300 [00:34<00:21,  6.43step/s]Training:  54%|█████▍    | 162/300 [00:34<00:21,  6.41step/s]Training:  54%|█████▍    | 163/300 [00:34<00:21,  6.42step/s]Training:  55%|█████▍    | 164/300 [00:35<00:21,  6.41step/s]Training:  55%|█████▌    | 165/300 [00:35<00:21,  6.38step/s]Training:  55%|█████▌    | 166/300 [00:35<00:20,  6.43step/s]Training:  56%|█████▌    | 167/300 [00:35<00:20,  6.42step/s]Training:  56%|█████▌    | 168/300 [00:35<00:20,  6.42step/s]Training:  56%|█████▋    | 169/300 [00:35<00:20,  6.43step/s]Training:  57%|█████▋    | 170/300 [00:35<00:20,  6.43step/s]Training:  57%|█████▋    | 171/300 [00:36<00:20,  6.39step/s]Training:  57%|█████▋    | 172/300 [00:36<00:19,  6.40step/s]Training:  58%|█████▊    | 173/300 [00:36<00:19,  6.42step/s]Training:  58%|█████▊    | 174/300 [00:36<00:19,  6.40step/s]Training:  58%|█████▊    | 175/300 [00:36<00:19,  6.42step/s]Training:  59%|█████▊    | 176/300 [00:36<00:19,  6.41step/s]Training:  59%|█████▉    | 177/300 [00:37<00:19,  6.39step/s]Training:  59%|█████▉    | 178/300 [00:37<00:19,  6.41step/s]Training:  60%|█████▉    | 179/300 [00:37<00:18,  6.41step/s]Training:  60%|██████    | 180/300 [00:37<00:18,  6.42step/s]Training:  60%|██████    | 181/300 [00:37<00:18,  6.43step/s]Training:  61%|██████    | 182/300 [00:37<00:18,  6.43step/s]Training:  61%|██████    | 183/300 [00:38<00:18,  6.41step/s]Training:  61%|██████▏   | 184/300 [00:38<00:18,  6.40step/s]Training:  62%|██████▏   | 185/300 [00:38<00:17,  6.42step/s]Training:  62%|██████▏   | 186/300 [00:38<00:17,  6.42step/s]Training:  62%|██████▏   | 187/300 [00:38<00:17,  6.44step/s]Training:  63%|██████▎   | 188/300 [00:38<00:17,  6.42step/s]Training:  63%|██████▎   | 189/300 [00:38<00:17,  6.43step/s]Training:  63%|██████▎   | 190/300 [00:39<00:17,  6.42step/s]Training:  64%|██████▎   | 191/300 [00:39<00:16,  6.42step/s]Training:  64%|██████▍   | 192/300 [00:39<00:16,  6.42step/s]Training:  64%|██████▍   | 193/300 [00:39<00:16,  6.41step/s]Training:  65%|██████▍   | 194/300 [00:39<00:16,  6.42step/s]Training:  65%|██████▌   | 195/300 [00:39<00:16,  6.42step/s]Training:  65%|██████▌   | 196/300 [00:40<00:16,  6.42step/s]Training:  66%|██████▌   | 197/300 [00:40<00:16,  6.41step/s]Training:  66%|██████▌   | 198/300 [00:40<00:15,  6.42step/s]Training:  66%|██████▋   | 199/300 [00:40<00:15,  6.42step/s]Training:  67%|██████▋   | 200/300 [00:40<00:15,  6.42step/s]INFO 2026-11-10 21:12:00 ot_train.py:641 step:200 smpl:2K ep:3 epch:0.06 loss:4.005 grdn:105.658 lr:1.0e-05 updt_s:0.154 data_s:0.001 smp/s:52 mem_gb:2.10 l1_loss:0.470 kld_loss:0.353
+Training:  67%|██████▋   | 201/300 [00:40<00:15,  6.42step/s]Training:  67%|██████▋   | 202/300 [00:40<00:15,  6.41step/s]Training:  68%|██████▊   | 203/300 [00:41<00:15,  6.40step/s]Training:  68%|██████▊   | 204/300 [00:41<00:14,  6.42step/s]Training:  68%|██████▊   | 205/300 [00:41<00:14,  6.41step/s]Training:  69%|██████▊   | 206/300 [00:41<00:14,  6.40step/s]Training:  69%|██████▉   | 207/300 [00:41<00:14,  6.41step/s]Training:  69%|██████▉   | 208/300 [00:41<00:14,  6.40step/s]Training:  70%|██████▉   | 209/300 [00:42<00:14,  6.40step/s]Training:  70%|███████   | 210/300 [00:42<00:14,  6.41step/s]Training:  70%|███████   | 211/300 [00:42<00:13,  6.41step/s]Training:  71%|███████   | 212/300 [00:42<00:13,  6.40step/s]Training:  71%|███████   | 213/300 [00:42<00:13,  6.41step/s]Training:  71%|███████▏  | 214/300 [00:42<00:13,  6.41step/s]Training:  72%|███████▏  | 215/300 [00:42<00:13,  6.39step/s]Training:  72%|███████▏  | 216/300 [00:43<00:13,  6.41step/s]Training:  72%|███████▏  | 217/300 [00:43<00:12,  6.40step/s]Training:  73%|███████▎  | 218/300 [00:43<00:12,  6.40step/s]Training:  73%|███████▎  | 219/300 [00:43<00:12,  6.42step/s]Training:  73%|███████▎  | 220/300 [00:43<00:12,  6.42step/s]Training:  74%|███████▎  | 221/300 [00:43<00:12,  6.40step/s]Training:  74%|███████▍  | 222/300 [00:44<00:12,  6.39step/s]Training:  74%|███████▍  | 223/300 [00:44<00:12,  6.40step/s]Training:  75%|███████▍  | 224/300 [00:44<00:11,  6.36step/s]Training:  75%|███████▌  | 225/300 [00:44<00:11,  6.38step/s]Training:  75%|███████▌  | 226/300 [00:44<00:11,  6.41step/s]Training:  76%|███████▌  | 227/300 [00:44<00:11,  6.40step/s]Training:  76%|███████▌  | 228/300 [00:45<00:11,  6.40step/s]Training:  76%|███████▋  | 229/300 [00:45<00:11,  6.39step/s]Training:  77%|███████▋  | 230/300 [00:45<00:10,  6.40step/s]Training:  77%|███████▋  | 231/300 [00:45<00:10,  6.42step/s]Training:  77%|███████▋  | 232/300 [00:45<00:10,  6.41step/s]Training:  78%|███████▊  | 233/300 [00:45<00:10,  6.41step/s]Training:  78%|███████▊  | 234/300 [00:45<00:10,  6.39step/s]Training:  78%|███████▊  | 235/300 [00:46<00:10,  6.39step/s]Training:  79%|███████▊  | 236/300 [00:46<00:10,  6.39step/s]Training:  79%|███████▉  | 237/300 [00:46<00:09,  6.40step/s]Training:  79%|███████▉  | 238/300 [00:46<00:09,  6.40step/s]Training:  80%|███████▉  | 239/300 [00:46<00:09,  6.40step/s]Training:  80%|████████  | 240/300 [00:46<00:09,  6.40step/s]Training:  80%|████████  | 241/300 [00:47<00:09,  6.41step/s]Training:  81%|████████  | 242/300 [00:47<00:09,  6.41step/s]Training:  81%|████████  | 243/300 [00:47<00:08,  6.39step/s]Training:  81%|████████▏ | 244/300 [00:47<00:08,  6.40step/s]Training:  82%|████████▏ | 245/300 [00:47<00:08,  6.40step/s]Training:  82%|████████▏ | 246/300 [00:47<00:08,  6.40step/s]Training:  82%|████████▏ | 247/300 [00:47<00:08,  6.37step/s]Training:  83%|████████▎ | 248/300 [00:48<00:08,  6.41step/s]Training:  83%|████████▎ | 249/300 [00:48<00:07,  6.40step/s]Training:  83%|████████▎ | 250/300 [00:48<00:07,  6.42step/s]Training:  84%|████████▎ | 251/300 [00:48<00:07,  6.41step/s]Training:  84%|████████▍ | 252/300 [00:48<00:07,  6.41step/s]Training:  84%|████████▍ | 253/300 [00:48<00:07,  6.38step/s]Training:  85%|████████▍ | 254/300 [00:49<00:07,  6.39step/s]Training:  85%|████████▌ | 255/300 [00:49<00:07,  6.40step/s]Training:  85%|████████▌ | 256/300 [00:49<00:06,  6.41step/s]Training:  86%|████████▌ | 257/300 [00:49<00:06,  6.41step/s]Training:  86%|████████▌ | 258/300 [00:49<00:06,  6.43step/s]Training:  86%|████████▋ | 259/300 [00:49<00:06,  6.41step/s]Training:  87%|████████▋ | 260/300 [00:50<00:06,  6.42step/s]Training:  87%|████████▋ | 261/300 [00:50<00:06,  6.42step/s]Training:  87%|████████▋ | 262/300 [00:50<00:05,  6.42step/s]Training:  88%|████████▊ | 263/300 [00:50<00:05,  6.42step/s]Training:  88%|████████▊ | 264/300 [00:50<00:05,  6.41step/s]Training:  88%|████████▊ | 265/300 [00:50<00:05,  6.40step/s]Training:  89%|████████▊ | 266/300 [00:50<00:05,  6.39step/s]Training:  89%|████████▉ | 267/300 [00:51<00:05,  6.40step/s]Training:  89%|████████▉ | 268/300 [00:51<00:04,  6.41step/s]Training:  90%|████████▉ | 269/300 [00:51<00:04,  6.42step/s]Training:  90%|█████████ | 270/300 [00:51<00:04,  6.40step/s]Training:  90%|█████████ | 271/300 [00:51<00:04,  6.41step/s]Training:  91%|█████████ | 272/300 [00:51<00:04,  6.39step/s]Training:  91%|█████████ | 273/300 [00:52<00:04,  6.41step/s]Training:  91%|█████████▏| 274/300 [00:52<00:04,  6.42step/s]Training:  92%|█████████▏| 275/300 [00:52<00:03,  6.42step/s]Training:  92%|█████████▏| 276/300 [00:52<00:03,  6.41step/s]Training:  92%|█████████▏| 277/300 [00:52<00:03,  6.41step/s]Training:  93%|█████████▎| 278/300 [00:52<00:03,  6.41step/s]Training:  93%|█████████▎| 279/300 [00:52<00:03,  6.40step/s]Training:  93%|█████████▎| 280/300 [00:53<00:03,  6.41step/s]Training:  94%|█████████▎| 281/300 [00:53<00:02,  6.42step/s]Training:  94%|█████████▍| 282/300 [00:53<00:02,  6.43step/s]Training:  94%|█████████▍| 283/300 [00:53<00:02,  6.43step/s]Training:  95%|█████████▍| 284/300 [00:53<00:02,  6.41step/s]Training:  95%|█████████▌| 285/300 [00:53<00:02,  6.40step/s]Training:  95%|█████████▌| 286/300 [00:54<00:02,  6.40step/s]Training:  96%|█████████▌| 287/300 [00:54<00:02,  6.41step/s]Training:  96%|█████████▌| 288/300 [00:54<00:01,  6.39step/s]Training:  96%|█████████▋| 289/300 [00:54<00:01,  6.42step/s]Training:  97%|█████████▋| 290/300 [00:54<00:01,  6.42step/s]Training:  97%|█████████▋| 291/300 [00:54<00:01,  6.41step/s]Training:  97%|█████████▋| 292/300 [00:55<00:01,  6.40step/s]Training:  98%|█████████▊| 293/300 [00:55<00:01,  6.39step/s]Training:  98%|█████████▊| 294/300 [00:55<00:00,  6.40step/s]Training:  98%|█████████▊| 295/300 [00:55<00:00,  6.40step/s]Training:  99%|█████████▊| 296/300 [00:55<00:00,  6.40step/s]Training:  99%|█████████▉| 297/300 [00:55<00:00,  6.39step/s]Training:  99%|█████████▉| 298/300 [00:55<00:00,  6.39step/s]Training: 100%|█████████▉| 299/300 [00:56<00:00,  6.40step/s]Training: 100%|██████████| 300/300 [00:56<00:00,  6.39step/s]INFO 2026-11-10 21:12:16 ot_train.py:641 step:300 smpl:2K ep:5 epch:0.10 loss:3.247 grdn:91.723 lr:1.0e-05 updt_s:0.154 data_s:0.002 smp/s:51 mem_gb:2.10 l1_loss:0.405 kld_loss:0.284
+INFO 2026-11-10 21:12:16 ot_train.py:687 Checkpoint policy after step 300
+Training: 100%|██████████| 300/300 [00:56<00:00,  5.27step/s]
+INFO 2026-11-10 21:12:17 ot_train.py:770 End of training

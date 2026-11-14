@@ -1,0 +1,82 @@
+{
+  "aloha_train": {
+    "v1 seed 1000": 68,
+    "v1 seed 1000, RSI-Harness re-run": 69,
+    "v1 seed 1001": 76,
+    "v1 seed 1002": 65,
+    "v2 seed 1000": 60,
+    "v3 seed 1000": 82,
+    "v3 seed 1001": 59,
+    "order replay seed 1000": 66
+  },
+  "lerobot": {
+    "lerobot-train v0.6.1 seed 1000": 100,
+    "released checkpoint (LeRobot 3c0a209)": 101
+  },
+  "all aloha-train runs": {
+    "chi2": 7.118522550750807,
+    "dof": 7,
+    "p": 0.41664464602094936,
+    "phi": 1.016931792964401,
+    "phi95": [
+      0.44455300962803884,
+      4.212469599509158
+    ],
+    "runs": 8,
+    "pooled_rate": 0.13625,
+    "sd_runs": 0.015471171347287926,
+    "binomial_sd": 0.015341834147193745
+  },
+  "v3 runs only": {
+    "chi2": 4.367605412858428,
+    "dof": 1,
+    "p": 0.03662843015535826,
+    "phi": 4.367605412858428,
+    "phi95": [
+      0.8693679056437339,
+      4447.350330515489
+    ],
+    "runs": 2,
+    "pooled_rate": 0.141,
+    "sd_runs": 0.032526911934581196,
+    "binomial_sd": 0.015563996915959602
+  },
+  "lerobot_vs_aloha_train": {
+    "diff_pp": 6.4750000000000005,
+    "binomial": {
+      "z": 5.140278078431012,
+      "p": 2.74332162209614e-07
+    },
+    "observed_spread_t": {
+      "t": 5.656053296881881,
+      "df": 8,
+      "p": 0.00047805752965569213
+    },
+    "phi_upper": {
+      "phi": 4.212469599509158,
+      "z": 2.6010822817909522,
+      "p": 0.00929301618035341
+    }
+  },
+  "control_checkpoints": {
+    "step 60000": 84,
+    "step 80000": 94,
+    "step 100000": 100
+  },
+  "control_checkpoint_pairs": {
+    "step 80000 vs step 60000": {
+      "both": 47,
+      "first_only": 47,
+      "second_only": 37,
+      "independence_both": 15.792,
+      "mcnemar_exact_p": 0.3261341711919829
+    },
+    "step 100000 vs step 80000": {
+      "both": 61,
+      "first_only": 39,
+      "second_only": 33,
+      "independence_both": 18.8,
+      "mcnemar_exact_p": 0.555997717760971
+    }
+  }
+}

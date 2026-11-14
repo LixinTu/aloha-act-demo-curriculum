@@ -1,0 +1,20 @@
+# started 2026-11-12T10:35:11-08:00 : scripts/final_protocol_chain.sh
+# verify-seed1002 queued at 2026-11-12T10:35:11-08:00 (try 1): env PROTOCOL=experiments/trainer_parity/steps100000/protocol_deterministic.json scripts/run_baseline.sh 1002 experiments/baseline_v3_det_verify
+# verify-seed1002 exit=0 at 2026-11-12T15:33:02-08:00
+# seed 1002 weights: original f594f15f8cf7437036817b5540078585929807b653496508f03638dce4789750
+# seed 1002 weights: verification f594f15f8cf7437036817b5540078585929807b653496508f03638dce4789750
+# verification: bit-identical, the original seed-1002 training is reproduced
+# oracle-run-final queued at 2026-11-12T15:33:03-08:00 (try 1): scripts/oracle_run.sh
+# started 2026-11-12T16:14:37-08:00 : scripts/final_protocol_chain.sh
+# verify-seed1002 already done (logs/verify-seed1002.exit says 0); skipped
+# seed 1002 weights: original f594f15f8cf7437036817b5540078585929807b653496508f03638dce4789750
+# seed 1002 weights: verification f594f15f8cf7437036817b5540078585929807b653496508f03638dce4789750
+# verification: bit-identical, the original seed-1002 training is reproduced
+# oracle-run-final queued at 2026-11-12T16:14:37-08:00 (try 1): scripts/oracle_run.sh
+# oracle-run-final exit=0 at 2026-11-12T21:22:10-08:00
+# probe-final-drop_idle queued at 2026-11-12T21:22:10-08:00 (try 1): scripts/run_candidate.sh experiments/probes_final/drop_idle/run_seed1000 experiments/probes/drop_idle/candidate 1000
+# probe-final-drop_idle exit=0 at 2026-11-13T02:25:39-08:00
+# probe-final-insertion_focus queued at 2026-11-13T02:25:40-08:00 (try 1): scripts/run_candidate.sh experiments/probes_final/insertion_focus/run_seed1000 experiments/probes/insertion_focus/candidate 1000
+# probe-final-insertion_focus exit=0 at 2026-11-13T07:26:02-08:00
+final-protocol chain done at 2026-11-13T07:26:02-08:00
+# finished 2026-11-13T07:26:02-08:00 exit=0

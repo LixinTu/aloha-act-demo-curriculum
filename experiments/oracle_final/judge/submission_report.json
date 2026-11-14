@@ -1,0 +1,19 @@
+{
+  "error": null,
+  "exit_code": 0,
+  "full_output_captured": true,
+  "metrics": {
+    "eval_s": 1345.6,
+    "n_episodes": 500.0,
+    "reward": 0.162,
+    "successes": 81.0,
+    "train_s": 16133.7
+  },
+  "round": "agent-1",
+  "runtime_seconds": 17495.405402025,
+  "score": 0.162,
+  "status": "completed",
+  "submitted_at": 1794547314.796298,
+  "timed_out": false,
+  "verifier_output_required": true
+}

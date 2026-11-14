@@ -1,0 +1,129 @@
+# started 2026-11-11T09:10:35-08:00 : scripts/check_normal_mode_algos.sh
+Using Python 3.12.15 environment at: .venv-control
+2026-11-11T09:10:35-08:00 normal-mode algorithm comparison, 300 steps, recording 2 steps from step 200, output experiments/trainer_parity/normal_algos300
+WARNING:lerobot.datasets.utils:Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+order.npy is identical to the noise check's order
+2026-11-11T09:10:38-08:00 aloha-train aloha_a
+2026-11-11 09:10:40,339 INFO root: Cuda backend detected, using cuda.
+2026-11-11 09:10:40,339 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-11 09:10:40,339 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-11 09:10:40,465 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+.venv/lib/python3.12/site-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+normal_mode_algos: recording from backward call 200 on
+2026-11-11 09:11:17,695 INFO aloha_curriculum.train: step 200/300 loss 7.3577 l1 0.5398 kl 0.6818 gn 157.45 data 0.001s step 0.183s elapsed 37s
+normal_mode_algos: recorded 2710 kernel launches, 141 distinct kernels, to experiments/trainer_parity/normal_algos300/aloha_a/record
+2026-11-11 09:11:34,764 INFO aloha_curriculum.train: step 300/300 loss 3.2469 l1 0.4054 kl 0.2842 gn 91.71 data 0.000s step 0.170s elapsed 54s
+2026-11-11T09:11:36-08:00 aloha-train aloha_b
+2026-11-11 09:11:38,876 INFO root: Cuda backend detected, using cuda.
+2026-11-11 09:11:38,876 WARNING lerobot.configs.policies: Device 'None' is not available. Switching to 'cuda'.
+2026-11-11 09:11:38,876 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+2026-11-11 09:11:39,017 WARNING lerobot.datasets.utils: Unknown fields in DatasetInfo: ['files_size_in_mb']. These will be ignored.
+.venv/lib/python3.12/site-packages/torch/profiler/profiler.py:224: UserWarning: Warning: Profiler clears events at the end of each cycle.Only events from the current cycle will be reported.To keep events across cycles, set acc_events=True.
+  _warn_once(
+normal_mode_algos: recording from backward call 200 on
+2026-11-11 09:12:16,989 INFO aloha_curriculum.train: step 200/300 loss 7.3574 l1 0.5396 kl 0.6818 gn 157.45 data 0.001s step 0.186s elapsed 37s
+normal_mode_algos: recorded 2718 kernel launches, 139 distinct kernels, to experiments/trainer_parity/normal_algos300/aloha_b/record
+2026-11-11 09:12:34,001 INFO aloha_curriculum.train: step 300/300 loss 3.2469 l1 0.4057 kl 0.2841 gn 91.71 data 0.000s step 0.170s elapsed 54s
+2026-11-11T09:12:35-08:00 lerobot-train lerobot_a
+2026-11-11T09:13:38-08:00 lerobot-train lerobot_b
+2026-11-11T09:14:42-08:00 comparing
+aloha_a      aloha    launches   2710 distinct  141 conv  32 gemm  29 other  80 cublas  44 cublasLt  58 tf32 launches    86 | benchmark True det False cudnn_tf32 True matmul_tf32 True precision high
+aloha_b      aloha    launches   2718 distinct  139 conv  30 gemm  29 other  80 cublas  44 cublasLt  58 tf32 launches    78 | benchmark True det False cudnn_tf32 True matmul_tf32 True precision high
+lerobot_a    lerobot  launches   2710 distinct  141 conv  32 gemm  29 other  80 cublas  44 cublasLt  58 tf32 launches    80 | benchmark True det False cudnn_tf32 True matmul_tf32 True precision high
+lerobot_b    lerobot  launches   2712 distinct  138 conv  29 gemm  29 other  80 cublas  44 cublasLt  58 tf32 launches    80 | benchmark True det False cudnn_tf32 True matmul_tf32 True precision high
+pair                         switches   conv   gemm  other  cublas cublasLt
+aloha_a vs aloha_b               True  False   True   True    True     True
+  conv differs in 11 entries; first 11:
+         0 |      8  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorO
+         2 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      8  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         0 |      8  void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float,
+         4 |      6  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)
+         6 |     12  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params)
+         2 |      0  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4::Params)
+        14 |      8  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4::Params)
+         8 |      0  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4::Params)
+         2 |      8  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)
+aloha_a vs lerobot_a             True  False   True  False    True     True
+  conv differs in 6 entries; first 6:
+         0 |      6  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIterator
+         2 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      2  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         0 |      6  void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float,
+         2 |      4  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)
+         2 |      0  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_align4::Params)
+  other differs in 3 entries; first 3:
+        18 |     20  Memcpy HtoD (Pinned -> Device)
+       140 |    128  Memset (Device)
+         6 |     10  void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunct
+aloha_a vs lerobot_b             True  False   True  False    True     True
+  conv differs in 15 entries; first 12:
+         0 |      2  _5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1
+         2 |      8  _5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1
+         2 |      8  cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)
+         2 |      8  cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)
+         6 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      8  void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)
+       172 |    160  void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)
+        64 |     58  void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)
+         0 |      2  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4::Params)
+         4 |      6  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)
+         2 |      0  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)
+  other differs in 2 entries; first 2:
+        18 |     20  Memcpy HtoD (Pinned -> Device)
+         6 |     10  void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunct
+aloha_b vs lerobot_a             True  False   True  False    True     True
+  conv differs in 11 entries; first 11:
+         0 |      6  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIterator
+         8 |      0  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorO
+         0 |      6  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         8 |      2  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         8 |      6  void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float,
+         6 |      4  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x128_16x5_nhwc_align4::Params)
+         2 |      4  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_align4::Params)
+        12 |      6  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_128x64_16x6_nhwc_unity_stride_align4::Params)
+         8 |     14  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4>(cutlass_tensorop_s1688dgrad_optimized_tf32_64x64_32x5_nhwc_unity_stride_align4::Params)
+         0 |      8  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4>(cutlass_tensorop_s1688wgrad_analytic_tf32_64x128_16x6_nhwc_align4::Params)
+         8 |      2  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4>(cutlass_tensorop_s1688wgrad_optimized_tf32_256x128_16x3_nhwc_align4::Params)
+  other differs in 3 entries; first 3:
+        18 |     20  Memcpy HtoD (Pinned -> Device)
+       140 |    128  Memset (Device)
+         6 |     10  void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunct
+aloha_b vs lerobot_b             True  False   True  False    True     True
+  conv differs in 17 entries; first 12:
+         0 |      2  _5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1
+         2 |      8  _5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1
+         8 |      0  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi64ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIteratorO
+         2 |      8  cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)
+         2 |      8  cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)
+         0 |      2  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         8 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      8  void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)
+       172 |    160  void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)
+        64 |     58  void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)
+         8 |      0  void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float,
+         0 |      2  void cutlass__5x_cudnn::Kernel<cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4>(cutlass_tensorop_s1688dgrad_analytic_tf32_256x64_16x4_nhwc_align4::Params)
+  other differs in 2 entries; first 2:
+        18 |     20  Memcpy HtoD (Pinned -> Device)
+         6 |     10  void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> >, std::array<char*, 2ul> >(int, at::native::BUnaryFunct
+lerobot_a vs lerobot_b           True  False   True  False    True     True
+  conv differs in 17 entries; first 12:
+         0 |      2  _5x_cudnn_ampere_scudnn_128x128_relu_small_nn_v1
+         2 |      8  _5x_cudnn_ampere_scudnn_128x128_stridedB_splitK_medium_nn_v1
+         6 |      0  _ZN17cutlass__5x_cudnn6KernelINS_4conv6kernel23ImplicitGemmConvolutionINS1_11threadblock22ImplicitGemmMultistageINS_4gemm9GemmShapeILi128ELi128ELi16EEENS4_52Conv2dWgradOutputGradientTileAccessIterator
+         2 |      8  cask__5x_cudnn::computeWgradBOffsetsKernel(cask__5x_cudnn::ComputeWgradBOffsetsParams)
+         2 |      8  cask__5x_cudnn::computeWgradSplitKOffsetsKernel(cask__5x_cudnn::ComputeSplitKOffsetsParams)
+         0 |      2  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x128x16_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize128x64x32_stage4_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         2 |      0  sm86_xmma_wgrad_implicit_gemm_indexed_tf32f32_tf32f32_f32_nhwckrsc_nhwc_tilesize64x64x64_stage3_warpsize2x2x1_g1_tensor16x8x8_execute_kernel__5x_cudnn
+         6 |      8  void cask__5x_cudnn::computeOffsetsKernel<false, false>(cask__5x_cudnn::ComputeOffsetsParams)
+       172 |    160  void cudnn::engines_precompiled::nchwToNhwcKernel<float, float, float, false, true, (cudnnKernelDataType_t)2>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, float const*, float*)
+        64 |     58  void cudnn::engines_precompiled::nhwcToNchwKernel<float, float, float, true, false, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nhwc2nchw_params_t<float>, float const*, float*)
+         6 |      0  void cutlass__5x_cudnn::Kernel<cutlass__5x_cudnn::reduction::kernel::ReduceSplitK<cutlass__5x_cudnn::MatrixShape<4, 128>, cutlass__5x_cudnn::epilogue::thread::LinearCombination<float, 4, float, float,
+  other differs in 1 entries; first 1:
+       128 |    140  Memset (Device)
+2026-11-11T09:14:42-08:00 normal-mode algorithm comparison done
+# finished 2026-11-11T09:14:42-08:00 exit=0

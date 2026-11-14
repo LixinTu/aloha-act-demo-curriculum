@@ -1,0 +1,71 @@
+{
+  "control_successes": 100,
+  "v1_pooled": "209/1500",
+  "thresholds_by_seed_count": {
+    "1": {
+      "above_v1_at_least": 88,
+      "below_control_at_most": 76
+    },
+    "2": {
+      "above_v1_at_least": 168,
+      "below_control_at_most": 159
+    },
+    "3": {
+      "above_v1_at_least": 247,
+      "below_control_at_most": 242
+    }
+  },
+  "runs": [
+    {
+      "seed": 1000,
+      "hidden_successes": 82,
+      "proxy_successes": 24,
+      "levels": [
+        92,
+        114,
+        16,
+        196,
+        82
+      ]
+    },
+    {
+      "seed": 1001,
+      "hidden_successes": 59,
+      "proxy_successes": 11,
+      "levels": [
+        121,
+        102,
+        21,
+        197,
+        59
+      ]
+    }
+  ],
+  "pooled_successes": 141,
+  "pooled_episodes": 1000,
+  "verdict": "below_control",
+  "spread": {
+    "sd_across_seeds": 0.032526911934581196,
+    "binomial_sd_single_run": 0.015563996915959602,
+    "homogeneity_chi2": 4.367605412858428,
+    "homogeneity_dof": 1,
+    "homogeneity_p": 0.03662843015535826,
+    "control_minus_pooled_pp": 5.900000000000002,
+    "z_vs_control_binomial": 2.933332249723081,
+    "p_vs_control_binomial": 0.0033534481602446285,
+    "z_vs_control_observed_spread": 1.481028951399475,
+    "p_vs_control_observed_spread": 0.13859885880815753,
+    "all_uniform_aloha_train_runs": {
+      "runs": 7,
+      "successes": 479,
+      "chi2": 7.0045519913147976,
+      "dof": 6,
+      "p": 0.32042643834492734,
+      "phi": 1.1674253318857997,
+      "phi95": [
+        0.48476503853636393,
+        5.660956532622684
+      ]
+    }
+  }
+}
