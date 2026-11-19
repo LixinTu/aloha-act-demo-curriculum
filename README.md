@@ -10,11 +10,53 @@ training budget and the seeds all fixed, can a research agent raise closed-loop 
 the ALOHA simulation by designing which demonstration frames serve as action-chunk anchors, with what
 weight, and in which training stage?
 
-**Status (2026-11-14).** Proposal stage. This repository holds the contributor's reference
-implementation and pre-proposal measurements; it is not an official OpenRSI-Index task. Every number
-below comes from a real run. Result files are in `experiments/` and run logs in `logs/`, except for
-the agent run, whose RSI-Harness records list the hidden seeds and are withheld;
-`docs/research_report.md` (section 8) describes it.
+**Status (2026-11-19).** The proposal was accepted into the OpenRSI-Index contribution pipeline
+([Discussion #350](https://github.com/OpenRSI-Foundation/OpenRSI-Index/discussions/350)). The
+official task generated from this implementation was run once on 2026-11-15 to 11-18 and is under
+OpenRSI review; its result is summarized in [Official OpenRSI run](#official-openrsi-run). The rest
+of this repository is unchanged: the contributor's reference implementation and pre-proposal
+measurements, which are not an official OpenRSI-Index task. Every number below comes from a real run.
+Result files are in `experiments/` and run logs in `logs/`, except for the contributor-side agent
+run, whose RSI-Harness records list the hidden seeds and are withheld; `docs/research_report.md`
+(section 8) describes it.
+
+## Official OpenRSI run
+
+The OpenRSI pipeline generated the official task from this implementation. The contributor validated
+it and ran it once with RSI-Harness on an RTX 4070 Laptop GPU from 2026-11-15 to 2026-11-18. The
+task, its hidden evaluation, the run logs and the review reports are in the private OpenRSI task
+repository and are not published here.
+
+The official protocol has its own uniform baselines, measured at three (training seed, schedule seed)
+pairs, and its own hidden block of 500 seeds. Its numbers are therefore not comparable with the
+pre-proposal table under [Results](#results).
+
+| Item | Value |
+| --- | --- |
+| Agent | Claude Code, `claude-opus-5-5` at maximum reasoning. Budget: 55 h of wall-clock time including Judge time, on one GPU shared by Work and Judge |
+| Rounds | 11, all scored. Every round retrains ACT from scratch, about 4.8 h per round |
+| Uniform baseline, one run per pair | 67, 74 and 67 of 500 at pairs 0, 1 and 2 |
+| Best round, at pair 0 (the Judge's pair) | 99 of 500 (round 9). 5 of the 11 rounds reached the pre-declared single-round requirement of 87 |
+| Pre-declared confirmation: the best round's exact candidate retrained at the two private pairs | 86 + 86 = 172 of 1,000, against 141 for uniform sampling. Requirement: 172. **Confirmed, with zero margin** |
+
+- **What the selected curriculum does.**
+  - It drops, as action-chunk anchors, the frames after each demonstration's estimated insertion.
+  - It weights the remaining frames by how reliably each demonstration's recorded actions still
+    succeed when they are replayed in the simulator with the objects slightly displaced.
+- **Size of the gain.** At the confirmation pairs the gain is +3.1 percentage points (17.2% against
+  14.1%), with a 95% interval of -0.1 to +6.3 points. The best round's 99 of 500 overstates it: the
+  same candidate scored 86 and 86 when it was retrained at the other two pairs.
+- **Limits of the result.**
+  - It meets the pre-declared rule exactly at the threshold, and that rule assumes no run-to-run
+    variance beyond binomial.
+  - It rests on one simulated hidden block of 500 episodes and one machine.
+  - It does not show which of the two ingredients helps, and it says nothing about other tasks or
+    real robots.
+- **Checks so far.**
+  - An independent scientific re-verification, in a separate Claude context whose blinding to the
+    per-round scores was incomplete, supported the candidate's validity and the classification.
+  - The trajectory audit is pending.
+  - OpenRSI's own review and reproduction are outstanding.
 
 ## Contents
 
@@ -30,7 +72,8 @@ the agent run, whose RSI-Harness records list the hidden seeds and are withheld;
 
 ## Results
 
-500 hidden episodes per run, RTX 4070 Laptop GPU, 2026-11-03 to 2026-11-14.
+Pre-proposal measurements under this repository's protocol: 500 hidden episodes per run, RTX 4070
+Laptop GPU, 2026-11-03 to 2026-11-14.
 
 | Run | Successes of 500 |
 | --- | --- |
